@@ -6,9 +6,19 @@ Lebesgue **outer measure at least 1/10**.
 
 The set need not be measurable or bounded. Neither a regular needle selector
 nor any auxiliary area inequality is an assumption of the public theorem.
-This repository contains the lower-bound formalization only, not the separate
-upper-bound constructions, manuscript, optimization experiments or model reviews.
+This repository contains the lower-bound formalization and its companion paper.
+It does not include the separate upper-bound implementation, optimization
+experiments or model reviews.
 It makes no claim that 1/10 is sharp or that a historical-priority audit is complete.
+
+## Paper
+
+[Read or download the full paper (Chinese PDF, 57 pages)](star-shaped-kakeya-paper.pdf).
+
+The paper presents the complete one-tenth lower-bound argument, subsequent
+upper-bound results, unsuccessful approaches, and the remaining difficulties.
+The Lean sources in this repository formalize the lower bound; inclusion of the
+paper does not claim that all of its other results have been formalized here.
 
 ## Public theorem
 
