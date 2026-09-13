@@ -7,8 +7,10 @@ Lebesgue **outer measure at least 1/10**.
 The set need not be measurable or bounded. Neither a regular needle selector
 nor any auxiliary area inequality is an assumption of the public theorem.
 This repository contains the lower-bound formalization and its companion paper.
-It does not include the separate upper-bound implementation, optimization
-experiments or model reviews.
+The optional research-history archive below additionally preserves selected
+experiments, historical source snapshots, and model-review records; those are not
+part of the main-branch Lean build. The separate upper-bound implementation is not
+included in that build.
 It makes no claim that 1/10 is sharp or that a historical-priority audit is complete.
 
 ## Paper
@@ -19,6 +21,23 @@ The paper presents the complete one-tenth lower-bound argument, subsequent
 upper-bound results, unsuccessful approaches, and the remaining difficulties.
 The Lean sources in this repository formalize the lower bound; inclusion of the
 paper does not claim that all of its other results have been formalized here.
+
+## Research history and materials / 研究史与材料
+
+- **[Read the history PDF (Chinese, 7 pages)](history/KAKEYA_HISTORY.pdf)** — the route from the adopted π/98 baseline to 1/10, including method changes, failed approaches, corrections, and intermediate Lean routes.
+- [Read the history online (Markdown)](history/KAKEYA_HISTORY.md).
+- **[Download the complete materials ZIP (3.28 MiB)](https://github.com/subfish-zhou/star-shaped-kakeya-lean/raw/refs/heads/main/history/kakeya-lower-bound-history.zip)** — includes the history PDF, local-link Markdown, editable TeX, selected original materials, historical Lean source closures, and writing/review evidence. All 435 files were actually extracted and hash-checked.
+- [Browse the archived source snapshot](https://github.com/subfish-zhou/star-shaped-kakeya-lean/tree/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0), [PDF source](history/pdf-source), [delivery checks and hashes](history/DELIVERY_VERIFICATION.json), and [publication/version notes](history/PUBLICATION_NOTES.md).
+
+The archive is on a separate `history-materials` branch so that historical `.lean`
+files do not enter the main project's exhaustive source inventory. PDF and online
+citations use the fixed archive commit, not a moving branch. This documentation
+release does not rerun historical Lean or numerical certificates, fill missing
+historical execution logs, or change the theorem. Earlier private-delivery and
+pre-publication records remain historical records; the current archive is public
+with the user's explicit authorization. Included materials retain their original
+provenance and applicable rights; their inclusion does not assign new licenses to
+third-party works or documents.
 
 ## Public theorem
 

@@ -1,0 +1,218 @@
+\section{从一根针生成的三角形说起}\label{ux4eceux4e00ux6839ux9488ux751fux6210ux7684ux4e09ux89d2ux5f62ux8bf4ux8d77}
+
+在平面集合里取一根单位线段，把线段上每一点连到同一个中心。星形性保证，生成的整个三角形仍在集合内。如果线段所在直线到中心的距离是 h，这个三角形的面积就是 \textbar h\textbar/2。因此，只要有一根针离中心足够远，下界立刻就有了。真正困难的构型把所有针都放得很靠近中心，让这些三角形彼此重叠。
+
+我们研究的是这种重叠，而不是让某一根针连续转动。合法集合在每个无向方向都包含一根完整的闭单位线段，并且关于同一点星形；集合可以不可测、无界，选针也不必连续。我们用 Lebesgue 外面积衡量它，记所有合法集合外面积的下确界为 A*。
+
+项目采用的外部起点是 Li 的 π/98，约为 \allowbreak{}0.032057。Li 的文章通过圆周截面估计改进下界，并回顾了 Cunningham 的 π/108。同一篇文章的 §\allowbreak{}4.1 还陈述了 (\allowbreak{}0.01030\ldots)π 和 (\allowbreak{}0.01050\ldots)π 两个数值改进。把 π/98 称作起点，是在说明项目采用的明确基线，不是抹掉这些进一步的陈述，也不是替省略的小数位补做认证。保留的 arXiv v2 副本首页带有期刊出版信息。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/D8-li-2026-arxiv-2509.05711v2.pdf}{LI}
+
+改进一个截面估计，就是证明：某些必须出现的针方向，迫使集合在某个物理圆周上占据更多位置。把适当的截面下界沿半径积分，就能得到面积下界。沿半径积分这一步一直保留了下来。改变的是截面估计看得见哪些几何信息，以及不同估计怎样共用同一块材料。
+
+\section{覆盖估计变好了，证明还要修两处}\label{ux8986ux76d6ux4f30ux8ba1ux53d8ux597dux4e86ux8bc1ux660eux8fd8ux8981ux4feeux4e24ux5904}
+
+7 月 31 日的记录指出，早期论证有一个可以避免的损失：覆盖选择引入的因子 3。对一族圆周区间，可以用包住其并集的开集连通分支，直接控制同心放大。放大倍数 c≥1 时，放大后并集的外长度不超过原并集外长度的 c 倍。不必先丢掉一批区间、抽取互不相交的子族，再为覆盖剩余部分额外付一次代价。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E2-APPROACH-PORTFOLIO.md}{E2} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E4-SUPERSEDED-ROUND-1-PI56-AUDIT.md}{E4}
+
+这一步需要真正的几何包含关系，仅仅比较每个区间的长度不够。还必须分清所处的圆：物理角度所在的圆周长是 2π，无向针方向所在的圆周长是 π。一个区间填满了后者，不等于填满了前者。这些区别后来都变成了 Lean 中需要明确处理的条件。
+
+去掉覆盖损失，并没有立刻得到有效的全局定理。项目尝试过迭代缩放，但其中一步把一个针对全部方向的结论，用在了只含部分方向的针族上；缩放不会把缺失的方向补回来。于是主线转向不依赖这个迭代的论证。另一处障碍来自引用范围：当前参数需要一个大于 1/2 的辅助半径，超出了所引用结果的适用范围。修复办法是独立证明所需的射影角度、贪心选择和剩余径向扇形论证，而不是把引用失败当成几何结论的反例。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E4-SUPERSEDED-ROUND-1-PI56-AUDIT.md}{E4} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E5-ROUND-2-LI-THEOREM-AUDIT.md}{E5}
+
+修正后的普通数学证明得到 π/56。随后，在同一框架内细调参数，得到 100π/5599，约为 \allowbreak{}0.056110。这是固定证明机制内的一次有效改进，并未证明整个参数族已被全局优化。这里的进度差别很重要：早期的 Lean 算术模块已经通过检查时，几何和外测度的连接还没完成。100π/5599 的无条件 Lean 端点，要等这些连接全部补齐。保留下来的 π/56 材料包含普通证明和算术 Lean 模块；尚未定位到它单独的无条件几何 Lean 端点。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E3-PI56-INDEPENDENT-PROOF.md}{E3} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E6-STRONGER-100-OVER-5599-PROOF.md}{E6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E7-ROUND-4-STRONGER-CERTIFICATE.md}{E7} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA}
+
+早期端点几何的形式化，还迫使我们分清究竟什么对象可以连续变化。原来的选针是任意的；给它补上连续性，就换了定理。曾经提出的修复，是把所有合法支撑放进一个紧对应关系中，再取极值；这条修复路线后来也退役了。最终的 \code{Figure5LocalContact} 和 \code{UniversalEndpointClosure} 改为逐点证明接触与端点包含，不再对那套任意选择的针族取极值。这里经历了错误路线、同样被放弃的修复，再到更局部的证明，不能只用``把既有证明翻译成 Lean''概括。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E8-ENDPOINT-FATALITY.md}{E8}
+
+\section{第一次较大的转向：让不同地方的面积相加}\label{ux7b2cux4e00ux6b21ux8f83ux5927ux7684ux8f6cux5411ux8ba9ux4e0dux540cux5730ux65b9ux7684ux9762ux79efux76f8ux52a0}
+
+接下来的问题改变了计算结构。旧论证根据方向比例分情况，必须同时防住球内与球外两种可能，全局保证受较弱分支限制。新的问题是：能不能让留在球内的方向只用球内材料付款，让逃出球的方向只用球外材料付款，把两份贡献用起来？
+
+这里要分清两件事：同时证明面积≥a、≥b，保证的是max(a,b)；分情况只知道其中一条成立，保证的是min(a,b)。两者都不允许直接写成a+b。分别估计一个可测球内、球外的材料则不同。若 D 是这个球，外测度满足
+
+\begin{quote}
+m*(E) = m*(E∩D) + m*(E∖D)。
+\end{quote}
+
+即便 E 不可测，这个分割等式仍成立。付款位置的分离，使两份贡献可以合法相加。新论证仍要顾及各类最弱的付款系数；改掉的是只能在两种分支保证中择一，而非消灭所有最小值。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E6-STRONGER-100-OVER-5599-PROOF.md}{E6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/001-joint-inner-outer/README.md}{N1}
+
+球外论证仍有自己的任务：它要从选中三角形的外部部分和剩余径向扇形获得面积，同时控制两者的重叠。同一块球外材料不能既算成三角形面积，又算成扇形面积。这条环带路线最终得到 131π/6250，约为 \allowbreak{}0.065848。
+
+保留下来的一份证明笔记，相对于此前纸面引理和一个数值假设给出这个结果；后来完成的 Lean 证明自己建立所需材料，并消去这些假设。它们是同一路线在不同阶段的产物。只读那份条件性的笔记，会漏掉已经闭合的端点；只读最后的端点，又看不到环带思路新在哪里。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/001-joint-inner-outer/README.md}{N1} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA}
+
+\section{从一道分界，走到多段径向安排}\label{ux4eceux4e00ux9053ux5206ux754cux8d70ux5230ux591aux6bb5ux5f84ux5411ux5b89ux6392}
+
+8 月 3 日，项目开始用另一种方式追踪单位针：记录整根线段到中心的最近、最远距离，以及星形三角形必定占据的径向薄片。这里的最近距离，是在线段所有点上取最小值；后来的 1/10 证明所说的近端点半径，是另一个量。混淆二者会改变几何问题。
+
+径向薄片论证先得到 1/15。调整有理高度阈值后，在不改变基本几何的情况下，得到 1717/25000，也就是 \allowbreak{}0.06868。随后，有限覆盖和更灵活的径向分配给出 7/100、141/2000。原始笔记保留了这些中间结果，新增它们的提交记录也支持这一先后。这段历史不是拿最终 1/10 定理倒推出几个弱界，再补写出来的。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-ONE-FIFTEENTH.md}{N3} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-OPTIMIZED.md}{N4} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-SEVEN-HUNDREDTHS.md}{N5} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-141-OVER-2000.md}{N6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/README.md}{N7}
+
+一份径向安排表规定：哪类几何对象，可以在哪些半径区间获得多少付款。它既要覆盖每一种合法类别，也要保证同一块面积没有被重复使用。有限张表不等于在方向圆上抽样有限个方向；每个表项代表的是一整类可能的线段。从有限类别到任意方向选针的连接，本身就是证明的一部分。
+
+32 类端点之后，又有了 64 类安排，得到 qπ≈\allowbreak{}0.07054486807936307。这里 q 是源码中一个明确的长有理数，3527/50000 只是它更短的严格推论，不是完整系数。对数的有理包围使表内付款能够得到证明；优化器输出的浮点值本身不是定理。后来的配对构造把旧表的一个低类拆成近配对类与余类，利用两端关系为前者在新的内径向区间取得付款，同时删去一段旧付款、改付余类，而非同壳叠加。它定义了一个新的隐式常数 C\_pair,64，并给出约 \allowbreak{}0.07054487627351847 的严格外向包围。这里也换用了更精细的超越函数包围；新证书的瓶颈落在未改动的第49类，不能把与 qπ 的小数差全算成近配对的几何收益。配对证书与 qπ 的 Lean 定理需要分别保存。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/N8-README.md}{N8} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/N9-THEOREM.md}{N9}
+
+至此，能定位到四条早期、均不依赖 OneTenth 的 Lean 源码端点：100π/5599、131π/6250、141/2000 和 qπ。它们的本地 import 闭包都不包含 OneTenth 模块。因此，这些源码保存的是不同的证明路线，不只是同一个最终定理的几个数值推论。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA}
+
+\section{\texorpdfstring{看起来接近成功的 \allowbreak{}0.0975576}{看起来接近成功的 0.0975576}}\label{ux770bux8d77ux6765ux63a5ux8fd1ux6210ux529fux7684-0.0975576}
+
+在继续写更强的下界之前，需要留下一个没有成立的候选。8 月 16 日，一个候选论证报出了约 \allowbreak{}0.0975576139796，已经很接近十分之一。它的算术和若干连接步骤通过了检查，关键的面积估计没有。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/blocked-09755/STATUS_BLOCKED.md}{F1}
+
+候选论证给每个输出指定唯一的见证和唯一的低端点。这里的输出是等待面积估计支持的对象，来源则是实际用来支持它的几何材料。这听起来像是每一份贡献都只算了一次。但不同输出仍可能反复使用同一个物理来源原子，也就是同一个``端点---高度''组合。每个输出只指向一个来源，并不限制这个来源总共承担多少输出。
+
+可以想象一叠账单，每张都只写一个付款人。这样确实知道了每张账单归谁，却不知道同一个付款人有没有足够的钱付完所有账单。几何论证需要补的是来源容量定理。没有它，所需的算子不等式还没成立，那个小数下界也就没有成立。
+
+保留的裁决是 BLOCKED。它值得进入历史，是因为它明确了下一种可用构造必须控制什么；不能把它写成``先冲到 \allowbreak{}0.0975576，后来又退回来''。项目从未把这个候选当成已经取得的下界。
+
+\section{给同一个物理集合分配权重}\label{ux7ed9ux540cux4e00ux4e2aux7269ux7406ux96c6ux5408ux5206ux914dux6743ux91cd}
+
+8 月 17 日的路线把来源约束写进了论证。它采用加权测度
+
+\begin{quote}
+dν = min(r,1) dr dθ，
+\end{quote}
+
+在原点外，相对于平面面积的密度为 min(1,1/r)，所以 ν 不超过面积。每条估计使用自己的径向权重 pᵢ(r)，所有权重在同一物理点的总和不得超过 1。相互重叠的几何族可以参加同一份证明，但必须共用容量，不能各自按完整价格报销。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/final-radial-price-theorem/CERTIFIED.md}{N10} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/final-radial-price-theorem/final_theorem_checklist_20260817_zh.md}{N11}
+
+修正后的低高度估计和高端点邻域的截面估计，给出安全下界 \allowbreak{}0.072323077979923422。证明还在任意开包络内恢复了有限值的 Borel 中点选择。它没有假设原来那套选针可测，而是重新构造一族便于积分的合法单位针，在新针族上重做几何分支，最后对开包络取下确界。
+
+随后，高度阈值 H 本身成为值得分析的变量。保持另外的低高度几何参数不变，降低 H 会增强这条估计，却会削弱容易分支，因为后者只能用一个三角形保证 H/2。因此，H 一直往下降，并不会让全局结论一直变好。通过平衡两条分支，并选定一个有理参数点，得到 \allowbreak{}0.073920942372137638。这一步虽沿用原框架，却找清了竞争约束如何决定瓶颈，不只是让优化器多吐几位小数。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/radial-H-fixed-point/CERTIFIED.md}{N12} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/radial-H-fixed-point/radial_H_monotonicity_and_certificate_zh.md}{N13}
+
+再往后，远端点落在一段有限半径范围内的高方向类，开始共用一个终端径向权重。``终端''指选定的一段后部径向区间，并不是把每个方向的贡献各算一遍。无限远的尺度不能一起塞进来：一旦这段范围的上半径越来越大，统一估计会恶化。因此构造保留有限截断，远处的尾部另用互不相交的二进尺度径向带支付。这给出了共享终端路线。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_price_report_zh.md}{N14}
+
+它的证书历史包含一次真正的修复。旧 v1 对零高度参数族只检查三个点，这个约化不足以控制连续参数。v2 改为在滑动端点穿越径向网格的每个事件处分段，再利用事件之间的凹性控制整个区间；同时把共同价格的尺度归一化为 1。保留下来的可靠发布下限是 \allowbreak{}0.082812499999972190。附近的浮点数 \allowbreak{}0.0828125 不能替代这个精确结论。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_strict_report_zh.md}{N15} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_strict_report_v2.md}{N16} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/CERTIFIED_PROMOTION.md}{N17}
+
+\section{十分之一需要一条新的低方向估计}\label{ux5341ux5206ux4e4bux4e00ux9700ux8981ux4e00ux6761ux65b0ux7684ux4f4eux65b9ux5411ux4f30ux8ba1}
+
+{\emergencystretch=2em
+
+9 月 5 日的简短证明，把此前的大表整理成七条有效行和三个混合系数。它解释清楚了 \allowbreak{}0.082812499999972190 为什么成立，没有提高下界；也让早已记录的瓶颈更显眼。共享终端模型中的低方向类仍依赖旧的低半径估计。若某一类根本没有从终端权重获得付款，继续优化这个权重也改善不了它。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/A0-baseline.md}{A0} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/baseline/PROOF.md}{T1} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/baseline/PROVENANCE.md}{T2} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_price_report_zh.md}{N14}
+
+\par}
+
+最后的改变重新利用一根完整单位线段的两个端点。仍然先在任意开包络中恢复 Borel 选针。在其中的低方向族里，每根针的高度不超过 1/5，远端点半径 M\textless99/100。记近端点半径为 N；它不是线段内部最近点的半径。把其中一个 Borel 方向子集 V 分成 B、U 两类：B 中 N≥2/5，U 是余下部分。
+
+每个方向先贡献远端的理想角度锚点。锚点记录线段方向的一种定向，不一定等于实际端点的极角。B 类的近端点也伸得足够远，于是还能贡献一个相反锚点。它们是同一个无向方向在周长 2π 的物理圆上的两个提升，不是周长 π 的方向圆上的两个不同方向。
+
+实际圆弧却不能直接相加：它们可能重叠，甚至只是同一段底弧被标记了两次。证明先对真实圆弧取并集，再控制把它们延伸到理想锚点所需的长度。用 W(V) 表示这部分选针生成的三角形并，Sᵣ(V) 表示它在半径 r 处的角截面；对于 0\textless r\textless2/5，有
+
+\begin{quote}
+\textbar Sᵣ(V)\textbar{} ≥ k(r)(\textbar V\textbar+\textbar B\textbar)，
+
+k(r)=min\{2/3, (2/5−r)/(2/5+r)\}。
+\end{quote}
+
+只有合格方向提供第二个锚点，不能把所有方向一律翻倍。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/low-source-b2/integrated-low/PROOF.md}{T6}
+
+剩下的 U 怎么办？完整单位线段满足 M+N≥1。如果 N\textless2/5，远端点就必须伸到 3/5 以外。远端点更远，改善的是内侧截面的估计；付款并不因此跑到半径3/5以外。实际补偿仍放在半径7/20到1/2之间，与 B 类的额外锚点贡献结合。
+
+集合仍然只有一个。在后面的付款会重叠的地方，用互补权重 λ 和 1−λ，使总价不超过 1。这里 W(U) 包含在 W(V) 中：一个点即使被两份估计同时计入，权重也只累加到 1。实际积分按下面三段支付；前面那条锚点估计虽在更大范围有效，这里只在第一段使用：
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+半径区间 & 使用的材料与估计 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0\textless r\textless1/5 & W(V)的额外锚点估计，完整权重 \\
+1/5≤r\textless7/20 & W(V)的普通远端估计，完整权重 \\
+7/20≤r\textless1/2 & W(U)的更强远端估计取λ；W(V)的普通远端估计取1−λ \\
+\end{longtable}
+}
+
+权重由消去两类系数差的代数关系确定，并非又一次数值寻优。B、U 的系数平衡后，最终保证不再取决于方向怎样分成这两类。得到的低方向积分系数严格大于 1/(10π)；其他方向类在不相交的径向区域付款，最终闭合普适下界 1/10。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/low-source-b2/integrated-low/PROOF.md}{T6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/THEOREM_01.md}{T7}
+
+并行探索还提出过一条更强的逐半径配对估计 PL，后来被真实的连续单位针族反驳：在半径 1/4 处，一个长度为 43/1000 的方向子集，实际角并集长度只有 1/50，小于方向长度的一半。这个反例否定的是 PL，不是否定跨半径补偿的积分不等式 IL，更不否定全局 1/10。最终证明不导入那条失败的逐点断言。文件能确认这条依赖边界，但不足以把所有后续想法都写成``由反例触发''。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/low-source-b2/paired-pointwise/COUNTEREXAMPLE.md}{T9} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/tenth-reviews/b2_universal_tenth_end_to_end_review.md}{T8}
+
+\section{留下来的不只是更大的数字}\label{ux7559ux4e0bux6765ux7684ux4e0dux53eaux662fux66f4ux5927ux7684ux6570ux5b57}
+
+普通数学的 1/10 证明于 9 月 5 日被记录为接受；到 9 月 13 日的本地交付验收时，最终 44 模块的原生冷编译检查已经完成。同日创建的公开仓库，也在当天的匿名 API 读回中确认为公开状态。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/writing-evidence/public-repository-readback.json}{PUB}把这两个日期合并，会抹掉一段真实工作。精确标量证书、源码中的定理声明、实际运行的公理输出、经过审读的数学证明，也各自回答不同问题。
+
+迁移审计找到了早期 Lean 的完整本地源码闭包，以及基线、环带路线的旧构建和公理转录；N32、N64 端点的原生执行原始日志尚未找齐。最终 1/10 项目保留了原生收据，其中记录的源文件哈希与当前 44 个模块全部相符。本次写作阶段未启动 Lean；对旧收据做哈希核对与重新启动编译，是两项不同的检查。保存源码和版本锁，让以后仍能检查它们，同时保留当前执行证据缺口。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA}
+
+现在可以看清主线了。最初，我们收紧覆盖估计；随后，让不同物理区域提供的面积相加；有限径向表使分配更灵活。一个接近十分之一的失败候选暴露出``输出唯一''并不足够，可用的径向权重转而限制共同来源的总负担。最终证明又找回近端点中尚未利用的几何信息，补偿低方向类的瓶颈。
+
+这样保存下来，才能回答只看小数或终稿回答不了的问题：每种方法舍弃了什么信息，后来的论证怎样把它找回来，哪些捷径行不通。它还保留了发现、修复、认证与形式化之间的间隔。终点依然是一个下界；A* 的精确值和匹配构造仍开放。更广的上界研究已收进正式研究稿，这份历史只追踪本次选定保留的下界主线。
+
+\section{关于这份历史的来源}\label{ux5173ux4e8eux8fd9ux4efdux5386ux53f2ux7684ux6765ux6e90}
+
+文中方括号编号对应材料包内的原始项目文件、迁移审计和公开状态读回。先后依据带日期的轮次记录和实际 Git 提交信息，不依据文件修改时间；它们定位的是已记录版本，不自动代表首次想到、对外发布或全球优先权。``我们''指项目中的共同数学工作，不能仅凭提交者姓名重建个人与模型的贡献。旧文件里的``human proof''按普通数学证明与形式化检查的区别理解，不作为人类作者身份的证据。
+
+本文重建已经定位的主线，未把未穷尽的旁支描述成不存在。正文解释方法怎样改变；完整参数、引理证明和代码留在对应原件中。
+
+\section{附录：按节点查常数与证据}\label{ux9644ux5f55ux6309ux8282ux70b9ux67e5ux5e38ux6570ux4e0eux8bc1ux636e}
+
+下表的比较对象是每一个合法集合 E 的外面积，不是直接对下确界 A* 作严格比较。即使每个 E 都严格大于某个数，也只据此得到 A* 大于等于该数。表中提交节点沿用原记录的 UTC 日期；7 月 31 日按轮次日志原日期列出。提交是可定位的版本节点，不等于首次发现或公开发表。
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+记录节点
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+当时的结论或状态
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+原件及证据类型
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Li 文 & ≥π/98≈\allowbreak{}0.032057067894；§\allowbreak{}4.1另列数值改进 & 文章首页、内页第14页 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/D8-li-2026-arxiv-2509.05711v2.pdf}{LI} \\
+07-31，第二轮修正后 & ≥π/56≈\allowbreak{}0.056099868814 & 普通证明已闭合；独立全局 Lean 端点未定位 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E3-PI56-INDEPENDENT-PROOF.md}{E3} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E5-ROUND-2-LI-THEOREM-AUDIT.md}{E5} \\
+07-31，第三至四轮 & \textgreater100π/5599≈\allowbreak{}0.056109888437 & 固定参数普通证明；后续有独立 Lean 端点 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E6-STRONGER-100-OVER-5599-PROOF.md}{E6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/E7-ROUND-4-STRONGER-CERTIFICATE.md}{E7} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/UniversalAssembly.lean}{L0} \\
+08-02，\code{f96f4a2f} & \textgreater131π/6250≈\allowbreak{}0.065847782019 & 内外相加；后续独立 Lean 端点及旧公理转录 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/001-joint-inner-outer/README.md}{N1} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/AnnularAssembly.lean}{L1} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA} \\
+08-03，\code{662cc336} & ≥1/15 & 径向薄片普通证明 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-ONE-FIFTEENTH.md}{N3} \\
+08-03，\code{f58d803a} & ≥1717/25000=\allowbreak{}0.06868 & 同几何机制的参数改进 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-OPTIMIZED.md}{N4} \\
+08-03，\code{3af5bec4} & ≥7/100 & 有限覆盖与径向安排 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-SEVEN-HUNDREDTHS.md}{N5} \\
+08-03，\code{3a1cd160} & ≥141/2000；Lean 端点给单集严格 \textgreater{} & 32类；已保全源码，原生原始日志缺口仍在 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/002-endpoint-capacity/UNIVERSAL-141-OVER-2000.md}{N6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/EndpointCapacityFinal141.lean}{L2} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA} \\
+08-04，\code{796e310c}→\code{97914cca} & \textgreater3527/50000；继而完整 ≥qπ & 64类、对数有理尾界；后者约\allowbreak{}0.07054486807936307 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/N8-README.md}{N8} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/EndpointCapacityFinal3527.lean}{L3} \\
+08-04，\code{8d69d973} & ≥C\_pair,64≈\allowbreak{}0.07054487627351847 & 普通数学证明及精确/外向证书；与 qπ 的 Lean 定理分开保存 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/N9-THEOREM.md}{N9} \\
+08-16，\code{0bbd492d} & \allowbreak{}0.0975576139796，BLOCKED & 来源容量未证，不能当作下界纪录 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/blocked-09755/STATUS_BLOCKED.md}{F1} \\
+08-17，\code{9fc64eb4} & ≥\allowbreak{}0.072323077979923422 & 普通证明及认证后的安全下限 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/final-radial-price-theorem/CERTIFIED.md}{N10} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/final-radial-price-theorem/final_theorem_checklist_20260817_zh.md}{N11} \\
+08-17，\code{4acb9bcb} & ≥\allowbreak{}0.073920942372137638 & H阈值平衡；固定有理参数及晋升裁决 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/radial-H-fixed-point/CERTIFIED.md}{N12} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/radial-H-fixed-point/radial_H_monotonicity_and_certificate_zh.md}{N13} \\
+08-17→08-21，\code{80a350d2}为v2节点 & 旧记录\allowbreak{}0.082812417187472190；可靠v2 ≥\allowbreak{}0.082812499999972190 & 保存旧错与v2修复，恢复时采用v2 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_price_report_zh.md}{N14} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_strict_report_zh.md}{N15} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_strict_report_v2.md}{N16} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/CERTIFIED_PROMOTION.md}{N17} \\
+09-05，简短重写 & 同一\allowbreak{}0.082812499999972190；简洁展示207/2500=\allowbreak{}0.0828 & 表示简化，非数值突破 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/A0-baseline.md}{A0} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/baseline/PROOF.md}{T1} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/baseline/PROVENANCE.md}{T2} \\
+09-05，\code{2587e7eb} & ≥1/10 & IL几何、算术及完整组装接受 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/low-source-b2/integrated-low/PROOF.md}{T6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/THEOREM_01.md}{T7} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/tenth-reviews/b2_universal_tenth_end_to_end_review.md}{T8} \\
+09-13，本地验收及新建公开库 & ≥1/10 & 当前44模块原生冷编译收据；公开状态另以匿名API读回确认 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{LA} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/writing-evidence/public-repository-readback.json}{PUB} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/final-public/README.md}{FINAL} \\
+\end{longtable}
+}
+
+几个较长的有限小数是证书给出的精确有理安全下限，不是把浮点近似强行当成等式。q 的完整分子分母在 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/N8-README.md}{N8} 第9--10行，C\_pair,64 的精确定义在 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history-sources/N9-THEOREM.md}{N9} 第102--125行；它们才是相应近似显示背后的对象。
+
+\subsection{旧 Lean 从哪里开始读}\label{ux65e7-lean-ux4eceux54eaux91ccux5f00ux59cbux8bfb}
+
+这里的独立，指这些端点不经由 OneTenth 推出，并不表示四套证明互不共享前置引理。四条路线的入口分别是：
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/UniversalAssembly.lean}{UniversalAssembly.lean}：\code{StarKakeyaLower.universal\_strong\_lower\_bound}。
+\item
+  \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/AnnularAssembly.lean}{AnnularAssembly.lean}：\code{StarKakeyaLower.universal\_annular\_lower\_bound}。
+\item
+  \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/EndpointCapacityFinal141.lean}{EndpointCapacityFinal141.lean}：\code{StarKakeyaLower.Witness141.universal\_one\_forty\_one\_over\_two\_thousand}。
+\item
+  \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/historical-lean-2026-08-04/StarKakeyaLower/EndpointCapacityFinal3527.lean}{EndpointCapacityFinal3527.lean}：\code{StarKakeyaLower.Witness3527.universal\_certifiedCoefficient\_mul\_pi}；同文件另有严格3527/50000推论。
+\end{itemize}
+
+源码、依赖和执行收据的差别见 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/historical-lean-audit.md}{Lean审计}。不同快照的同名模块不能混用：材料包的 \code{RELOCATION.json} 记录逻辑原路径到实际保存文件的映射，历史审计 JSON 另有 \code{restore\_map}。H历史树缺其自身原始manifest；保留的同版本依赖清单是恢复参考，不冒充H当年环境的完整原生证据。最终项目的准备与受控构建入口为 \texttt{bash prepare.sh}、\texttt{python3 build.py}，见 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/final-public/README.md}{最终项目README}。历史材料中的聚合构建命令只是旧记录，不是本次推荐的恢复操作。
+
+\subsection{哪些材料只保留为失败或受限结论}\label{ux54eaux4e9bux6750ux6599ux53eaux4fddux7559ux4e3aux5931ux8d25ux6216ux53d7ux9650ux7ed3ux8bba}
+
+\begin{itemize}
+\tightlist
+\item
+  \allowbreak{}0.0975576 保留为容量缺口实例，不进入已证纪录。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/blocked-09755/STATUS_BLOCKED.md}{F1}
+\item
+  旧共享终端 v1 保留来解释连续参数漏洞，执行入口采用 v2。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/shared-terminal-082812/class_independent_terminal_strict_report_v2.md}{N16}
+\item
+  34/441 属于限于居中且同高度的七根针（七弦）等条件的覆盖台账，不能当成任意星形 Kakeya 的新下界。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/CLOSEOUT.md}{T3} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/DISPOSITION.md}{T4}
+\item
+  PL 的逐半径反例与 IL 的积分证明同时成立；前者不是后者的反例。\href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/low-source-b2/integrated-low/PROOF.md}{T6} \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/history/one-tenth/low-source-b2/paired-pointwise/COUNTEREXAMPLE.md}{T9}
+\end{itemize}
+
+\subsection{文档与来源的对应关系}\label{ux6587ux6863ux4e0eux6765ux6e90ux7684ux5bf9ux5e94ux5173ux7cfb}
+
+正文的链接在解压后的材料包内可直接使用。完整来源行号、历史路径和阅读范围在 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/audits/history-source-audit.md}{来源索引}；版本先后在 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/COMMIT_CHRONOLOGY.json}{提交记录}。这些旧审计是冻结时的记录，正文对Li原文的补读和本次写作检查另有记录，不修改旧审计来伪装其当时已经完成。
+
+最终研究论文见 \href{https://github.com/subfish-zhou/star-shaped-kakeya-lean/blob/6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0/final-public/star-shaped-kakeya-paper.pdf}{正式PDF}。本次交付经用户明确授权，公开上传到 star-shaped-kakeya-lean；此前私人交付记录按历史版本保留。

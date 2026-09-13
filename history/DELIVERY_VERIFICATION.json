@@ -1,0 +1,17 @@
+{
+  "pdf_pages": 7,
+  "pdf_bytes": 272296,
+  "pdf_sha256": "b982c4f2a7ce5f5b02b75ec737ec95b518d2fd53dadab1a9d927c6a78f1e5da7",
+  "zip_bytes": 3439205,
+  "zip_mib": 3.28,
+  "zip_sha256": "f244e9d4f2d7c1ab4f9235cde2fc01f64e598f79a5817627dd560af2a652933c",
+  "zip_members": 435,
+  "manifest_payloads": 434,
+  "original_sources_unchanged": 383,
+  "real_extraction_every_file_identical": true,
+  "tamper_negative_control": true,
+  "pdf_source_citations": 95,
+  "unique_source_targets": 44,
+  "archive_commit": "6432d8eb33cc2093ed5ca1f5e63390e4bf065fd0",
+  "lean_executed": false
+}

@@ -1,0 +1,37 @@
+\documentclass[UTF8,fontset=none,11pt]{ctexart}
+\usepackage[a4paper,margin=23mm,headheight=16pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}[Scale=0.88]
+\setCJKmainfont[ItalicFont={Noto Serif CJK SC}]{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\usepackage{amsmath,amssymb,array,longtable,booktabs,calc,seqsplit}
+\usepackage{newunicodechar}
+\newfontfamily\symbolfont{DejaVu Sans}
+\newunicodechar{∖}{{\symbolfont ∖}}
+\usepackage{xcolor}
+\definecolor{linkblue}{HTML}{245577}
+\usepackage[colorlinks=true,linkcolor=linkblue,urlcolor=linkblue]{hyperref}
+\usepackage{xurl}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 星形 Kakeya 下界研究史}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\linespread{1.15}
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\code}[1]{{\ttfamily\small\seqsplit{#1}}}
+\hypersetup{pdftitle={从0.03到0.1：星形Kakeya下界的一段研究史},pdfsubject={方法转向、失败修正、历史Lean路线及证据边界},pdfauthor={}}
+\title{从 0.03 到 0.1\\[0.5em]\Large 星形 Kakeya 下界的一段研究史}
+\author{}
+\date{研究记录截至2026年9月13日}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\input{body.tex}
+\end{document}
