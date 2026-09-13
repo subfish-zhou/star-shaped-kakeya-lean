@@ -1,0 +1,1768 @@
+{
+  "meta": {
+    "generated_by": "spikes/002-endpoint-capacity/benchmark_capacity.py",
+    "python": "3.11.14",
+    "quick": false,
+    "numpy": "2.4.6",
+    "independence": "profiles retyped from paper eq:aprofile/eq:sprofile; no production module imported; no cached spectrum read",
+    "runtime_seconds": 511.6264879703522
+  },
+  "comparison_anchors": {
+    "upper_continuum_certificate_num": 90477812,
+    "upper_continuum_certificate_den": 1000000000,
+    "upper_continuum_reported_decimal": "0.0904778111246769545",
+    "lower_published_num": 131,
+    "lower_published_den": 6250,
+    "source_upper": "paper/star_shaped_kakeya_bounds.tex eq:contbound (Prop. 'continuum area bound')",
+    "source_lower": "paper/star_shaped_kakeya_bounds.tex Theorem A / spikes/001-joint-inner-outer"
+  },
+  "definitions": {
+    "Tp": "projective direction circle R/piZ, total mass pi",
+    "chord": "Gamma_theta(u) = p_theta + u e(theta), u in [0,1], the full paired chord",
+    "rho": "rho(phi) = sup{|x| : x in union_theta Gamma_theta, arg x = phi}, sup of empty set = 0",
+    "Cap2": "Cap2 = (1/2) * upper-Lebesgue-integral over S^1 of rho(phi)^2 dphi",
+    "identity": "Cap2 = outer Lebesgue measure of Tri(E) = union_theta conv(0, Gamma_theta)",
+    "normalisation": "all capacities are reported divided by pi",
+    "h": "h(theta) = dist(O, aff Gamma_theta)",
+    "m": "m(theta) = dist(O, Gamma_theta) (segment, not line)",
+    "M": "M(theta) = max_u |Gamma_theta(u)| >= 1/2",
+    "delta": "angular defect from antipodality; A B sin(delta) = h and A^2+B^2+2AB cos(delta) = 1",
+    "lower_published": "131*pi/6250 = 0.020960*pi",
+    "upper_certified": "< 90477812e-9 * pi (continuum), the near-extremizer ceiling"
+  },
+  "profiles": {
+    "a_coeffs_p_plus_q_sqrt2": [
+      [
+        "0",
+        "1/4"
+      ],
+      [
+        "-1/288",
+        "-1/2"
+      ],
+      [
+        "643/7200",
+        "0"
+      ],
+      [
+        "-121/400",
+        "0"
+      ],
+      [
+        "53/180",
+        "0"
+      ],
+      [
+        "1/45",
+        "0"
+      ],
+      [
+        "-7/50",
+        "0"
+      ],
+      [
+        "1/25",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "s_coeffs_p_plus_q_sqrt2": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "90557/183600",
+        "90557/367200"
+      ],
+      [
+        "-9829/36720",
+        "-9829/73440"
+      ],
+      [
+        "-361/150",
+        "-361/300"
+      ],
+      [
+        "29249/2700",
+        "29249/5400"
+      ],
+      [
+        "-3352/135",
+        "-1676/135"
+      ],
+      [
+        "152/5",
+        "76/5"
+      ],
+      [
+        "-512/27",
+        "-256/27"
+      ],
+      [
+        "128/27",
+        "64/27"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "H_coeffs_p_plus_q_sqrt2": [
+      [
+        "1/2",
+        "1/4"
+      ],
+      [
+        "-1/288",
+        "-1/2"
+      ],
+      [
+        "643/7200",
+        "0"
+      ],
+      [
+        "-121/400",
+        "0"
+      ],
+      [
+        "53/180",
+        "0"
+      ],
+      [
+        "1/45",
+        "0"
+      ],
+      [
+        "-7/50",
+        "0"
+      ],
+      [
+        "1/25",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "J_coeffs_p_plus_q_sqrt2": [
+      [
+        "1243/244800",
+        "1243/367200"
+      ],
+      [
+        "-26/255",
+        "-34379/146880"
+      ],
+      [
+        "1737178903/293760000",
+        "1562442121/440640000"
+      ],
+      [
+        "-15653204039/440640000",
+        "-599042899/24480000"
+      ],
+      [
+        "32463272507/293760000",
+        "34896685597/440640000"
+      ],
+      [
+        "-4623945019/24480000",
+        "-15680103703/110160000"
+      ],
+      [
+        "40747034753/220320000",
+        "16190302309/110160000"
+      ],
+      [
+        "-256080149/2295000",
+        "-611040091/6885000"
+      ],
+      [
+        "62546627/1020000",
+        "1071097321/27540000"
+      ],
+      [
+        "-18913913/405000",
+        "-1895641/81000"
+      ],
+      [
+        "3768577/135000",
+        "5674361/405000"
+      ],
+      [
+        "-15097/2250",
+        "-3784/1125"
+      ],
+      [
+        "-351031/202500",
+        "-8884/10125"
+      ],
+      [
+        "22211/16875",
+        "448/675"
+      ],
+      [
+        "-3173/16875",
+        "-64/675"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "evidence": "exact"
+  },
+  "shape_inequalities": {
+    "minima": {
+      "s''": 0.9138971978365995,
+      "H": 0.14644660940672616,
+      "-H'": 0.7001041201631071,
+      "H-s'": 0.011557373251714909,
+      "J": 0.0048570773411858205,
+      "s_interior": 4.209655321164806e-05
+    },
+    "argmin": {
+      "s''": 1.0,
+      "H": 1.0,
+      "-H'": 0.8675566221688915,
+      "H-s'": 0.0,
+      "J": 0.025398730063496824,
+      "s_interior": 4.999750012499375e-05
+    },
+    "all_strictly_positive": true,
+    "evidence": "numeric"
+  },
+  "envelope": {
+    "tau_star": 0.4188076290544064,
+    "evidence": "numeric"
+  },
+  "continuum_refinement_table": {
+    "rows": [
+      {
+        "N": 200,
+        "lower": 0.08891376840642534,
+        "upper": 0.09244904719419253,
+        "width": 0.0035352787877671876,
+        "R_monotone_nonincreasing": true
+      },
+      {
+        "N": 800,
+        "lower": 0.09005794424141392,
+        "upper": 0.0909417639383557,
+        "width": 0.0008838196969417761,
+        "R_monotone_nonincreasing": true
+      },
+      {
+        "N": 3200,
+        "lower": 0.09036787778569988,
+        "upper": 0.09058883270993531,
+        "width": 0.00022095492423543361,
+        "R_monotone_nonincreasing": true
+      },
+      {
+        "N": 12800,
+        "lower": 0.09045023986343896,
+        "upper": 0.09050547859449784,
+        "width": 5.523873105887922e-05,
+        "R_monotone_nonincreasing": true
+      },
+      {
+        "N": 51200,
+        "lower": 0.09047090887204388,
+        "upper": 0.0904847185548086,
+        "width": 1.3809682764709397e-05,
+        "R_monotone_nonincreasing": true
+      }
+    ],
+    "evidence": "enclosure"
+  },
+  "switch_structure": {
+    "n_switches": 5,
+    "switches": [
+      {
+        "y": 0.00074347179926397,
+        "tau": 0.030145638998685685,
+        "zeta": 0.06864632633949747,
+        "R": 0.8051042928447572
+      },
+      {
+        "y": 0.003910749682607059,
+        "tau": 0.061200325296057984,
+        "zeta": 0.14138006808826814,
+        "R": 0.7541397236777523
+      },
+      {
+        "y": 0.05622629226532194,
+        "tau": 0.18359043109654366,
+        "zeta": 0.4546248476907282,
+        "R": 0.5324747246345303
+      },
+      {
+        "y": 0.15104380713264903,
+        "tau": 0.26631645707261264,
+        "zeta": 0.6427832307188386,
+        "R": 0.3980078178619835
+      },
+      {
+        "y": 0.2580459586863514,
+        "tau": 0.31525260393631493,
+        "zeta": 0.7523811591003973,
+        "R": 0.32041869475065
+      }
+    ],
+    "active_branch_pattern": "eseses",
+    "six_piece_total": 0.09047781112467895,
+    "six_piece_pieces": [
+      {
+        "branch": "e",
+        "y0": 0.0,
+        "y1": 0.00074347179926397,
+        "p0": 3.76158192263132e-37,
+        "p1": 0.06864632633949747,
+        "contrib": 0.00050748196958259
+      },
+      {
+        "branch": "s",
+        "y0": 0.00074347179926397,
+        "y1": 0.003910749682607059,
+        "p0": 0.030145638998685685,
+        "p1": 0.061200325296057984,
+        "contrib": 0.0019096576606938704
+      },
+      {
+        "branch": "e",
+        "y0": 0.003910749682607059,
+        "y1": 0.05622629226532194,
+        "p0": 0.14138006808826814,
+        "p1": 0.4546248476907282,
+        "contrib": 0.020272253947730343
+      },
+      {
+        "branch": "s",
+        "y0": 0.05622629226532194,
+        "y1": 0.15104380713264903,
+        "p0": 0.18359043109654366,
+        "p1": 0.26631645707261264,
+        "contrib": 0.019844865459435992
+      },
+      {
+        "branch": "e",
+        "y0": 0.15104380713264903,
+        "y1": 0.2580459586863514,
+        "p0": 0.6427832307188386,
+        "p1": 0.7523811591003973,
+        "contrib": 0.013607835389530483
+      },
+      {
+        "branch": "s",
+        "y0": 0.2580459586863514,
+        "y1": 1.0,
+        "p0": 0.31525260393631493,
+        "p1": 0.4188076290544064,
+        "contrib": 0.03433571669770568
+      }
+    ],
+    "evidence": "numeric"
+  },
+  "agreement_with_production_upper": {
+    "reconstructed_six_piece": 0.09047781112467895,
+    "reconstructed_bracket": [
+      0.09047090887204388,
+      0.0904847185548086
+    ],
+    "production_certificate_strict_upper": 0.090477812,
+    "paper_reported_decimal": 0.09047781112467695,
+    "six_piece_minus_reported": 1.9984014443252818e-15,
+    "bracket_contains_reported": true,
+    "reconstruction_below_certificate": true
+  },
+  "near_extremizer_profile": {
+    "R_at_0": 0.8535533905932737,
+    "R_at_half": 0.22850986006674834,
+    "R_at_1": 0.14662071149681943,
+    "radial_floor_min_R": 0.14662071149681943,
+    "radial_floor_capacity_over_pi": 0.02149763303983356,
+    "antipodal_pair_floor_min": 0.10443351229544981,
+    "antipodal_pair_capacity_over_pi": 0.052216756147724905,
+    "H_at_1_exact_baseline": 0.14644660940672627,
+    "evidence": "numeric"
+  },
+  "level_set_margins": {
+    "rows": [
+      {
+        "r": 0.05,
+        "theoremA_bound_over_pi": 0.8181818181818181,
+        "near_extremizer_actual_over_pi": 1.0,
+        "slack": 0.18181818181818188,
+        "satisfied": true
+      },
+      {
+        "r": 0.1,
+        "theoremA_bound_over_pi": 0.6666666666666667,
+        "near_extremizer_actual_over_pi": 1.0,
+        "slack": 0.33333333333333326,
+        "satisfied": true
+      },
+      {
+        "r": 0.146,
+        "theoremA_bound_over_pi": 0.5479876160990712,
+        "near_extremizer_actual_over_pi": 1.0,
+        "slack": 0.4520123839009288,
+        "satisfied": true
+      },
+      {
+        "r": 0.2,
+        "theoremA_bound_over_pi": 0.4285714285714286,
+        "near_extremizer_actual_over_pi": 0.6254041668191936,
+        "slack": 0.19683273824776504,
+        "satisfied": true
+      },
+      {
+        "r": 0.25,
+        "theoremA_bound_over_pi": 0.3333333333333333,
+        "near_extremizer_actual_over_pi": 0.42565291267901756,
+        "slack": 0.09231957934568424,
+        "satisfied": true
+      },
+      {
+        "r": 0.3,
+        "theoremA_bound_over_pi": 0.25,
+        "near_extremizer_actual_over_pi": 0.2974985500662409,
+        "slack": 0.047498550066240874,
+        "satisfied": true
+      },
+      {
+        "r": 0.4,
+        "theoremA_bound_over_pi": 0.11111111111111108,
+        "near_extremizer_actual_over_pi": 0.14896830265763905,
+        "slack": 0.037857191546527974,
+        "satisfied": true
+      },
+      {
+        "r": 0.45,
+        "theoremA_bound_over_pi": 0.05263157894736841,
+        "near_extremizer_actual_over_pi": 0.1047171456932593,
+        "slack": 0.052085566745890884,
+        "satisfied": true
+      }
+    ],
+    "statement": "|{rho > r}| / pi  >=  (1-2r)/(1+2r)  for a selector with m == 0",
+    "all_satisfied": true,
+    "min_slack": 0.037857191546527974,
+    "evidence": "numeric"
+  },
+  "spectra": {
+    "endpoint_compression": [
+      {
+        "scale_m": 1,
+        "n_tiles": 2,
+        "min": 0.14393615825792117,
+        "q05": 0.14393615825792117,
+        "median": 1.856063841742003,
+        "max": 1.856063841742003,
+        "mean_ratio_must_be_one": 0.999999999999962,
+        "hall_expansion_lambda_m": 0.14393615825792117,
+        "packing_mass_of_compressed_tiles": 0.5,
+        "image_mass_of_compressed_tiles": 0.07196807912896058
+      },
+      {
+        "scale_m": 2,
+        "n_tiles": 4,
+        "min": 0.05940648587116426,
+        "q05": 0.05940648587116426,
+        "median": 0.7324956662873816,
+        "max": 2.9796320171966246,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.05940648587116426,
+        "packing_mass_of_compressed_tiles": 0.5,
+        "image_mass_of_compressed_tiles": 0.07196807912896058
+      },
+      {
+        "scale_m": 3,
+        "n_tiles": 8,
+        "min": 0.023105274831246914,
+        "q05": 0.023105274831246914,
+        "median": 0.5294314368606075,
+        "max": 4.1908807880160115,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.023105274831246914,
+        "packing_mass_of_compressed_tiles": 0.5,
+        "image_mass_of_compressed_tiles": 0.07196807912896058
+      },
+      {
+        "scale_m": 4,
+        "n_tiles": 16,
+        "min": 0.010029183294053445,
+        "q05": 0.010029183294053445,
+        "median": 0.4523178240631589,
+        "max": 5.204591460483366,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.010029183294053445,
+        "packing_mass_of_compressed_tiles": 0.5625,
+        "image_mass_of_compressed_tiles": 0.10023794313290801
+      },
+      {
+        "scale_m": 6,
+        "n_tiles": 64,
+        "min": 0.007162164878611543,
+        "q05": 0.010148755207831872,
+        "median": 0.402396860852015,
+        "max": 6.293771967830473,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.007162164878611543,
+        "packing_mass_of_compressed_tiles": 0.546875,
+        "image_mass_of_compressed_tiles": 0.09235660370415522
+      },
+      {
+        "scale_m": 8,
+        "n_tiles": 256,
+        "min": 0.006968541654022609,
+        "q05": 0.011598640450914743,
+        "median": 0.3909191352383914,
+        "max": 6.630237485141521,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.006968541654022609,
+        "packing_mass_of_compressed_tiles": 0.5546875,
+        "image_mass_of_compressed_tiles": 0.09622444032888117
+      },
+      {
+        "scale_m": 10,
+        "n_tiles": 1024,
+        "min": 0.006953990003612631,
+        "q05": 0.012495485055161737,
+        "median": 0.3881113580899296,
+        "max": 6.7193374180884575,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.006953990003612631,
+        "packing_mass_of_compressed_tiles": 0.552734375,
+        "image_mass_of_compressed_tiles": 0.09524399660811694
+      },
+      {
+        "scale_m": 12,
+        "n_tiles": 4096,
+        "min": 0.006953079044038191,
+        "q05": 0.012541982449590705,
+        "median": 0.387413254044759,
+        "max": 6.74194327698433,
+        "mean_ratio_must_be_one": 0.9999999999999621,
+        "hall_expansion_lambda_m": 0.006953079044038191,
+        "packing_mass_of_compressed_tiles": 0.552978515625,
+        "image_mass_of_compressed_tiles": 0.09536605655755143
+      }
+    ],
+    "interior_contact_compression": [
+      {
+        "scale_m": 1,
+        "n_tiles": 2,
+        "min": 0.1570432898473233,
+        "q05": 0.1570432898473233,
+        "median": 1.8429567101526794,
+        "max": 1.8429567101526794,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 0.1570432898473233,
+        "packing_mass_of_compressed_tiles": 0.5,
+        "image_mass_of_compressed_tiles": 0.07852164492366165
+      },
+      {
+        "scale_m": 2,
+        "n_tiles": 4,
+        "min": 0.05689696965852614,
+        "q05": 0.05689696965852614,
+        "median": 0.7050432781520506,
+        "max": 2.980870142153308,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 0.05689696965852614,
+        "packing_mass_of_compressed_tiles": 0.5,
+        "image_mass_of_compressed_tiles": 0.07852164492366165
+      },
+      {
+        "scale_m": 3,
+        "n_tiles": 8,
+        "min": 0.0215831262023789,
+        "q05": 0.0215831262023789,
+        "median": 0.5210899045872766,
+        "max": 4.239280893234737,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 0.0215831262023789,
+        "packing_mass_of_compressed_tiles": 0.5,
+        "image_mass_of_compressed_tiles": 0.07852164492366165
+      },
+      {
+        "scale_m": 4,
+        "n_tiles": 16,
+        "min": 0.008611140405540896,
+        "q05": 0.008611140405540896,
+        "median": 0.4575038522254826,
+        "max": 5.335098317391848,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 0.008611140405540896,
+        "packing_mass_of_compressed_tiles": 0.5625,
+        "image_mass_of_compressed_tiles": 0.10711563568775431
+      },
+      {
+        "scale_m": 6,
+        "n_tiles": 64,
+        "min": 0.001667614064248757,
+        "q05": 0.010643119296170678,
+        "median": 0.4175024409170618,
+        "max": 6.58905808448668,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 0.001667614064248757,
+        "packing_mass_of_compressed_tiles": 0.5625,
+        "image_mass_of_compressed_tiles": 0.10711563568775431
+      },
+      {
+        "scale_m": 8,
+        "n_tiles": 256,
+        "min": 0.0003833456993653228,
+        "q05": 0.012693923223614512,
+        "median": 0.40831706173658944,
+        "max": 6.995808564264308,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 0.0003833456993653228,
+        "packing_mass_of_compressed_tiles": 0.5546875,
+        "image_mass_of_compressed_tiles": 0.10315502824381592
+      },
+      {
+        "scale_m": 10,
+        "n_tiles": 1024,
+        "min": 9.368153774363952e-05,
+        "q05": 0.014330282203964373,
+        "median": 0.4060660337449349,
+        "max": 7.1051639616291595,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 9.368153774363952e-05,
+        "packing_mass_of_compressed_tiles": 0.5546875,
+        "image_mass_of_compressed_tiles": 0.10315502824381592
+      },
+      {
+        "scale_m": 12,
+        "n_tiles": 4096,
+        "min": 2.3284773776610646e-05,
+        "q05": 0.014469542308447103,
+        "median": 0.40550602916198386,
+        "max": 7.133019996314033,
+        "mean_ratio_must_be_one": 1.0000000000000013,
+        "hall_expansion_lambda_m": 2.3284773776610646e-05,
+        "packing_mass_of_compressed_tiles": 0.554931640625,
+        "image_mass_of_compressed_tiles": 0.10327698403897645
+      }
+    ],
+    "endpoint_jacobian_min_J_over_H2": 0.006953020562788721,
+    "far_endpoint_images": {
+      "zeta_switch": 0.4999999999999998,
+      "y_switch": 0.0719680791289603,
+      "leading_far_image": 0.0719680791289603,
+      "trailing_far_image": 0.9280319208710397,
+      "image_overlap": 0.0719680791289603,
+      "union_of_far_images": 0.9280319208710397
+    },
+    "evidence": "numeric"
+  },
+  "finite_cell_reconstruction": {
+    "rows": [
+      {
+        "n": 51,
+        "M": 1200,
+        "Nt": 8000,
+        "r_threshold": 0.05,
+        "mode": "full",
+        "normalised_area_lower": 0.0905686021028775,
+        "rho_min": 0.14680756444054321,
+        "rho_max": 0.8419674421787748,
+        "pair_sum_min": 0.10453386650238432,
+        "pair_sum_at_quarter": 0.10453386650238432,
+        "sup_h": 0.013183352114390963,
+        "sup_m_dist": 0.013183352114390963,
+        "min_Rmax": 0.500218496083,
+        "sup_delta_defect": 0.05272119383110656
+      },
+      {
+        "n": 101,
+        "M": 1200,
+        "Nt": 8000,
+        "r_threshold": 0.05,
+        "mode": "full",
+        "normalised_area_lower": 0.09050943129814434,
+        "rho_min": 0.14666831617557172,
+        "rho_max": 0.8419674421558057,
+        "pair_sum_min": 0.10445908559966452,
+        "pair_sum_at_quarter": 0.10445908559966452,
+        "sup_h": 0.006656940176573655,
+        "sup_m_dist": 0.006656940176573655,
+        "min_Rmax": 0.5000890499731829,
+        "sup_delta_defect": 0.02662618774635655
+      },
+      {
+        "n": 201,
+        "M": 1200,
+        "Nt": 8000,
+        "r_threshold": 0.05,
+        "mode": "full",
+        "normalised_area_lower": 0.09049396261867412,
+        "rho_min": 0.1466327293280152,
+        "rho_max": 0.8419674420101926,
+        "pair_sum_min": 0.10443996866500313,
+        "pair_sum_at_quarter": 0.10443996866500313,
+        "sup_h": 0.0033450296409648717,
+        "sup_m_dist": 0.0033450296409648717,
+        "min_Rmax": 0.5000559291457958,
+        "sup_delta_defect": 0.013379919058833002
+      },
+      {
+        "n": 401,
+        "M": 1200,
+        "Nt": 8000,
+        "r_threshold": 0.05,
+        "mode": "full",
+        "normalised_area_lower": 0.09049001350690061,
+        "rho_min": 0.1466237308173875,
+        "rho_max": 0.8419674427354014,
+        "pair_sum_min": 0.10443513438225967,
+        "pair_sum_at_quarter": 0.10443513438225967,
+        "sup_h": 0.001676685680383888,
+        "sup_m_dist": 0.001676685680383888,
+        "min_Rmax": 0.5000475520642381,
+        "sup_delta_defect": 0.006706717636075452
+      },
+      {
+        "n": 801,
+        "M": 1200,
+        "Nt": 8000,
+        "r_threshold": 0.05,
+        "mode": "full",
+        "normalised_area_lower": 0.09048931022654791,
+        "rho_min": 0.14662146819364022,
+        "rho_max": 0.8419674425868036,
+        "pair_sum_min": 0.10443391880657658,
+        "pair_sum_at_quarter": 0.10443391880657658,
+        "sup_h": 0.0008393894604668403,
+        "sup_m_dist": 0.0008393894604668403,
+        "min_Rmax": 0.5000454455599336,
+        "sup_delta_defect": 0.0033575547145564015
+      }
+    ],
+    "note": "rho is sampled on a finite angular grid, so the reported value is a lower bound for the area of the LITERAL finite-cell set E_n; E_n itself lies above the n -> infinity continuum limit, so the table should decrease toward the continuum target from above as n grows",
+    "continuum_target": 0.09047781112467895,
+    "evidence": "numeric"
+  },
+  "sliver_covering_probe": {
+    "rows": [
+      {
+        "mu": 0.1,
+        "N": 600,
+        "seeded_periodic_starts": 4,
+        "greedy_best_density_grid": 0.7833333333333333,
+        "greedy_best_density_continuum_feasible": 0.8333333333333334,
+        "proved_sharp_density": 0.8333333333333334,
+        "grid_artifact_gap": 0.050000000000000044,
+        "falsified": false,
+        "note": "grid feasibility over-counts each component by up to one cell; only solutions satisfying the exact continuum budget sum |C|(1+2mu) >= L can falsify the lemma"
+      },
+      {
+        "mu": 0.25,
+        "N": 600,
+        "seeded_periodic_starts": 6,
+        "greedy_best_density_grid": 0.5316666666666666,
+        "greedy_best_density_continuum_feasible": 0.6666666666666666,
+        "proved_sharp_density": 0.6666666666666666,
+        "grid_artifact_gap": 0.135,
+        "falsified": false,
+        "note": "grid feasibility over-counts each component by up to one cell; only solutions satisfying the exact continuum budget sum |C|(1+2mu) >= L can falsify the lemma"
+      },
+      {
+        "mu": 0.5,
+        "N": 600,
+        "seeded_periodic_starts": 6,
+        "greedy_best_density_grid": 0.425,
+        "greedy_best_density_continuum_feasible": 0.5,
+        "proved_sharp_density": 0.5,
+        "grid_artifact_gap": 0.07500000000000001,
+        "falsified": false,
+        "note": "grid feasibility over-counts each component by up to one cell; only solutions satisfying the exact continuum budget sum |C|(1+2mu) >= L can falsify the lemma"
+      },
+      {
+        "mu": 1.0,
+        "N": 600,
+        "seeded_periodic_starts": 6,
+        "greedy_best_density_grid": 0.3333333333333333,
+        "greedy_best_density_continuum_feasible": 0.3333333333333333,
+        "proved_sharp_density": 0.3333333333333333,
+        "grid_artifact_gap": 0.0,
+        "falsified": false,
+        "note": "grid feasibility over-counts each component by up to one cell; only solutions satisfying the exact continuum budget sum |C|(1+2mu) >= L can falsify the lemma"
+      },
+      {
+        "mu": 2.0,
+        "N": 600,
+        "seeded_periodic_starts": 6,
+        "greedy_best_density_grid": 0.2,
+        "greedy_best_density_continuum_feasible": 0.2,
+        "proved_sharp_density": 0.2,
+        "grid_artifact_gap": 0.0,
+        "falsified": false,
+        "note": "grid feasibility over-counts each component by up to one cell; only solutions satisfying the exact continuum budget sum |C|(1+2mu) >= L can falsify the lemma"
+      }
+    ],
+    "evidence": "numeric",
+    "proved_bound": "|U| >= L/(1+2mu), sharp"
+  },
+  "theorem_a_geometric_probe": {
+    "rows": [
+      {
+        "r": 0.05,
+        "R": 0.5,
+        "theoremA_density_bound": 0.8181818181818181,
+        "minimal_feasible_periodic_density": 0.8406900448580927,
+        "slack": 0.022508226676274612,
+        "falsified": false
+      },
+      {
+        "r": 0.1,
+        "R": 0.5,
+        "theoremA_density_bound": 0.6666666666666667,
+        "minimal_feasible_periodic_density": 0.6988664068194339,
+        "slack": 0.032199740152767165,
+        "falsified": false
+      },
+      {
+        "r": 0.2,
+        "R": 0.5,
+        "theoremA_density_bound": 0.4285714285714286,
+        "minimal_feasible_periodic_density": 0.46095497553415044,
+        "slack": 0.03238354696272183,
+        "falsified": false
+      },
+      {
+        "r": 0.3,
+        "R": 0.5,
+        "theoremA_density_bound": 0.25,
+        "minimal_feasible_periodic_density": 0.2723967408310273,
+        "slack": 0.022396740831027273,
+        "falsified": false
+      },
+      {
+        "r": 0.4,
+        "R": 0.5,
+        "theoremA_density_bound": 0.11111111111111108,
+        "minimal_feasible_periodic_density": 0.12230773173087073,
+        "slack": 0.01119662061975965,
+        "falsified": false
+      }
+    ],
+    "note": "adversary may choose h and the side per direction; the sliver shape is the rigid arcsin pair, so the achievable density is at least the Theorem-A density",
+    "evidence": "numeric"
+  },
+  "finite_schedule_seven_hundredths": {
+    "eta": 0.14,
+    "area_bound": 0.07,
+    "coefficient_over_pi": 0.022281692032865348,
+    "common_rational_coefficient": 0.02228228228228228,
+    "radii": [
+      0.5,
+      0.5003,
+      0.5012,
+      0.5027,
+      0.5048,
+      0.5075,
+      0.5109,
+      0.5147
+    ],
+    "endpoints": [
+      0.0175,
+      0.3355,
+      0.3419,
+      0.352,
+      0.3661,
+      0.3841,
+      0.4075,
+      0.4392,
+      0.5147
+    ],
+    "rows": [
+      {
+        "j": 0,
+        "m_upper": 0.0175,
+        "payment": 0.02236258855203782,
+        "margin_over_common": 8.030626975553956e-05
+      },
+      {
+        "j": 1,
+        "m_upper": 0.035,
+        "payment": 0.022368073300774727,
+        "margin_over_common": 8.579101849244541e-05
+      },
+      {
+        "j": 2,
+        "m_upper": 0.0525,
+        "payment": 0.02236426623021248,
+        "margin_over_common": 8.198394793020036e-05
+      },
+      {
+        "j": 3,
+        "m_upper": 0.07,
+        "payment": 0.022371334817996413,
+        "margin_over_common": 8.905253571413196e-05
+      },
+      {
+        "j": 4,
+        "m_upper": 0.0875,
+        "payment": 0.02236427515086814,
+        "margin_over_common": 8.199286858585897e-05
+      },
+      {
+        "j": 5,
+        "m_upper": 0.105,
+        "payment": 0.022369292841597443,
+        "margin_over_common": 8.70105593151621e-05
+      },
+      {
+        "j": 6,
+        "m_upper": 0.1225,
+        "payment": 0.02237343030043415,
+        "margin_over_common": 9.114801815186813e-05
+      },
+      {
+        "j": 7,
+        "m_upper": 0.14,
+        "payment": 0.022383889758268438,
+        "margin_over_common": 0.00010160747598615683
+      }
+    ],
+    "minimum_low_payment": 0.02236258855203782,
+    "minimum_low_margin_over_common": 8.030626975553956e-05,
+    "high_uniform_lower": 0.02447838202247191,
+    "high_margin_over_common": 0.0021960997401896283,
+    "evidence": "exact-formula numeric mirror; see exact Fraction certificate"
+  },
+  "finite_schedule_141_over_2000": {
+    "eta": 0.141046,
+    "area_bound": 0.0705,
+    "coefficient_over_pi": 0.022440846975957246,
+    "common_rational_coefficient": 0.022447,
+    "class_upper_endpoints": [
+      0.027226,
+      0.03859,
+      0.047324,
+      0.054682,
+      0.061151,
+      0.066981,
+      0.072321,
+      0.077266,
+      0.081884,
+      0.086225,
+      0.090323,
+      0.094208,
+      0.0979,
+      0.101419,
+      0.104778,
+      0.107987,
+      0.111058,
+      0.113996,
+      0.116807,
+      0.119496,
+      0.122066,
+      0.124519,
+      0.126854,
+      0.129071,
+      0.131166,
+      0.133135,
+      0.134969,
+      0.136656,
+      0.138174,
+      0.139487,
+      0.140523,
+      0.141046
+    ],
+    "radii": [
+      0.5,
+      0.50074,
+      0.501486,
+      0.502234,
+      0.502981,
+      0.503725,
+      0.504466,
+      0.505203,
+      0.505934,
+      0.50666,
+      0.50738,
+      0.508092,
+      0.508797,
+      0.509494,
+      0.510182,
+      0.51086,
+      0.511528,
+      0.512185,
+      0.51283,
+      0.513462,
+      0.514081,
+      0.514684,
+      0.515271,
+      0.515841,
+      0.51639,
+      0.516918,
+      0.517421,
+      0.517896,
+      0.518338,
+      0.51874,
+      0.519092,
+      0.519371
+    ],
+    "switches": [
+      0.027226,
+      0.339842,
+      0.344933,
+      0.349939,
+      0.354888,
+      0.359794,
+      0.364671,
+      0.369526,
+      0.374368,
+      0.379204,
+      0.38404,
+      0.388883,
+      0.39374,
+      0.398615,
+      0.403517,
+      0.408452,
+      0.413428,
+      0.418453,
+      0.423537,
+      0.42869,
+      0.433923,
+      0.439251,
+      0.444691,
+      0.450264,
+      0.455995,
+      0.461917,
+      0.468075,
+      0.474531,
+      0.481375,
+      0.488752,
+      0.496925,
+      0.506472,
+      0.519371
+    ],
+    "rows": [
+      {
+        "j": 0,
+        "m_upper": 0.027226,
+        "payment": 0.022448095162151738,
+        "margin_over_common": 1.095162151736051e-06
+      },
+      {
+        "j": 1,
+        "m_upper": 0.03859,
+        "payment": 0.022448090083767636,
+        "margin_over_common": 1.0900837676339203e-06
+      },
+      {
+        "j": 2,
+        "m_upper": 0.047324,
+        "payment": 0.02244805197346278,
+        "margin_over_common": 1.0519734627775779e-06
+      },
+      {
+        "j": 3,
+        "m_upper": 0.054682,
+        "payment": 0.022448079122511178,
+        "margin_over_common": 1.0791225111758673e-06
+      },
+      {
+        "j": 4,
+        "m_upper": 0.061151,
+        "payment": 0.022448037477624194,
+        "margin_over_common": 1.0374776241925399e-06
+      },
+      {
+        "j": 5,
+        "m_upper": 0.066981,
+        "payment": 0.02244806930021276,
+        "margin_over_common": 1.0693002127568074e-06
+      },
+      {
+        "j": 6,
+        "m_upper": 0.072321,
+        "payment": 0.022448015921387954,
+        "margin_over_common": 1.01592138795209e-06
+      },
+      {
+        "j": 7,
+        "m_upper": 0.077266,
+        "payment": 0.02244803564437281,
+        "margin_over_common": 1.0356443728085085e-06
+      },
+      {
+        "j": 8,
+        "m_upper": 0.081884,
+        "payment": 0.022448071991039154,
+        "margin_over_common": 1.0719910391518428e-06
+      },
+      {
+        "j": 9,
+        "m_upper": 0.086225,
+        "payment": 0.022448008634490813,
+        "margin_over_common": 1.0086344908108447e-06
+      },
+      {
+        "j": 10,
+        "m_upper": 0.090323,
+        "payment": 0.022448027287694627,
+        "margin_over_common": 1.0272876946257337e-06
+      },
+      {
+        "j": 11,
+        "m_upper": 0.094208,
+        "payment": 0.02244804084292351,
+        "margin_over_common": 1.0408429235095329e-06
+      },
+      {
+        "j": 12,
+        "m_upper": 0.0979,
+        "payment": 0.022448058846764873,
+        "margin_over_common": 1.0588467648717237e-06
+      },
+      {
+        "j": 13,
+        "m_upper": 0.101419,
+        "payment": 0.02244803855058075,
+        "margin_over_common": 1.0385505807494755e-06
+      },
+      {
+        "j": 14,
+        "m_upper": 0.104778,
+        "payment": 0.02244799838628414,
+        "margin_over_common": 9.983862841386748e-07
+      },
+      {
+        "j": 15,
+        "m_upper": 0.107987,
+        "payment": 0.022448052252264428,
+        "margin_over_common": 1.0522522644260124e-06
+      },
+      {
+        "j": 16,
+        "m_upper": 0.111058,
+        "payment": 0.022447991004356627,
+        "margin_over_common": 9.910043566249693e-07
+      },
+      {
+        "j": 17,
+        "m_upper": 0.113996,
+        "payment": 0.02244800757012677,
+        "margin_over_common": 1.007570126769497e-06
+      },
+      {
+        "j": 18,
+        "m_upper": 0.116807,
+        "payment": 0.022448063300286147,
+        "margin_over_common": 1.0633002861457075e-06
+      },
+      {
+        "j": 19,
+        "m_upper": 0.119496,
+        "payment": 0.022448069102632418,
+        "margin_over_common": 1.0691026324158304e-06
+      },
+      {
+        "j": 20,
+        "m_upper": 0.122066,
+        "payment": 0.022448060289267935,
+        "margin_over_common": 1.0602892679331677e-06
+      },
+      {
+        "j": 21,
+        "m_upper": 0.124519,
+        "payment": 0.02244801381325867,
+        "margin_over_common": 1.0138132586698378e-06
+      },
+      {
+        "j": 22,
+        "m_upper": 0.126854,
+        "payment": 0.022448040236589473,
+        "margin_over_common": 1.0402365894709997e-06
+      },
+      {
+        "j": 23,
+        "m_upper": 0.129071,
+        "payment": 0.02244802823558506,
+        "margin_over_common": 1.0282355850585456e-06
+      },
+      {
+        "j": 24,
+        "m_upper": 0.131166,
+        "payment": 0.02244805164015773,
+        "margin_over_common": 1.0516401577273515e-06
+      },
+      {
+        "j": 25,
+        "m_upper": 0.133135,
+        "payment": 0.022448042838750237,
+        "margin_over_common": 1.0428387502356418e-06
+      },
+      {
+        "j": 26,
+        "m_upper": 0.134969,
+        "payment": 0.02244806148150008,
+        "margin_over_common": 1.0614815000795086e-06
+      },
+      {
+        "j": 27,
+        "m_upper": 0.136656,
+        "payment": 0.022448014991343468,
+        "margin_over_common": 1.0149913434662206e-06
+      },
+      {
+        "j": 28,
+        "m_upper": 0.138174,
+        "payment": 0.022448003689357343,
+        "margin_over_common": 1.003689357341464e-06
+      },
+      {
+        "j": 29,
+        "m_upper": 0.139487,
+        "payment": 0.02244806025770496,
+        "margin_over_common": 1.0602577049587114e-06
+      },
+      {
+        "j": 30,
+        "m_upper": 0.140523,
+        "payment": 0.022448050691624588,
+        "margin_over_common": 1.0506916245864306e-06
+      },
+      {
+        "j": 31,
+        "m_upper": 0.141046,
+        "payment": 0.02244802297809345,
+        "margin_over_common": 1.0229780934498112e-06
+      }
+    ],
+    "minimum_low_payment": 0.022447991004356627,
+    "minimum_low_margin_over_common": 9.910043566249693e-07,
+    "height_margin_over_target": 2.3000000000009124e-05,
+    "high_uniform_lower": 0.02445696478642285,
+    "high_margin_over_common": 0.00200996478642285,
+    "gain_over_7_100": 0.0004999999999999866,
+    "evidence": "32-segment exact-formula numeric mirror; see exact Fraction certificate"
+  },
+  "finite_schedule_variational": {
+    "exact_constant": "C_FS = sup over all admissible finite schedules",
+    "theorem": "L*(E) >= C_FS for every star-shaped Kakeya set",
+    "certified_explicit_lower": 0.0705,
+    "formal_bvp_numeric_candidate": 0.0705668,
+    "candidate_status": "not a validated enclosure or proved approximation of C_FS",
+    "evidence": "see FINITE-SCHEDULE-VARIATIONAL.md"
+  },
+  "target_ledger": {
+    "published_lower_over_pi": 0.02096,
+    "certified_upper_ceiling_over_pi": 0.090477812,
+    "headroom_ratio_ceiling_over_published": 4.316689503816794,
+    "theoremA_coefficient_r0_zero": 0.028426409720027357,
+    "theoremA_break_even_r0": 0.14874204084764187,
+    "theoremA_scope": "class-scoped: every selected needle has m(theta)<=r0",
+    "intermediate_universal_area_bound": 0.06666666666666667,
+    "intermediate_universal_coefficient_over_pi": 0.02122065907891938,
+    "optimized_universal_area_bound": 0.06868,
+    "optimized_universal_coefficient_over_pi": 0.021861522983102746,
+    "optimized_relative_gain_over_published": 0.04301159270528365,
+    "intermediate_seven_hundredths_area_bound": 0.07,
+    "exact_variational_headline": "C_FS",
+    "certified_explicit_area_lower": 0.0705,
+    "certified_explicit_coefficient_over_pi": 0.022440846975957246,
+    "explicit_gain_over_7_100": 0.0004999999999999866,
+    "rows": [
+      {
+        "r0": 0.0,
+        "capacity_coefficient_over_pi": 0.028426409720027357,
+        "beats_published_131_over_6250": true,
+        "ratio_to_published": 1.3562218377875648,
+        "fraction_of_certified_ceiling": 0.314181002962664
+      },
+      {
+        "r0": 0.03125,
+        "capacity_coefficient_over_pi": 0.027977001878244777,
+        "beats_published_131_over_6250": true,
+        "ratio_to_published": 1.33478062396206,
+        "fraction_of_certified_ceiling": 0.3092139526787493
+      },
+      {
+        "r0": 0.0625,
+        "capacity_coefficient_over_pi": 0.026771052548219085,
+        "beats_published_131_over_6250": true,
+        "ratio_to_published": 1.277244873483735,
+        "fraction_of_certified_ceiling": 0.29588527790900915
+      },
+      {
+        "r0": 0.125,
+        "capacity_coefficient_over_pi": 0.02281068537713224,
+        "beats_published_131_over_6250": true,
+        "ratio_to_published": 1.0882960580692862,
+        "fraction_of_certified_ceiling": 0.2521135831305496
+      },
+      {
+        "r0": 0.1475,
+        "capacity_coefficient_over_pi": 0.02105988229577785,
+        "beats_published_131_over_6250": true,
+        "ratio_to_published": 1.0047653767069584,
+        "fraction_of_certified_ceiling": 0.2327629485091643
+      },
+      {
+        "r0": 0.1875,
+        "capacity_coefficient_over_pi": 0.01773140027929465,
+        "beats_published_131_over_6250": false,
+        "ratio_to_published": 0.8459637537831418,
+        "fraction_of_certified_ceiling": 0.195975122379116
+      },
+      {
+        "r0": 0.25,
+        "capacity_coefficient_over_pi": 0.01240896377410955,
+        "beats_published_131_over_6250": false,
+        "ratio_to_published": 0.5920307144136235,
+        "fraction_of_certified_ceiling": 0.13714924686849797
+      }
+    ],
+    "route_ceilings": {
+      "uniform_radial_floor_route": 0.02149763303983356,
+      "antipodal_pair_floor_universal": 0.0,
+      "antipodal_pair_floor_near_extremizer_diagnostic": 0.052216756147724905,
+      "endpoint_only_route": 0.0,
+      "explanation": "near-extremizer values are diagnostics only; explicit legal adversaries determine whether a route survives universally"
+    },
+    "evidence": "numeric"
+  },
+  "adversary_endpoint_collapse": {
+    "family": "a = kappa(1-2t)/2, s = gamma t(1-t), gamma = (1+kappa)/2",
+    "rows": [
+      {
+        "kappa": 0.0,
+        "gamma": 0.5,
+        "endpoint_branch_int_J": 0.25,
+        "stationary_branch_int": 0.031048583502539945,
+        "H_max": 0.5,
+        "H_min": 0.5,
+        "shape_feasible_H_minus_sp": 0.0
+      },
+      {
+        "kappa": 0.25,
+        "gamma": 0.625,
+        "endpoint_branch_int_J": 0.20312499999999997,
+        "stationary_branch_int": 0.04851341172271866,
+        "H_max": 0.625,
+        "H_min": 0.375,
+        "shape_feasible_H_minus_sp": 0.0
+      },
+      {
+        "kappa": 0.7071067811865475,
+        "gamma": 0.8535533905932737,
+        "endpoint_branch_int_J": 0.0904822031355754,
+        "stationary_branch_int": 0.09048220313557544,
+        "H_max": 0.8535533905932737,
+        "H_min": 0.14644660940672627,
+        "shape_feasible_H_minus_sp": 0.0
+      },
+      {
+        "kappa": 0.85,
+        "gamma": 0.925,
+        "endpoint_branch_int_J": 0.04812499999999997,
+        "stationary_branch_int": 0.10626377703744297,
+        "H_max": 0.925,
+        "H_min": 0.07500000000000001,
+        "shape_feasible_H_minus_sp": 0.0
+      },
+      {
+        "kappa": 0.95,
+        "gamma": 0.975,
+        "endpoint_branch_int_J": 0.016458333333333353,
+        "stationary_branch_int": 0.11806223876840813,
+        "H_max": 0.975,
+        "H_min": 0.025000000000000022,
+        "shape_feasible_H_minus_sp": 0.0
+      },
+      {
+        "kappa": 0.99,
+        "gamma": 0.995,
+        "endpoint_branch_int_J": 0.0033250000000000224,
+        "stationary_branch_int": 0.12295549552840844,
+        "H_max": 0.995,
+        "H_min": 0.0050000000000000044,
+        "shape_feasible_H_minus_sp": 0.0
+      },
+      {
+        "kappa": 1.0,
+        "gamma": 1.0,
+        "endpoint_branch_int_J": 0.0,
+        "stationary_branch_int": 0.12419433401015978,
+        "H_max": 1.0,
+        "H_min": 0.0,
+        "shape_feasible_H_minus_sp": 0.0
+      }
+    ],
+    "verdict": "endpoint branch int J -> 0 as kappa -> 1 while the interior-contact branch stays bounded below: any endpoint-only capacity functional collapses",
+    "cs_baseline_kappa": 0.7071067811865475,
+    "cs_baseline_endpoint_value": 0.0904822031355754,
+    "evidence": "exact-closed-form"
+  },
+  "adversary_astroid": {
+    "normalised_capacity": 0.37499764514189077,
+    "exact_astroid_normalised": 0.375,
+    "endpoint_arg_atoms": 4,
+    "endpoint_only_capacity": 0.0,
+    "rho_min": 0.5000000856736694,
+    "rho_max": 0.9903342213236015,
+    "evidence": "numeric"
+  },
+  "adversary_far_needles": {
+    "rows": [
+      {
+        "T": 1.0,
+        "eta": 0.001,
+        "A": 0.500000999999,
+        "B": 1.5000003333332963,
+        "m_dist": 0.500000999999,
+        "M_dist": 1.5000003333332963,
+        "lambda": 0.33333392592513583,
+        "sliver_payment_over_pi": 0.17540686924985877,
+        "triangle_area": 0.0005,
+        "M2_minus_m2": 2.0
+      },
+      {
+        "T": 2.0,
+        "eta": 0.001,
+        "A": 1.5000003333332963,
+        "B": 2.500000199999992,
+        "m_dist": 1.5000003333332963,
+        "M_dist": 2.500000199999992,
+        "lambda": 0.6000000853333136,
+        "sliver_payment_over_pi": 0.21070556228528564,
+        "triangle_area": 0.0005,
+        "M2_minus_m2": 4.000000000000001
+      },
+      {
+        "T": 10.0,
+        "eta": 0.001,
+        "A": 9.500000052631579,
+        "B": 10.500000047619048,
+        "m_dist": 9.500000052631579,
+        "M_dist": 10.500000047619048,
+        "lambda": 0.9047619056712074,
+        "sliver_payment_over_pi": 0.24176879829802364,
+        "triangle_area": 0.0005,
+        "M2_minus_m2": 20.0
+      },
+      {
+        "T": 100.0,
+        "eta": 0.001,
+        "A": 99.50000000502513,
+        "B": 100.50000000497512,
+        "m_dist": 99.50000000502513,
+        "M_dist": 100.50000000497512,
+        "lambda": 0.9900497512447712,
+        "sliver_payment_over_pi": 0.2491677062299844,
+        "triangle_area": 0.0005,
+        "M2_minus_m2": 199.99999999999818
+      },
+      {
+        "T": 10.0,
+        "eta": 10.0,
+        "A": 13.793114224133722,
+        "B": 14.5,
+        "m_dist": 13.793114224133722,
+        "M_dist": 14.5,
+        "lambda": 0.9512492568368084,
+        "sliver_payment_over_pi": 0.12285401320019812,
+        "triangle_area": 5.0,
+        "M2_minus_m2": 19.99999999999997
+      },
+      {
+        "T": 100.0,
+        "eta": 100.0,
+        "A": 141.06824589538215,
+        "B": 141.77535046685654,
+        "m_dist": 141.06824589538215,
+        "M_dist": 141.77535046685654,
+        "lambda": 0.9950124999222647,
+        "sliver_payment_over_pi": 0.12479101809471563,
+        "triangle_area": 50.0,
+        "M2_minus_m2": 199.99999999999272
+      }
+    ],
+    "note": "m^2 + 1/4 <= M^2 always; the perpendicular far needle has h = m so the elementary triangle bound h/2 takes over",
+    "evidence": "exact-closed-form"
+  },
+  "adversary_far_common_center": {
+    "family": "N_theta=(R,0)+[-1/2,1/2]e(theta); E=conv(0,B((R,0),1/2))",
+    "rows": [
+      {
+        "R": 0.51,
+        "support_half_angle": 1.3724418046360918,
+        "projective_pair_nonzero_support_length": 2.7448836092721836,
+        "projective_pair_zero_interval_length": 0.39670904431760956,
+        "pointwise_pair_floor": 0.0,
+        "essential_pair_floor": 0.0,
+        "star_hull_area": 0.7860589109633516,
+        "full_projective_pair_integral": 1.5721178219267031
+      },
+      {
+        "R": 1.0,
+        "support_half_angle": 0.5235987755982989,
+        "projective_pair_nonzero_support_length": 1.0471975511965979,
+        "projective_pair_zero_interval_length": 2.0943951023931953,
+        "pointwise_pair_floor": 0.0,
+        "essential_pair_floor": 0.0,
+        "star_hull_area": 0.9566114774905182,
+        "full_projective_pair_integral": 1.9132229549810364
+      },
+      {
+        "R": 2.0,
+        "support_half_angle": 0.25268025514207865,
+        "projective_pair_nonzero_support_length": 0.5053605102841573,
+        "projective_pair_zero_interval_length": 2.636232143305636,
+        "pointwise_pair_floor": 0.0,
+        "essential_pair_floor": 0.0,
+        "star_hull_area": 1.424114982036098,
+        "full_projective_pair_integral": 2.848229964072196
+      },
+      {
+        "R": 10.0,
+        "support_half_angle": 0.050020856805770016,
+        "projective_pair_nonzero_support_length": 0.10004171361154003,
+        "projective_pair_zero_interval_length": 3.041550939978253,
+        "pointwise_pair_floor": 0.0,
+        "essential_pair_floor": 0.0,
+        "star_hull_area": 5.398950384759711,
+        "full_projective_pair_integral": 10.797900769519423
+      },
+      {
+        "R": 100.0,
+        "support_half_angle": 0.005000020833567712,
+        "projective_pair_nonzero_support_length": 0.010000041667135424,
+        "projective_pair_zero_interval_length": 3.131592611922658,
+        "pointwise_pair_floor": 0.0,
+        "essential_pair_floor": 0.0,
+        "star_hull_area": 50.39332408300081,
+        "full_projective_pair_integral": 100.78664816600163
+      }
+    ],
+    "verdict": "pointwise, a.e., essential-inf, quantile, and fixed local-average antipodal floors have best universal constant zero; full-angle average is exactly twice radial capacity",
+    "evidence": "exact-closed-form"
+  },
+  "adversary_zero_height": {
+    "min_A2_plus_B2": 0.5,
+    "attained_at_A": 0.5,
+    "capacity_lower_over_pi": 0.125,
+    "sharp_capacity_over_pi": 0.25,
+    "evidence": "numeric"
+  },
+  "mutations": {
+    "MUT-1-remove-pairing": {
+      "check": "replace the paired chord constraint A^2 + B^2 >= 1/2 by the unpaired endpoint marginal max(A,B) >= 1/2",
+      "zero_height_paired_capacity_over_pi": 0.25,
+      "zero_height_unpaired_capacity_over_pi": 0.125,
+      "ratio": 0.5,
+      "gate": "sharp constant for the h == 0 class",
+      "visibly_changed": true,
+      "secondary_finite_cell_witness": {
+        "note": "the rational-seven near-extremizer is pairing-symmetric (its two far-endpoint images nest), so dropping one endpoint family is almost invisible there; the mutation is decisive on the h == 0 class and on the astroid",
+        "pair_floor_both_families": 0.10445908559966452,
+        "pair_floor_leading_family_only": 0.10415286026001808,
+        "area_both": 0.09050943129814434,
+        "area_leading_only": 0.09024780078629362
+      },
+      "astroid_witness": {
+        "endpoint_argument_atoms": 4,
+        "endpoint_only_capacity_over_pi": 0.0,
+        "true_capacity_over_pi": 0.375
+      }
+    },
+    "MUT-2-remove-interior-contacts": {
+      "check": "discard every chord interior and keep only the two chord endpoints; evaluate on a legal endpoint-collapse family",
+      "collapse_family": "a = 0.99(1-2t)/2, s = 0.995 t(1-t) (legal, compact, admissible)",
+      "collapse_full_chord_capacity": 0.12302525012318294,
+      "collapse_endpoints_only_capacity": 0.0038784209663738907,
+      "rational_seven_full_chord_capacity": 0.09050943129814434,
+      "rational_seven_endpoints_only_capacity": 0.09061264721902779,
+      "endpoint_refinement_rows_rational_seven": [
+        {
+          "M": 300,
+          "normalised_area_lower": 0.09259826686498887,
+          "rho_min": 0.1467574710994877
+        },
+        {
+          "M": 600,
+          "normalised_area_lower": 0.09147193703024371,
+          "rho_min": 0.14657983991445128
+        },
+        {
+          "M": 1200,
+          "normalised_area_lower": 0.09090351706186284,
+          "rho_min": 0.14649102025480792
+        },
+        {
+          "M": 2400,
+          "normalised_area_lower": 0.09061264721902779,
+          "rho_min": 0.0
+        }
+      ],
+      "gate_threshold": 0.02096,
+      "verdict_full_on_collapse_family": true,
+      "verdict_endpoints_only_on_collapse_family": false,
+      "visibly_rejected": true,
+      "closed_form_cross_check": {
+        "family": "a = kappa(1-2t)/2, s = gamma t(1-t), gamma=(1+kappa)/2",
+        "kappa_sweep_endpoint_branch": [
+          [
+            0.0,
+            0.25
+          ],
+          [
+            0.25,
+            0.20312499999999997
+          ],
+          [
+            0.7071067811865475,
+            0.0904822031355754
+          ],
+          [
+            0.85,
+            0.04812499999999997
+          ],
+          [
+            0.95,
+            0.016458333333333353
+          ],
+          [
+            0.99,
+            0.0033250000000000224
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "endpoint_capacity_at_kappa_1": 0.0,
+        "interior_capacity_at_kappa_1": 0.12419433401015978
+      }
+    },
+    "MUT-3-coarsen-one-scale": {
+      "check": "Hall expansion constant lambda_m = min dyadic endpoint expansion",
+      "fine_scale": 12,
+      "fine_lambda": 0.006953079044038191,
+      "coarse_scale": 1,
+      "coarse_lambda": 0.14393615825792117,
+      "ratio_coarse_over_fine": 20.70106744742633,
+      "gate_threshold_lambda": 0.1,
+      "verdict_fine": false,
+      "verdict_coarse": true,
+      "visibly_changed": true,
+      "note": "coarsening reports expansion lambda = 0.1439 where the fine scale sees 0.00695; a Hall alternative certified at the coarse scale is not valid at the fine scale"
+    },
+    "MUT-4-null-fibre-ae-relaxation": {
+      "check": "replace the pointwise fibre constraint rho(arg x) >= |x| by an a.e.-in-phi constraint",
+      "exact_value_over_pi": 0.09047781112467895,
+      "true_value_zero_height_over_pi": 0.25,
+      "relaxed_LP_value_over_pi": 0.0,
+      "reason": "for h == 0 every chord meets each circle in a two-point set, so every fibre {phi : some chord point has argument phi and radius >= r} is a countable union of singletons per direction; an a.e.-in-phi constraint is satisfied by rho == 0 off a null set and the relaxed infimum is 0, while the true value is >= 1/4",
+      "visibly_collapsed": true
+    }
+  },
+  "candidate_margins": {
+    "C1_uniform_radial_floor": {
+      "statement": "rho >= c a.e.  =>  Cap2 >= pi c^2",
+      "near_extremizer_value_of_c": 0.14662071149681943,
+      "implied_ceiling_over_pi": 0.02149763303983356,
+      "margin_vs_published": 0.0005376330398335592,
+      "status": "false in general: the origin-crossing radial family Gamma_theta=[T e(theta),(T+1)e(theta)] has rho=0 on an oriented half-circle"
+    },
+    "C2_antipodal_pair_floor": {
+      "statement": "rho(phi)^2 + rho(phi+pi)^2 >= c  =>  Cap2 >= pi c/2",
+      "near_extremizer_value_of_c": 0.10443351229544981,
+      "implied_ceiling_over_pi": 0.052216756147724905,
+      "margin_vs_published": 0.031256756147724905,
+      "status": "REFUTED universally: far common-centre radial hulls have rho(phi)=rho(phi+pi)=0 on a positive-measure interval; the reported near-extremizer value is diagnostic only"
+    },
+    "C3_hall_carleson_endpoint_expansion": {
+      "statement": "either the paired endpoint image expands by lambda or a compression payment is collected",
+      "near_extremizer_min_expansion": 0.006953020562788721,
+      "collapse_family_min_expansion": 0.0,
+      "status": "REFUTED: expansion branch is vacuous on a legal family"
+    },
+    "C4_radial_sliver_covering": {
+      "statement": "class-scoped: if all needles satisfy m(theta)<=r0, then |{rho >= r}| >= pi*(1-2r)/(1+2r) and the integrated coefficient is 0.0284264 at r0=0",
+      "scope": "class-scoped; every selected needle meets B(O,r0)",
+      "coefficient_r0_zero": 0.028426409720027357,
+      "margin_vs_published": 0.007466409720027357,
+      "fraction_of_ceiling": 0.314181002962664,
+      "status": "PROVED (see THEORY.md Theorem A); constant not claimed sharp"
+    },
+    "C5_universal_radial_ledger": {
+      "statement": "L*(E) >= 1/15 for every star-shaped Kakeya set",
+      "area_bound": 0.06666666666666667,
+      "coefficient_over_pi": 0.02122065907891938,
+      "margin_vs_published_coefficient": 0.00026065907891938134,
+      "status": "PROVED intermediate rational witness"
+    },
+    "C6_optimized_universal_radial_ledger": {
+      "statement": "L*(E) >= 1717/25000 for every star-shaped Kakeya set",
+      "area_bound": 0.06868,
+      "coefficient_over_pi": 0.021861522983102746,
+      "margin_vs_published_coefficient": 0.0009015229831027469,
+      "relative_gain_over_published": 0.04301159270528365,
+      "mechanism_numeric_ceiling_area": 0.0686843084203425,
+      "status": "PROVED intermediate result; see UNIVERSAL-OPTIMIZED.md and exact optimized certificate"
+    },
+    "C7_finite_schedule_seven_hundredths": {
+      "statement": "L*(E) >= 7/100 for every star-shaped Kakeya set",
+      "area_bound": 0.07,
+      "coefficient_over_pi": 0.022281692032865348,
+      "gain_over_1717_25000": 0.0013200000000000017,
+      "minimum_low_payment": 0.02236258855203782,
+      "common_rational_coefficient": 0.02228228228228228,
+      "status": "PROVED intermediate result; see UNIVERSAL-SEVEN-HUNDREDTHS.md and exact certificate"
+    },
+    "C8_finite_schedule_141_over_2000": {
+      "statement": "32-segment schedule certifies C_FS >= 141/2000",
+      "certified_witness_area": 0.0705,
+      "coefficient_over_pi": 0.022440846975957246,
+      "gain_over_7_100": 0.0004999999999999866,
+      "minimum_low_payment": 0.022447991004356627,
+      "common_rational_coefficient": 0.022447,
+      "status": "CERTIFIED explicit witness for C_FS; see UNIVERSAL-141-OVER-2000.md and exact certificate"
+    }
+  },
+  "verdict": {
+    "go_no_go": "GO: exact finite-schedule variational bound C_FS, with certified witness 141/2000; NO-GO only for the endpoint-only Hall-Carleson candidate",
+    "no_go": {
+      "target": "paired endpoint image expansion / Hall-Carleson alternative",
+      "killer_family": "a = kappa(1-2t)/2, s = (1+kappa)/2 * t(1-t), kappa -> 1",
+      "why": "the endpoint Jacobian J = H^2 - s'H + sH' vanishes identically at kappa = 1, so the whole projective direction circle is mapped by the leading-endpoint argument map onto a single output angle: the expansion branch of any Hall alternative is vacuous on a legal family",
+      "near_extremizer_min_expansion": 0.006953020562788721,
+      "collapse_family_min_expansion": 0.0
+    },
+    "go": {
+      "statement": "FINITE-SCHEDULE-VARIATIONAL.md Theorem V plus the certified 32-segment witness",
+      "class": "every star-shaped Kakeya set; arbitrary selector",
+      "exact_variational_constant": "C_FS",
+      "certified_explicit_area_lower": 0.0705,
+      "certified_explicit_coefficient_over_pi": 0.022440846975957246,
+      "intermediate_area_bounds": [
+        0.06666666666666667,
+        0.06868,
+        0.07
+      ],
+      "finite_schedule_minimum_low_payment": 0.022447991004356627,
+      "coefficient_at_r0_zero_for_stronger_scoped_corollary": 0.028426409720027357,
+      "break_even_r0_for_stronger_scoped_corollary": 0.14874204084764187,
+      "not_li_confined_escaping": true,
+      "handles_near_extremizer": true
+    }
+  }
+}

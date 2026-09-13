@@ -1,0 +1,78 @@
+{
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "compiler": "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+  "compiler_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "compiler_sha256": "3e0d0d3d801675359f2d4cf9815bfdb417b20b92fdd9d48b3b14c95bbae28bbf",
+  "sysroot_init_sha256": "12e94e3624b943d20ad898491957051ae9ba22ccbed9e6f92c35fbc711849246",
+  "packages": [
+    {
+      "name": "mathlib",
+      "rev": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib",
+      "manifest_sha256": "71f9e393a23807b33a5369e8f45888debe0cb79e872188b8dfbe308175e6d90c"
+    },
+    {
+      "name": "plausible",
+      "rev": "86210d4ad1b08b086d0bd638637a75246523dbb8",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/plausible",
+      "manifest_sha256": "99a17603b60cd9af445e5689b572b8441aaeaed149f3760dc52595a0c4b128db"
+    },
+    {
+      "name": "LeanSearchClient",
+      "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/LeanSearchClient",
+      "manifest_sha256": "a9b5fc5e76254f415e49b04b7049f58c6cb42e76a0e31b0aed2ddf4af6882033"
+    },
+    {
+      "name": "importGraph",
+      "rev": "cdab3938ccabbdb044be6896e251b5814bec932e",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/importGraph",
+      "manifest_sha256": "ed26057ebc690551ffeee6d8a57a85270170a698fbf014109506ef02218b4ca2"
+    },
+    {
+      "name": "proofwidgets",
+      "rev": "2db6054a44326f8c0230ee0570e2ddb894816511",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/proofwidgets",
+      "manifest_sha256": "cfa8a1535cd79fbd868bcc67eb22efdab57568248a437fa5dda567234f1f03e2"
+    },
+    {
+      "name": "aesop",
+      "rev": "f0c6e183ea26531e82773feb4b73ab6595ca17a5",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/aesop",
+      "manifest_sha256": "5a8383928c1ae31c6c518adb532c79028c7870be0d6f1952a47fd10c68f604b1"
+    },
+    {
+      "name": "Qq",
+      "rev": "1cc7e819b9b9bc1e87c9edcccb62e0269e00a809",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/Qq",
+      "manifest_sha256": "460e7ce76c58edfd8ba59428f23e908c5860e8bbca8883ff6c1262980e364d30"
+    },
+    {
+      "name": "batteries",
+      "rev": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/batteries",
+      "manifest_sha256": "67a8bbfcd0c742e05e198714b2d0f3602a3103d838e7427d773a5587555f88a2"
+    },
+    {
+      "name": "Cli",
+      "rev": "13567aed1ac4f12aea9484178e07e51f8c9f7658",
+      "clean": true,
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/Cli",
+      "manifest_sha256": "f608bac5ccb22b59292584eb7fb4497c327e780a17e7afb8d584ce5d79ad0b70"
+    }
+  ],
+  "donor": "/home/argustest/research/star-shaped-kakeya-lean",
+  "donor_project_objects_used": false,
+  "lock_sha256": "83cf9512ecae573eef33f806d045c0a3e84d1a63cbe20aecb26beaea4a371f7d",
+  "manifest_sha256": "b640265d622ba5c23076f661e9b7d4803baea2f28444b7d8643f3acb3fb92988",
+  "donor_manifest_sha256": "b640265d622ba5c23076f661e9b7d4803baea2f28444b7d8643f3acb3fb92988",
+  "LEAN_PATH": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/plausible/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/aesop/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/Qq/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/batteries/.lake/build/lib/lean:/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/Cli/.lake/build/lib/lean:/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/lib/lean"
+}

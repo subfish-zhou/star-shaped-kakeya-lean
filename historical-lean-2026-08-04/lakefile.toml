@@ -1,0 +1,32 @@
+name = "StarKakeyaLower"
+version = "0.1.0"
+keywords = ["math", "kakeya", "geometric-measure-theory"]
+
+# `lake build` builds the production root only (see README/REPRODUCE):
+#   production build : lake build            (== lake build +StarKakeyaLower)
+#   audit build      : lake build StarKakeyaLowerAudit
+#   full library     : lake build StarKakeyaLower StarKakeyaLowerAudit
+defaultTargets = ["StarKakeyaLower"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+
+# Exact Mathlib revision used by the validated local build.  Unlike the local
+# development lakefile, this share configuration contains no machine path.
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "5450b53e5ddc75d46418fabb605edbf36bd0beb6"
+
+# Production library: root `StarKakeyaLower.lean` plus its transitive imports.
+[[lean_lib]]
+name = "StarKakeyaLower"
+
+# Audit library: `#print axioms` receipts.  Kept as a separate target so the
+# audit is never a production dependency, and so `lake build` stays quiet.
+[[lean_lib]]
+name = "StarKakeyaLowerAudit"
+srcDir = "."
+roots = ["StarKakeyaLower.Audit"]

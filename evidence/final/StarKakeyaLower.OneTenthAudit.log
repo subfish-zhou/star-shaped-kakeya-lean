@@ -1,0 +1,91 @@
+@StarShapedKakeya.one_tenth_le_outerArea : ∀ {E : Set Plane} (K : StarShapedKakeya E),
+  ENNReal.ofReal (1 / 10) ≤ volume.toOuterMeasure E
+structure StarKakeyaLower.StarShapedKakeya (E : Set Plane) : Type
+number of parameters: 1
+fields:
+  StarKakeyaLower.StarShapedKakeya.center : Plane
+  StarKakeyaLower.StarShapedKakeya.star : ∀ ⦃x : Plane⦄, x ∈ E → segment ℝ self.center x ⊆ E
+  StarKakeyaLower.StarShapedKakeya.needle_exists : ∀ (θ : Direction), ∃ n, n.HasDirection θ ∧ n.carrier ⊆ E
+constructor:
+  StarKakeyaLower.StarShapedKakeya.mk {E : Set Plane} (center : Plane)
+    (star : ∀ ⦃x : Plane⦄, x ∈ E → segment ℝ center x ⊆ E)
+    (needle_exists : ∀ (θ : Direction), ∃ n, n.HasDirection θ ∧ n.carrier ⊆ E) : StarShapedKakeya E
+structure StarKakeyaLower.UnitNeedle : Type
+number of parameters: 0
+fields:
+  StarKakeyaLower.UnitNeedle.left : Plane
+  StarKakeyaLower.UnitNeedle.right : Plane
+  StarKakeyaLower.UnitNeedle.unit_length : dist self.left self.right = 1
+constructor:
+  StarKakeyaLower.UnitNeedle.mk (left right : Plane) (unit_length : dist left right = 1) : UnitNeedle
+def StarKakeyaLower.UnitNeedle.HasDirection : UnitNeedle → Direction → Prop :=
+fun n θ => ∃ t, ↑t = θ ∧ ∃ c, c ≠ 0 ∧ n.right - n.left = c • angleVector t
+def StarKakeyaLower.UnitNeedle.carrier : UnitNeedle → Set Plane :=
+fun n => segment ℝ n.left n.right
+'StarKakeyaLower.StarShapedKakeya.one_tenth_le_outerArea' depends on axioms: [propext, Classical.choice, Quot.sound]
+actual_bank_price : ∀ (o : Plane) {c : ℝ → Plane},
+  Measurable c →
+    ∀ (G : Set Plane),
+      IsOpen G →
+        (∀ q ∈ chart, triangle o c q ⊆ G) →
+          (∀ q ∈ chart, |farHeight o c q| ≤ 1 / 5) →
+            ∀ (n : ℕ),
+              ENNReal.ofReal (1 / (10 * π)) * mass (sourceCut o c n) ≤
+                radialBank (centeredCoordinateEnvelope o G) (radialSupport n)
+small_height_one_tenth : ∀ (o : Plane) {c : ℝ → Plane},
+  Measurable c →
+    ∀ (G : Set Plane),
+      IsOpen G →
+        (∀ q ∈ chart, triangle o c q ⊆ G) →
+          (∀ q ∈ chart, |farHeight o c q| ≤ 1 / 5) → ENNReal.ofReal (1 / 10) ≤ volume G
+@open_cover_one_tenth : ∀ {E G : Set Plane} (Kak : StarShapedKakeya E),
+  E ⊆ G → IsOpen G → ENNReal.ofReal (1 / 10) ≤ volume G
+'StarKakeyaLower.OneTenth.GlobalAssembly.tail_bounded_kernel_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_tail_radial_price' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_tail_bank_price' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_F_bank_price' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_D0_bank_price' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_bank_price' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.small_height_one_tenth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.open_cover_one_tenth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+sourceCut_mass_sum : ∀ (o : Plane) {c : ℝ → Plane}, Measurable c → ∑' (n : ℕ), mass (sourceCut o c n) = ENNReal.ofReal π
+target_prices_sum : ∀ (o : Plane) {c : ℝ → Plane},
+  Measurable c → ∑' (n : ℕ), ENNReal.ofReal (1 / (10 * π)) * mass (sourceCut o c n) = ENNReal.ofReal (1 / 10)
+actual_banks_sum_le_volume : ∀ (o : Plane) {G : Set Plane},
+  IsOpen G → ∑' (n : ℕ), radialBank (centeredCoordinateEnvelope o G) (radialSupport n) ≤ volume G
+actual_low_bank_price : ∀ (o : Plane) {c : ℝ → Plane},
+  Measurable c →
+    ∀ (G : Set Plane),
+      IsOpen G →
+        (∀ q ∈ chart, triangle o c q ⊆ G) →
+          (∀ q ∈ chart, |farHeight o c q| ≤ 1 / 5) →
+            ENNReal.ofReal (1 / (10 * π)) * mass (sourceCut o c 0) ≤
+              radialBank (centeredCoordinateEnvelope o G) (radialSupport 0)
+'StarKakeyaLower.OneTenth.GlobalAssembly.sourceCut_mass_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.target_prices_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.pairwise_disjoint_sourceCut' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.pairwise_disjoint_radialSupport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_banks_sum_le_volume' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.low_banks_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.ofReal_mul_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.GlobalAssembly.actual_low_bank_price' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

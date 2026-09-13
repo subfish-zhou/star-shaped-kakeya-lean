@@ -1,0 +1,910 @@
+{
+  "purpose": "仅迁移来源选材，非完整证明/优先权核验",
+  "roots": {
+    "early": "/home/argustest/research/star-shaped-kakeya",
+    "early_lower": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound",
+    "middle_frozen": "/home/argustest/research/star-kakeya-wt-v2-normalized",
+    "late": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth"
+  },
+  "read_only_sources": true,
+  "builds_or_network": false,
+  "chronology": [
+    {
+      "date": "2026-07-31",
+      "claim": "π/56 → 100π/5599",
+      "evidence": "轮次日志E2:42–45"
+    },
+    {
+      "date": "2026-08-02",
+      "claim": "131π/6250",
+      "evidence": "f96f4a2f 17:25:51Z；N1:3"
+    },
+    {
+      "date": "2026-08-03",
+      "claim": "1/15",
+      "evidence": "662cc336 07:50:23Z"
+    },
+    {
+      "date": "2026-08-03",
+      "claim": "1717/25000",
+      "evidence": "f58d803a 08:25:26Z"
+    },
+    {
+      "date": "2026-08-03",
+      "claim": "7/100",
+      "evidence": "3af5bec4 12:10:18Z"
+    },
+    {
+      "date": "2026-08-03",
+      "claim": "141/2000",
+      "evidence": "3a1cd160 12:48:04Z"
+    },
+    {
+      "date": "2026-08-04",
+      "claim": "3527/50000",
+      "evidence": "796e310c 08:56:09Z"
+    },
+    {
+      "date": "2026-08-04",
+      "claim": "完整qπ",
+      "evidence": "97914cca 11:48:10Z"
+    },
+    {
+      "date": "2026-08-04",
+      "claim": "C_pair,64",
+      "evidence": "8d69d973 17:41:27Z"
+    },
+    {
+      "date": "2026-08-16",
+      "claim": "0.0975576 BLOCKED",
+      "evidence": "0bbd492d 14:23:26Z"
+    },
+    {
+      "date": "2026-08-17",
+      "claim": "0.072323077979923422",
+      "evidence": "9fc64eb4 05:08:36Z"
+    },
+    {
+      "date": "2026-08-17",
+      "claim": "0.073920942372137638",
+      "evidence": "4acb9bcb 05:27:43Z"
+    },
+    {
+      "date": "2026-08-17",
+      "claim": "旧0.082812417187472190晋升",
+      "evidence": "ccfd7f7d 12:33:01Z；当前须读v2纠错"
+    },
+    {
+      "date": "2026-08-21",
+      "claim": "0.082812499999972190 v2",
+      "evidence": "80a350d2 03:18:56Z"
+    },
+    {
+      "date": "2026-09-05",
+      "claim": "1/10验收",
+      "evidence": "2587e7eb 02:30:16Z；之前3dea4cf2为待审组装"
+    }
+  ],
+  "files": [
+    {
+      "id": "E0",
+      "path": "/home/argustest/research/star-shaped-kakeya/README.md",
+      "line_ranges": [
+        [
+          3,
+          33
+        ]
+      ],
+      "role": "早期对象定义及100π/5599顶层结果",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 4470
+    },
+    {
+      "id": "E1",
+      "path": "/home/argustest/research/star-shaped-kakeya/notes/01-literature-map.md",
+      "line_ranges": [
+        [
+          30,
+          48
+        ]
+      ],
+      "role": "π/108与π/98文献归属；本次未读原PDF",
+      "migration_priority": "背景",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 3888
+    },
+    {
+      "id": "E2",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/00-status/APPROACH-PORTFOLIO.md",
+      "line_ranges": [
+        [
+          23,
+          56
+        ]
+      ],
+      "role": "2026-07-31轮次先后证据及失败路线",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 7424
+    },
+    {
+      "id": "E3",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/01-theorem/PI56-INDEPENDENT-PROOF.md",
+      "line_ranges": [
+        [
+          1,
+          50
+        ],
+        [
+          108,
+          122
+        ],
+        [
+          258,
+          258
+        ],
+        [
+          546,
+          548
+        ]
+      ],
+      "role": "π/56原始证明，去掉因子3与非迭代路线",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 19309
+    },
+    {
+      "id": "E4",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/02-audit/SUPERSEDED-ROUND-1-PI56-AUDIT.md",
+      "line_ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "role": "迭代方向scope缺口及初期conditional状态",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 12922
+    },
+    {
+      "id": "E5",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/02-audit/ROUND-2-LI-THEOREM-AUDIT.md",
+      "line_ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "role": "ρ>1/2不能直接引用Li；独立重证Case II",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 14539
+    },
+    {
+      "id": "E6",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/01-theorem/STRONGER-100-OVER-5599-PROOF.md",
+      "line_ranges": [
+        [
+          1,
+          398
+        ]
+      ],
+      "role": "固定参数完整强界证明",
+      "migration_priority": "核心选材",
+      "inspection": "全文已读；未运行证书或复核每一步算术",
+      "exists": true,
+      "bytes": 7766
+    },
+    {
+      "id": "E7",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/02-audit/ROUND-4-STRONGER-CERTIFICATE.md",
+      "line_ranges": [
+        [
+          1,
+          75
+        ]
+      ],
+      "role": "强界独立裁决及exact margins",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 2189
+    },
+    {
+      "id": "E8",
+      "path": "/home/argustest/research/star-shaped-kakeya/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/02-audit/ENDPOINT-FATALITY.md",
+      "line_ranges": [
+        [
+          1,
+          49
+        ]
+      ],
+      "role": "连续选择错误→图方案也退役→逐点端点证明",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 12791
+    },
+    {
+      "id": "E9",
+      "path": "/home/argustest/research/star-shaped-kakeya/notes/07-spike-log.md",
+      "line_ranges": [
+        [
+          9,
+          49
+        ]
+      ],
+      "role": "圆弧膨胀需c≥1的Lean化修正",
+      "migration_priority": "补充",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 1735
+    },
+    {
+      "id": "N0",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/README.md",
+      "line_ranges": [
+        [
+          24,
+          52
+        ],
+        [
+          60,
+          116
+        ],
+        [
+          118,
+          180
+        ],
+        [
+          267,
+          285
+        ],
+        [
+          399,
+          424
+        ]
+      ],
+      "role": "四个旧Lean下界与后续paired证据边界",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 20401
+    },
+    {
+      "id": "N1",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/001-joint-inner-outer/README.md",
+      "line_ranges": [
+        [
+          1,
+          84
+        ]
+      ],
+      "role": "8月2日内外区域加法创新与prose/Lean边界",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 16369
+    },
+    {
+      "id": "N2",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/paper/star_shaped_kakeya_bounds.tex",
+      "line_ranges": [
+        [
+          3350,
+          3386
+        ]
+      ],
+      "role": "131π/6250主稿定理及组装",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 209268
+    },
+    {
+      "id": "N3",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/UNIVERSAL-ONE-FIFTEENTH.md",
+      "line_ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "role": "1/15；径向sliver替代Li二分",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 8065
+    },
+    {
+      "id": "N4",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/UNIVERSAL-OPTIMIZED.md",
+      "line_ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "role": "1717/25000；只优化高度阈值",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 6699
+    },
+    {
+      "id": "N5",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/UNIVERSAL-SEVEN-HUNDREDTHS.md",
+      "line_ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "role": "7/100；有限外测度cover与共享径向schedule",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 9639
+    },
+    {
+      "id": "N6",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/UNIVERSAL-141-OVER-2000.md",
+      "line_ranges": [
+        [
+          1,
+          50
+        ]
+      ],
+      "role": "141/2000；32类有理witness",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 8269
+    },
+    {
+      "id": "N7",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/README.md",
+      "line_ranges": [
+        [
+          1,
+          79
+        ]
+      ],
+      "role": "独立审查汇总；Hall/双侧sliver失败及中间结果先后",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 18671
+    },
+    {
+      "id": "N8",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/007-cfs-rational-cert/README.md",
+      "line_ranges": [
+        [
+          1,
+          140
+        ]
+      ],
+      "role": "3527/50000与完整qπ、四项log surrogate及有理schedule",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 5261
+    },
+    {
+      "id": "N9",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/012-paired-cfs-exact-certificate/THEOREM.md",
+      "line_ranges": [
+        [
+          1,
+          145
+        ]
+      ],
+      "role": "精确隐式C_pair,64；65原子、近配对与互斥owner",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 6209
+    },
+    {
+      "id": "N10",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/final-radial-price-theorem/CERTIFIED.md",
+      "line_ranges": [
+        [
+          1,
+          12
+        ]
+      ],
+      "role": "0.072323077979923422晋升裁决",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 777
+    },
+    {
+      "id": "N11",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/final-radial-price-theorem/final_theorem_checklist_20260817_zh.md",
+      "line_ranges": [
+        [
+          1,
+          110
+        ]
+      ],
+      "role": "low切触修补、高域collar、开外包恢复和source-once组装",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 6205
+    },
+    {
+      "id": "N12",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/radial-H-fixed-point/CERTIFIED.md",
+      "line_ranges": [
+        [
+          1,
+          11
+        ]
+      ],
+      "role": "0.073920942372137638晋升裁决",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 732
+    },
+    {
+      "id": "N13",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/radial-H-fixed-point/radial_H_monotonicity_and_certificate_zh.md",
+      "line_ranges": [
+        [
+          1,
+          99
+        ]
+      ],
+      "role": "H单调性与easy/hard固定点原始推导；待审标签为旧状态",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 3491
+    },
+    {
+      "id": "N14",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/shared-terminal-082812/class_independent_terminal_price_report_zh.md",
+      "line_ranges": [
+        [
+          1,
+          105
+        ]
+      ],
+      "role": "共同terminal+新鲜dyadic tail创新；float与旧low ceiling",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 5549
+    },
+    {
+      "id": "N15",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/shared-terminal-082812/class_independent_terminal_strict_report_zh.md",
+      "line_ranges": [
+        [
+          1,
+          43
+        ]
+      ],
+      "role": "旧0.082812417187...报告，三点pole论证已废止",
+      "migration_priority": "必须连同修正保留",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 2329
+    },
+    {
+      "id": "N16",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/shared-terminal-082812/class_independent_terminal_strict_report_v2.md",
+      "line_ranges": [
+        [
+          1,
+          28
+        ]
+      ],
+      "role": "v2修正pole连续域并把公共价格缩放归一至1",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 1546
+    },
+    {
+      "id": "N17",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/shared-terminal-082812/CERTIFIED_PROMOTION.md",
+      "line_ranges": [
+        [
+          1,
+          14
+        ]
+      ],
+      "role": "0.082812499999972190当前晋升裁决",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 963
+    },
+    {
+      "id": "F1",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/archive/whole-coupled-09755/STATUS_BLOCKED.md",
+      "line_ranges": [
+        [
+          1,
+          47
+        ]
+      ],
+      "role": "0.0975576失败：demand-once不等于source-once",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 1410
+    },
+    {
+      "id": "F2",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/005-contact-ridge-lower/THEOREM.md",
+      "line_ranges": [
+        [
+          1,
+          31
+        ]
+      ],
+      "role": "projective selector错误及1/32撤销",
+      "migration_priority": "補充失败样例",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 6879
+    },
+    {
+      "id": "A0",
+      "path": "/home/argustest/kakeya_astra_audit_20260905/baseline.md",
+      "line_ranges": [
+        [
+          1,
+          160
+        ]
+      ],
+      "role": "冻结80a350d...独立审查及132格→7段化简",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 25394
+    },
+    {
+      "id": "T0",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/ADMISSION.md",
+      "line_ranges": [
+        [
+          1,
+          36
+        ]
+      ],
+      "role": "9月5日基线冻结、禁混N7和普适目标",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 4216
+    },
+    {
+      "id": "T1",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/baseline/PROOF.md",
+      "line_ranges": [
+        [
+          1,
+          65
+        ]
+      ],
+      "role": "0.082812499999972190七段短证明；Borel恢复",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 15055
+    },
+    {
+      "id": "T2",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/baseline/PROVENANCE.md",
+      "line_ranges": [
+        [
+          1,
+          72
+        ]
+      ],
+      "role": "132格来源及归并、原始witness/hash来源",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 3531
+    },
+    {
+      "id": "T3",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/CLOSEOUT.md",
+      "line_ranges": [
+        [
+          1,
+          35
+        ]
+      ],
+      "role": "34/441仅受限七弦台账，不是1/10",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 2784
+    },
+    {
+      "id": "T4",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/DISPOSITION.md",
+      "line_ranges": [
+        [
+          1,
+          45
+        ]
+      ],
+      "role": "退役路径与mixed-event半角错误",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 3510
+    },
+    {
+      "id": "T5",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/endpoint-geometry-b1/endpoint-domain/PROOF.md",
+      "line_ranges": [
+        [
+          1,
+          40
+        ]
+      ],
+      "role": "完整圆截面/高域核；单far路线仍不足",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 17132
+    },
+    {
+      "id": "T6",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/low-source-b2/integrated-low/PROOF.md",
+      "line_ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "role": "关键IL eligible anchors与互补价格",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 10969
+    },
+    {
+      "id": "T7",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/THEOREM_01.md",
+      "line_ranges": [
+        [
+          1,
+          117
+        ]
+      ],
+      "role": "1/10完整组装",
+      "migration_priority": "核心选材",
+      "inspection": "全文已读；未逐行重证/运行算术",
+      "exists": true,
+      "bytes": 6827
+    },
+    {
+      "id": "T8",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/tenth-reviews/b2_universal_tenth_end_to_end_review.md",
+      "line_ranges": [
+        [
+          1,
+          70
+        ]
+      ],
+      "role": "ACCEPT_UNIVERSAL_0P1及版本绑定",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 22012
+    },
+    {
+      "id": "T9",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/low-source-b2/paired-pointwise/COUNTEREXAMPLE.md",
+      "line_ranges": [
+        [
+          1,
+          65
+        ]
+      ],
+      "role": "PL正测度反例；不否定IL/1/10",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 11314
+    },
+    {
+      "id": "T10",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/README.md",
+      "line_ranges": [
+        [
+          1,
+          38
+        ]
+      ],
+      "role": "最终人工证明状态、历史标签裁决优先级",
+      "migration_priority": "核心选材",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 2889
+    },
+    {
+      "id": "L0",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/UniversalAssembly.lean",
+      "line_ranges": [
+        [
+          35,
+          39
+        ],
+        [
+          165,
+          185
+        ]
+      ],
+      "role": "旧下界Lean顶层声明交叉核对；不含构建验证",
+      "migration_priority": "交父Lean lane",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 8840
+    },
+    {
+      "id": "L1",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/AnnularAssembly.lean",
+      "line_ranges": [
+        [
+          228,
+          244
+        ]
+      ],
+      "role": "旧下界Lean顶层声明交叉核对；不含构建验证",
+      "migration_priority": "交父Lean lane",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 11510
+    },
+    {
+      "id": "L2",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/EndpointCapacityFinal141.lean",
+      "line_ranges": [
+        [
+          1,
+          34
+        ]
+      ],
+      "role": "旧下界Lean顶层声明交叉核对；不含构建验证",
+      "migration_priority": "交父Lean lane",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 1253
+    },
+    {
+      "id": "L3",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/EndpointCapacityFinal3527.lean",
+      "line_ranges": [
+        [
+          1,
+          45
+        ]
+      ],
+      "role": "旧下界Lean顶层声明交叉核对；不含构建验证",
+      "migration_priority": "交父Lean lane",
+      "inspection": "已读所列行；非全证明复核",
+      "exists": true,
+      "bytes": 1904
+    },
+    {
+      "id": "D1",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/THEORY.md",
+      "line_ranges": [],
+      "role": "径向sliver原始几何证明",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 39147
+    },
+    {
+      "id": "D2",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/002-endpoint-capacity/FINITE-SCHEDULE-VARIATIONAL.md",
+      "line_ranges": [],
+      "role": "有限schedule变分框架",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 8050
+    },
+    {
+      "id": "D3",
+      "path": "/home/argustest/research/star-kakeya-wt-v2-normalized/spikes/011-small-radius-paired-persistence/THEOREM.md",
+      "line_ranges": [],
+      "role": "配对几何原始输入",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 10494
+    },
+    {
+      "id": "D4",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/tenth-reviews/b2_IL_geometry_review.md",
+      "line_ranges": [],
+      "role": "IL独立几何裁决",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 12423
+    },
+    {
+      "id": "D5",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/tenth-reviews/b2_IL_arithmetic_review.md",
+      "line_ranges": [],
+      "role": "IL独立算术裁决",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 20296
+    },
+    {
+      "id": "D6",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/endpoint-geometry-b1/CONDITIONAL_TENTH_BRIDGE.md",
+      "line_ranges": [],
+      "role": "最终审查固定的组装权威源",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 6153
+    },
+    {
+      "id": "D7",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/theorem_01_acceptance.json",
+      "line_ranges": [],
+      "role": "最终字节绑定验收记录",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 3347
+    },
+    {
+      "id": "D8",
+      "path": "/home/argustest/research/star-shaped-kakeya/sources/li-2026-arxiv-2509.05711v2.pdf",
+      "line_ranges": [],
+      "role": "Li已发表原文",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 489443
+    },
+    {
+      "id": "D9",
+      "path": "/home/argustest/research/star-kakeya-wt-01-short-integration/research/one-tenth/baseline/witness.json",
+      "line_ranges": [],
+      "role": "七行固定有理witness",
+      "migration_priority": "迁移时按依赖补保留",
+      "inspection": "仅核存在；本次未读正文/数据",
+      "exists": true,
+      "bytes": 221
+    }
+  ],
+  "limitations": [
+    "未穷尽研究史",
+    "长证明仅所列段落",
+    "未重放Lean或证书",
+    "D项仅核存在",
+    "一次误遍历.lake文件名已披露并停止"
+  ],
+  "runnable_closure_claimed": false
+}

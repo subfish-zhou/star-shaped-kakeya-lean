@@ -1,0 +1,11 @@
+{
+  "git_parent": "ccfd7f7dae432c27b7a3b35991c4c133f8027137",
+  "receipt_path": "archive/shared-terminal-082812/class_independent_terminal_strict_receipt_v2.json",
+  "receipt_sha256": "0b0fa32ddc3a8d570ac4ddb4c0f848141baf7381270f9b9fe1119d331069a94b",
+  "release_floor": "0.082812499999972190",
+  "strict_internal_lower": "0.0828124999999721904111374192974978881",
+  "verifier_path": "archive/shared-terminal-082812/class_independent_terminal_strict_arb_v2.py",
+  "verifier_sha256": "1cd97e9b3afa38c834adafbe93fbdebbf038f7f4b54418690fe572a8ff2a0dc2",
+  "witness_path": "archive/shared-terminal-082812/class_independent_terminal_strict_witness.json",
+  "witness_sha256": "147bace20b933ac50febeb150ffff5a154a682d0c45cf3a9fb4c101ecd51b33a"
+}

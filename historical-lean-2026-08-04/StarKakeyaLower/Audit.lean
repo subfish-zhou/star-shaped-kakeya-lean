@@ -1,0 +1,792 @@
+import StarKakeyaLower.UniversalAssembly
+import StarKakeyaLower.ArithmeticKernel
+import StarKakeyaLower.NegativeControls
+import StarKakeyaLower.AnnularIntegralControls
+import StarKakeyaLower.AnnularAssembly
+import StarKakeyaLower.EndpointConfinedExit
+import StarKakeyaLower.EndpointCapacityGeometry
+import StarKakeyaLower.EndpointCapacityFractionalCover
+import StarKakeyaLower.EndpointCapacitySliverCover
+import StarKakeyaLower.EndpointCapacitySliverGeometry
+import StarKakeyaLower.EndpointCapacityNeedleAdapter
+import StarKakeyaLower.EndpointCapacityRadialSuperlevel
+import StarKakeyaLower.EndpointCapacitySingleNeedleSliver
+import StarKakeyaLower.EndpointCapacityFixedWindow
+import StarKakeyaLower.EndpointCapacityUniversal
+import StarKakeyaLower.EndpointCapacityLayerCake
+import StarKakeyaLower.EndpointCapacityLogBound
+import StarKakeyaLower.EndpointCapacityClasses
+import StarKakeyaLower.EndpointCapacityWitness32Data
+import StarKakeyaLower.EndpointCapacityHighGeometry
+import StarKakeyaLower.EndpointCapacityHighLedger
+import StarKakeyaLower.EndpointCapacityLeftLimit
+import StarKakeyaLower.EndpointCapacityPayment
+import StarKakeyaLower.EndpointCapacityWitness32Arithmetic
+import StarKakeyaLower.EndpointCapacityLowSchedule
+import StarKakeyaLower.EndpointCapacityHighAggregate
+import StarKakeyaLower.EndpointCapacityHighConcrete
+import StarKakeyaLower.EndpointCapacityLowConcrete
+import StarKakeyaLower.EndpointCapacityFinalAssembly
+import StarKakeyaLower.EndpointCapacityFinal141
+import StarKakeyaLower.EndpointCapacityWitness64Data
+import StarKakeyaLower.EndpointCapacityWitness64Arithmetic
+import StarKakeyaLower.EndpointCapacityLowSchedule64
+import StarKakeyaLower.EndpointCapacityLowConcrete64
+import StarKakeyaLower.EndpointCapacityHighLedger64
+import StarKakeyaLower.EndpointCapacityHighAggregate64
+import StarKakeyaLower.EndpointCapacityHighConcrete64
+import StarKakeyaLower.EndpointCapacityFinalAssembly64
+import StarKakeyaLower.EndpointCapacityFinal3527
+
+/-!
+# Audit receipts
+
+`#print axioms` receipts for the final theorem and for the load-bearing
+components it is assembled from.  This module is a separate Lake target
+(`lake build StarKakeyaLowerAudit`); nothing in the production closure imports
+it.
+
+Imports are the five roots that are actually needed: the production assembly
+`UniversalAssembly`, the independent rational `ArithmeticKernel`, and the
+audit-only `NegativeControls` and `AnnularIntegralControls` (the latter pulls in
+the CLEAN annular radial certificate `AnnularCaseIIntegral`, and through it the
+annular numeric kernel `AnnularKernel`), together with the CLEAN parameterised
+endpoint bridge `EndpointConfinedExit`.  The former `AnnularEndpoint` import was
+replaced by the M7 assembly `AnnularAssembly`, which re-exports it together with
+the M1 split, the M4 exterior exit and the M6 analytic gates.
+
+`AnnularKernel` and `AnnularAnalytic` keep the receipt policy of the reviewed
+numeric-kernel branch: their receipts are produced by a temporary file outside
+the library rather than recorded here, so no receipt of theirs is restated or
+weakened by this module.  (Both are now in this module's import closure, because
+M7 consumes the gates (C1), (C3) and (C4); that changes nothing about where
+their receipts are recorded.)  What is recorded below for the annular route is
+the radial integral certificate, its audit-only controls, and the M7 assembly.
+-/
+
+namespace StarKakeyaLower
+
+#print axioms rLambda_affine_identity
+#print axioms caseI_seven_strict
+#print axioms caseI_five_negative_control
+#print axioms caseII_rational_strict
+#print axioms thirdBranch_base_rational_strict
+#print axioms derivative_ratio_positive
+#print axioms alt_rLambda_affine_identity
+#print axioms alt_caseI_strict
+#print axioms alt_caseI_seven_negative_control
+#print axioms alt_caseII_rational_strict
+#print axioms alt_height_strict
+#print axioms alt_log_geom_upper
+#print axioms alt_caseI_exactPrimitive_strict
+#print axioms atan_even_partial_lower
+#print axioms arctan_quarter_turn
+#print axioms alt_largeAngle_le_const_at_left
+#print axioms alt_largeAngle_le_rational_at_right
+#print axioms alt_right_interval_integral_exact
+#print axioms measure_iUnion_le_mul_of_disjoint_components
+#print axioms centeredDilate_subset_componentDilate
+#print axioms volume_iUnion_centeredDilate_le
+#print axioms isOpen_openComponent
+#print axioms openComponentRational_mem
+#print axioms countable_openComponentIndex
+#print axioms pairwise_disjoint_openComponent
+#print axioms iUnion_openComponent
+#print axioms openComponent_eq_Ioo_csInf_csSup
+#print axioms quotientInterval_of_lt
+#print axioms quotientInterval_eq_univ_of_le
+#print axioms quotientInterval_eq_univ_of_length_eq
+#print axioms quotientInterval_eq_univ_of_length_gt
+#print axioms quotientCenteredArc_eq_quotientInterval
+#print axioms quotientComponentDilate_eq_univ
+#print axioms quotientCenteredArc_subset_quotientCenteredDilate
+#print axioms quotientCenteredDilate_subset_quotientComponentDilate_of_lt
+#print axioms quotientCenteredDilate_subset_quotientComponentDilate_of_saturated
+#print axioms equivIco_image_quotientInterval
+#print axioms quotient_image_iUnion
+#print axioms quotientInterval_eq_ball
+#print axioms isOpen_quotientInterval
+#print axioms measurableSet_quotientInterval
+#print axioms quotientHybridCenteredArc
+#print axioms quotientHybridCenteredDilate
+#print axioms volume_quotientInterval
+#print axioms quotientInterval_add_int_mul_period
+#print axioms quotientCenteredArc_add_int_mul_period
+#print axioms quotientCenteredDilate_add_int_mul_period
+#print axioms quotientCenteredDilate_subset_quotientComponentDilate
+#print axioms volume_quotientComponentDilate
+#print axioms volume_quotientComponentDilate_le
+#print axioms volume_iUnion_quotientCenteredDilate_le_of_components
+#print axioms volume_iUnion_quotientCenteredDilate_le_of_components_with_shifts
+#print axioms volume_iUnion_quotientCenteredDilate_le_of_eq_univ
+#print axioms exists_shift_centeredInterval_subset_Ioo
+#print axioms quotient_image_fundamental_Ioo
+#print axioms exists_openComponent_superset_Ioo
+#print axioms volume_iUnion_quotientCenteredDilate_le_of_common_cut
+#print axioms volume_iUnion_quotientCenteredDilate_le
+#print axioms volume_iUnion_quotientHybridCenteredDilate_le
+#print axioms caseIIC_lt_half_rho
+#print axioms caseII_single_triangle_weight
+#print axioms caseII_asin_weight_of_concave
+#print axioms caseIILambda_neg
+#print axioms caseII_minimax
+#print axioms residual_height_eq_zero_of_finite_stop
+#print axioms residual_height_eq_zero_of_tendsto
+#print axioms sSup_residual_height_eq_zero_of_finite_stop
+#print axioms sSup_residual_height_eq_zero_of_tendsto
+#print axioms strong_target_strictly_improves_pi56
+#print axioms strong_caseI_strict
+#print axioms strong_caseI_mutation_fails
+#print axioms strong_caseII_strict
+#print axioms strong_height_rational_margin_exact
+#print axioms strong_d_rational_bounds
+#print axioms strong_r₁_radicand_lt_quarter
+#print axioms strong_r₁_gt_rational_lower
+#print axioms strong_rho_domains
+#print axioms StrongParameterDomain
+#print axioms strongParameterDomain
+#print axioms UnitNeedle.height_nonneg
+#print axioms triangleAreaBridge
+#print axioms StarShapedKakeya.needleFamily_hasDirection
+#print axioms StarShapedKakeya.needleFamily_carrier_subset
+#print axioms StarShapedKakeya.triangleHull_subset
+#print axioms StarShapedKakeya.outerMeasure_ge_half_height
+#print axioms StarShapedKakeya.outerMeasure_ge_half_of_height
+#print axioms StarShapedKakeya.directionOuterMeasure_univ
+#print axioms StarShapedKakeya.univ_subset_A_in_union_A_out_of_no_high
+#print axioms StarShapedKakeya.direction_trichotomy
+#print axioms StarShapedKakeya.high_branch_outerMeasure
+#print axioms StarShapedKakeya.outerMeasure_direction_trichotomy
+#print axioms StarShapedKakeya.univ_subset_A_in_radius_union_A_out_radius_of_no_high
+#print axioms StarShapedKakeya.disjoint_A_in_radius_A_out_radius
+#print axioms StarShapedKakeya.direction_radius_trichotomy
+#print axioms StarShapedKakeya.outerMeasure_direction_radius_trichotomy
+#print axioms planeNormSq_unitDirection
+#print axioms supportNeedle_unit_length
+#print axioms polar_trace_normal_coordinate
+#print axioms polar_trace_tangent_coordinate
+#print axioms polarToProjective_image_polarArc
+#print axioms first_endpoint_configuration
+#print axioms exterior_endpoint_configuration
+#print axioms endpointEnvelope_subset_sameCentre_dilate
+#print axioms large_angle_sameCentre_dilate_eq_univ
+#print axioms first_endpoint_subset_sameCentre_dilate
+#print axioms exterior_endpoint_subset_sameCentre_dilate
+#print axioms endpointConfiguration_envelope_subset_sameCentre_dilate
+#print axioms NormalizedPolarArc.rotate_span
+#print axioms NormalizedPolarArc.rotate_carrier
+#print axioms NormalizedPolarArc.reverse_span
+#print axioms NormalizedPolarArc.reverse_carrier
+#print axioms NormalizedPolarArc.changeLift_carrier
+#print axioms NormalizedPolarArc.polar_coe_injective_on_fullChart
+#print axioms NormalizedPolarArc.exists_changeLift_subset_targetChart
+#print axioms selectedArcOfOptions?_rotate
+#print axioms ClosedIccPresentation.toShiftedClosedPolarPresentation_arc_add
+#print axioms FirstArcData.secondSpan_le_firstArc_span
+#print axioms FirstArcData.firstArc_eq_componentZero_of_tie
+#print axioms FirstArcData.firstArc_isMaximalConnectedTraceArc
+#print axioms FirstArcData.firstArc_carrier_subset_trace
+#print axioms FirstArcData.selectedLift_isLeast_isGreatest
+#print axioms FirstArcData.firstArc_endpoints_mem_trace
+#print axioms FirstArcData.exists_firstArc_changeLift_endpoint_inequalities
+#print axioms DirectionNeedleFamily.firstArc_span_ge_secondArc_span
+#print axioms DirectionNeedleFamily.firstArc_eq_componentZero_of_tie
+#print axioms DirectionNeedleFamily.mem_JGamma_iff
+#print axioms DirectionNeedleFamily.firstArc_subset_target_of_mem_JGamma
+#print axioms rotateCoordinatePlane_supportPoint
+#print axioms supportNeedleTriangle_rotate
+#print axioms mem_trianglePolarTrace_supportCoordinates_iff
+#print axioms mem_trianglePolarTrace_coordinateInequalities_iff
+#print axioms mem_trianglePolarTrace_eliminatedCoordinates_iff
+#print axioms sin_le_iff_le_arcsin_of_mem_left_half
+#print axioms sin_le_iff_pi_sub_arcsin_le_of_mem_right_half
+#print axioms positivePeriod_sin_le_eq_twoIntervals
+#print axioms positivePeriod_sin_le_zero_eq_endpoints
+#print axioms positivePeriod_sin_le_one
+#print axioms tangential_inequalities_between
+#print axioms principalTraceWindow_half_ordConnected
+#print axioms mem_trianglePolarTrace_iff_shifted_principalTraceWindow
+#print axioms trianglePolarTrace_inter_positiveChart_eq_shift_principalTraceWindow
+#print axioms mem_trianglePolarTrace_zeroHeight_iff
+#print axioms mem_trianglePolarTrace_iff_principalTraceWindow_height_one
+#print axioms principalTraceWindow_left_eq_closedPiece
+#print axioms principalTraceWindow_right_eq_closedPiece
+#print axioms closedIccPresentationOfCompactOrdConnected
+#print axioms ClosedIccPresentation.extrema?
+#print axioms principalTraceClosedPresentations
+#print axioms PrincipalTraceEndpointActive
+#print axioms principalTraceLeftPiece_interval_lo_active
+#print axioms principalTraceLeftPiece_interval_hi_active
+#print axioms principalTraceRightPiece_interval_lo_active
+#print axioms principalTraceRightPiece_interval_hi_active
+#print axioms closedTraceDecompositionOfPolarPresentations_components_of_some
+#print axioms closedTraceDecompositionOfPolarPresentations_firstArc_cases_of_some
+#print axioms FirstArcData.ofOneComponent
+#print axioms FirstArcData.ofTwoComponents
+#print axioms FirstArcData.ofOneClosedArc
+#print axioms FirstArcData.ofTwoClosedArcs
+#print axioms ClosedTraceDecomposition.toFirstArcData?
+#print axioms NormalizedPolarArc.isCompact_carrier
+#print axioms NormalizedPolarArc.isConnected_carrier
+#print axioms twoClosedArcGap_of_disjoint
+#print axioms ClosedIccPresentation.toClosedPolarPresentation
+#print axioms closedTraceDecompositionOfPolarPresentations
+#print axioms firstArcDataOfPolarPresentations?
+#print axioms polar_coe_injective_on_halfChart
+#print axioms ClosedIccPresentation.toShiftedClosedPolarPresentation
+#print axioms disjoint_shifted_halfPieces_on_polarCircle
+#print axioms disjoint_principalTraceClosedPresentations
+#print axioms principalTraceShiftedClosedPolarPresentations
+#print axioms polarPoint_eq_of_polar_coe_eq
+#print axioms trianglePolarTrace_iff_of_polar_coe_eq
+#print axioms shiftedPolarImage_add_fullTurn
+#print axioms polarCircleTrace_supportNeedleTriangle_eq_positiveChart_image
+#print axioms principalTraceLeftPiece_union_rightPiece
+#print axioms principalTraceShiftedClosedPolarPresentations_cover
+#print axioms heightOne_principalTracePieces_touch_counterexample
+#print axioms singletonPolarArc_carrier
+#print axioms mem_polarCircleTrace_zeroHeight_iff
+#print axioms zeroHeightTraceClosedDecomposition
+#print axioms principalTraceHeightOnePiece_ordConnected
+#print axioms principalTraceHeightOnePiece_icc_span_lt
+#print axioms trianglePolarTrace_inter_positiveChart_eq_shift_heightOnePiece
+#print axioms principalTraceHeightOneShiftedClosedPresentation_cover
+#print axioms heightOneTraceClosedDecomposition
+#print axioms principalTraceClosedDecomposition
+#print axioms principalTraceFirstArcData?
+#print axioms supportTraceClosedDecomposition
+#print axioms supportTraceFirstArcData?
+#print axioms supportTraceFirstArcData?_firstArc_rotate
+#print axioms selectedSupportFirstArc?_add_of_pos
+#print axioms supportTraceFirstArcData?_zeroHeight_projectiveCenter_radius
+#print axioms exteriorEndpointData_of_traceContact
+#print axioms exteriorEndpoint_gap_ratio_of_traceContact
+#print axioms DirectionNeedleFamily.mem_JGamma_liftedCoordinate_iff
+#print axioms DirectionNeedleFamily.mem_JGamma_coordinateInequalities_iff_of_componentOne_eq_none
+#print axioms DirectionNeedleFamily.mem_JGamma_supportTangentialEndpoint_iff_of_componentOne_eq_none
+
+#print axioms planeNormSq_supportPoint
+#print axioms unitChordNearestParameter_mem
+#print axioms unitChordNearestParameter_sq_le
+#print axioms unitChordNearestParameter_realizes_minimum
+#print axioms unitChord_max_endpoint_sq_ge_min_add_quarter
+#print axioms measure_apply_union_add_inter_le
+#print axioms directionAngleOuter_union_add_inter_le
+#print axioms measure_biUnion_atoms_le_weighted_classes
+#print axioms HybridSliverFamilyContainment
+#print axioms angleOuter_ge_of_hybridSliverFamilyContainment
+#print axioms radius_mul_arcsin_le
+#print axioms arcsin_sum_div_diff_le
+#print axioms arcsin_div_strictMono_pair
+#print axioms radius_mul_arcsin_lt
+#print axioms arcsin_sum_div_diff_lt
+#print axioms supportPoint_sqrt_eq_polarPoint_arcsin
+#print axioms supportPoint_neg_sqrt_eq_polarPoint_pi_sub_arcsin
+#print axioms arcsin_div_image_Icc
+#print axioms supportChord_positiveRadialWindow_mem_triangle
+#print axioms supportChord_negativeRadialWindow_mem_triangle
+#print axioms unitChord_radial_side_selection
+#print axioms supportChord_radialWindow_exists_side
+#print axioms DirectionNeedle.nearestRadiusSq
+#print axioms DirectionNeedle.maxEndpointRadiusSq
+#print axioms DirectionNeedle.maxEndpointRadiusSq_ge_nearest_add_quarter
+#print axioms DirectionNeedle.radialWindow_exists_side
+#print axioms radialSuperlevelPolar
+#print axioms radialSuperlevelOuter
+#print axioms volume_projectedRadialSuperlevel_le
+#print axioms projectiveOuter_ge_of_hybridSliverFamilyContainment
+#print axioms radialSuperlevelOuter_ge_of_hybridSliverFamilyContainment
+#print axioms radialWindowDilation
+#print axioms DirectionNeedle.sliverRadius
+#print axioms SingleNeedleSliverCertificate
+#print axioms DirectionNeedle.direction_mem_positiveSliverDilate
+#print axioms DirectionNeedle.positiveSliverBase_subset_radialSuperlevel
+#print axioms DirectionNeedle.direction_mem_negativeSliverDilate
+#print axioms DirectionNeedle.negativeSliverBase_subset_radialSuperlevel
+#print axioms DirectionNeedle.positiveSliverCertificate
+#print axioms DirectionNeedle.negativeSliverCertificate
+#print axioms DirectionNeedle.zeroHeightSliverCertificate
+#print axioms DirectionNeedle.exists_fixedWindowSliverCertificate
+#print axioms volume_le_radialSuperlevelOuter_mul_of_fixedWindowNeedles
+#print axioms ofReal_windowRatio_mul_volume_le_radialSuperlevelOuter
+#print axioms radialSuperlevelOuter_mono
+#print axioms endpointCapacityWindowDirections
+#print axioms universalPositiveNeedle_triangle_subset_centeredSet
+#print axioms StarShapedKakeya.endpointCapacity_fixedWindow
+#print axioms StarShapedKakeya.endpointCapacity_fixedWindow_centeredSet
+#print axioms RadiallyDownClosed
+#print axioms DirectionNeedle.radiallyDownClosed_triangle
+#print axioms radiallyDownClosed_directionTriangleUnion
+#print axioms radialSuperlevelOuter_le_angleOuter
+#print axioms finiteStep_lintegral_le_outerMeasure
+#print axioms StarShapedKakeya.selectedTriangleUnion_finiteStep_lintegral_le
+#print axioms logRatioThreeTermUpper
+#print axioms log_ratio_le_three_term_tail
+#print axioms DirectionNeedle.nearestRadiusSq_nonneg
+#print axioms endpointCapacityInitialClass
+#print axioms endpointCapacityBandClass
+#print axioms endpointCapacityInitialClass_subset_windowDirections
+#print axioms endpointCapacityBandClass_subset_windowDirections
+#print axioms endpointCapacityBandClass_disjoint
+#print axioms endpointCapacityInitialClass_disjoint_band
+#print axioms Witness141.eta
+#print axioms Witness141.b
+#print axioms Witness141.outerRadius
+#print axioms Witness141.switch
+#print axioms Witness141.outerRadius_sq_le_quarter_add_classLower_sq
+#print axioms Witness141.switch_succ_le_outerRadius
+#print axioms Witness141.piLower_lt_pi
+#print axioms Witness141.target_lt_common_mul_pi
+#print axioms Witness141.ofReal_target_lt_common_mul_projectiveVolume
+#print axioms unitChord_high_foot_outside_sq
+#print axioms DirectionNeedle.high_foot_outside_sq
+#print axioms Witness141.highB_lt_highOuterRadius
+#print axioms Witness141.highRadiusLower_sq_lt_one_add_eta_sq
+#print axioms Witness141.common_lt_highPaymentLower
+#print axioms Witness141.highOuterRadius_lt_next_highB
+#print axioms Witness141.highLedger_pairwise_disjoint
+#print axioms Witness141.highClass_subset_windowDirections
+#print axioms Witness141.low_high_radial_separation
+#print axioms radialSuperlevelOuter_antitone
+#print axioms Antitone.leftLim_ae_eq_volume
+#print axioms radialSuperlevelOuter_leftLim_ae_eq
+#print axioms leftLim_radialSuperlevel_lintegral_le_outerMeasure
+#print axioms StarShapedKakeya.endpointCapacity_fixedWindow_leftLim
+#print axioms endpointWindowKernel
+#print axioms endpointWindowPayment
+#print axioms endpointWindowPaymentLower_le
+#print axioms intervalIntegral_endpointWindowKernel
+#print axioms Witness141.lowPaymentLower
+#print axioms Witness141.lowPaymentLower_eq_formula
+#print axioms Witness141.lowPaymentFormula_le_lowPayment
+#print axioms Witness141.common_lt_lowPayment
+#print axioms Witness141.b_strictMono
+#print axioms Witness141.lowClass_pairwiseDisjoint
+#print axioms Witness141.iUnion_lowClass
+#print axioms Witness141.lowEligible_fixedWindow_leftLim
+#print axioms Witness141.finiteLowLedger_to_lintegral
+#print axioms Witness141.finiteLowLedger_to_outer
+#print axioms Witness141.common_mul_lowUnion_le_outer
+#print axioms Witness141.highClasses_pairwise_disjoint
+#print axioms Witness141.highClasses_cover_nearestSq_gt_eta_sq
+#print axioms Witness141.highClass_ledger_integrand
+#print axioms Witness141.uniformHighPaymentCertificate_of_crude
+#print axioms Witness141.highTail_countable_aggregate
+#print axioms Witness141.highLedgers_lintegral_le_selectedTriangleOuter
+#print axioms Witness141.highTail_aggregate_le_selectedTriangleOuter
+#print axioms Witness141.highOuterRadius_shifted_lower
+#print axioms Witness141.highFactorLower_le_ratio
+#print axioms Witness141.concreteHighJ_affine_payment
+#print axioms Witness141.concrete_uniformHighPaymentCertificate
+#print axioms Witness141.common_mul_tsum_highClass_le_lintegral
+#print axioms Witness141.common_mul_tsum_highClass_le_selectedTriangleOuter
+#print axioms Witness141.lowRadial_disjoint_highRadial
+#print axioms Witness141.low_add_high_lintegral_le_selectedOuter
+#print axioms Witness141.low_high_direction_cover
+#print axioms Witness141.common_mul_projectiveVolume_le_selectedOuter_of_local_bounds
+#print axioms Witness141.final_141_over_2000_of_concrete_local_bounds
+#print axioms Witness141.lowRowWeight
+#print axioms Witness141.common_mul_lowUnion_le_lintegral
+#print axioms Witness141.universal_one_forty_one_over_two_thousand
+#print axioms Witness141.universal_one_forty_one_over_two_thousand_le
+
+/-! ### N=64 rational finite-schedule witness (`3527/50000`) -/
+
+#print axioms log_ratio_le_four_term_tail
+#print axioms endpointWindowPaymentLowerFour_le
+#print axioms Witness3527.eta
+#print axioms Witness3527.certifiedCoefficient
+#print axioms Witness3527.b
+#print axioms Witness3527.outerRadius
+#print axioms Witness3527.switch
+#print axioms Witness3527.outerRadius_sq_le_quarter_add_classLower_sq
+#print axioms Witness3527.switch_succ_le_outerRadius
+#print axioms Witness3527.piLower_lt_pi
+#print axioms Witness3527.target_lt_common_mul_pi
+#print axioms Witness3527.common_mul_pi_lt_eta_half
+#print axioms Witness3527.certifiedCoefficient_mul_pi_lt_eta_half
+#print axioms Witness3527.ofReal_target_lt_common_mul_projectiveVolume
+#print axioms Witness3527.highB_lt_highOuterRadius
+#print axioms Witness3527.highRadiusLower_sq_lt_one_add_eta_sq
+#print axioms Witness3527.common_lt_highPaymentLower
+#print axioms Witness3527.highOuterRadius_lt_next_highB
+#print axioms Witness3527.highLedger_pairwise_disjoint
+#print axioms Witness3527.highClass_subset_windowDirections
+#print axioms Witness3527.low_high_radial_separation
+#print axioms Witness3527.lowPaymentLower
+#print axioms Witness3527.common_lt_lowPayment
+#print axioms Witness3527.certifiedCoefficient_le_lowPaymentLower
+#print axioms Witness3527.certifiedCoefficient_le_lowPayment
+#print axioms Witness3527.b_strictMono
+#print axioms Witness3527.lowClass_pairwiseDisjoint
+#print axioms Witness3527.iUnion_lowClass
+#print axioms Witness3527.lowEligible_fixedWindow_leftLim
+#print axioms Witness3527.finiteLowLedger_to_lintegral
+#print axioms Witness3527.finiteLowLedger_to_outer
+#print axioms Witness3527.common_mul_lowUnion_le_outer
+#print axioms Witness3527.highClasses_pairwise_disjoint
+#print axioms Witness3527.highClasses_cover_nearestSq_gt_eta_sq
+#print axioms Witness3527.highClass_ledger_integrand
+#print axioms Witness3527.uniformHighPaymentCertificate_of_crude
+#print axioms Witness3527.highTail_countable_aggregate
+#print axioms Witness3527.highLedgers_lintegral_le_selectedTriangleOuter
+#print axioms Witness3527.highTail_aggregate_le_selectedTriangleOuter
+#print axioms Witness3527.highOuterRadius_shifted_lower
+#print axioms Witness3527.highFactorLower_le_ratio
+#print axioms Witness3527.concreteHighJ_affine_payment
+#print axioms Witness3527.concrete_uniformHighPaymentCertificate
+#print axioms Witness3527.common_mul_tsum_highClass_le_lintegral
+#print axioms Witness3527.common_mul_tsum_highClass_le_selectedTriangleOuter
+#print axioms Witness3527.lowRadial_disjoint_highRadial
+#print axioms Witness3527.low_add_high_lintegral_le_selectedOuter
+#print axioms Witness3527.low_high_direction_cover
+#print axioms Witness3527.common_mul_projectiveVolume_le_selectedOuter_of_local_bounds
+#print axioms Witness3527.final_3527_over_50000_of_concrete_local_bounds
+#print axioms Witness3527.final_common_mul_pi_of_concrete_local_bounds
+#print axioms Witness3527.final_certifiedCoefficient_mul_pi_of_concrete_local_bounds
+#print axioms Witness3527.lowRowWeight
+#print axioms Witness3527.common_mul_lowUnion_le_lintegral
+#print axioms Witness3527.certifiedCoefficient_mul_lowUnion_le_lintegral
+#print axioms Witness3527.certifiedCoefficient_le_highPaymentLower
+#print axioms Witness3527.certifiedCoefficient_uniformHighPaymentCertificate
+#print axioms Witness3527.certifiedCoefficient_mul_tsum_highClass_le_lintegral
+#print axioms Witness3527.universal_three_five_two_seven_over_fifty_thousand
+#print axioms Witness3527.universal_three_five_two_seven_over_fifty_thousand_le
+#print axioms Witness3527.universal_certifiedCoefficient_mul_pi
+
+#print axioms subset_dilate_of_subset_endpointEnvelope
+#print axioms endpointEnvelopeAlgebra_subset_sameCentre_dilate
+
+#print axioms FixedDeletionGreedyData.future_triangle_shadow_sum_lt_distance
+#print axioms UnitNeedle.not_carrier_subset_closedBall_of_not_triangleHull_subset_closedBall
+#print axioms UnitNeedle.outsideBall_sub_one_of_not_triangleHull_subset_closedBall
+#print axioms FixedDeletionGreedyData.geometric_outerMeasure_lower
+#print axioms FiniteFixedSelection.geometric_outerMeasure_lower
+#print axioms fixedSelectionOutcome
+#print axioms coordinatePlaneEquiv_measurePreserving
+#print axioms DirectionNeedle.toUnitNeedle_hasDirection
+#print axioms DirectionNeedle.toUnitNeedle_height_zero
+#print axioms DirectionNeedle.image_triangle_eq_triangleHull
+#print axioms li25FixedSelectionOutcome
+#print axioms strong_concaveOn_arcsin_mul_sin
+#print axioms polarSector_liResidualAngles_subset_liResidualRayFan
+#print StrongLiLemma25Theorem
+#print axioms liCenteredExteriorArea_zero
+#print axioms liLemma23_centered_calculus
+#print axioms liLemma23_counterexample_not_in_context_cap
+#print axioms LiLemma23ExteriorAreaStatement
+#print axioms LiLemma23ExteriorAreaStatement_proof
+#print axioms LiLemma24ExteriorSeparationStatement
+#print axioms liLemma24ExteriorSeparation
+#print axioms outerMeasure_frontier_directionNeedle_triangle
+#print axioms outerMeasure_interior_liExterior_eq
+#print axioms liLemma23_interior_bound
+#print axioms pairwise_disjoint_liExteriorInterior
+#print axioms measurableSet_iUnion_liExteriorInterior
+#print axioms liSelectedExteriorUnion_area
+#print axioms FiniteFixedSelection.liSelectedExterior_area
+#print axioms FixedDeletionGreedyData.liSelectedExterior_area
+#print axioms FixedDeletionGreedyData.liSelectedExterior_eq_top_of_cost_eq_top
+#print axioms image_directionQuotient_liResidualAngles
+#print axioms directionAngleOuter_le_angleSetOuter_liResidualAngles
+#print axioms polarSector_liResidualAngles_subset_directionTriangleUnion
+#print axioms disjoint_liResidualRayFan_selectedExterior
+#print axioms FiniteFixedSelection.liLemma25GreedyCertificate
+#print axioms liLemma25Certificate_of_fixedSelection
+#print axioms UnitNeedle.volume_triangleInterior
+#print axioms finite_paperWeight_payment
+#print axioms paperWeight_payment_tsum
+#print axioms caseII_round2_initial_angle_lower_bound
+#print axioms caseII_fixed_greedy_lower_bound
+#print axioms caseII_A_out_fixed_greedy_lower_bound
+#print axioms strong_caseII_kappa_rational_lower
+#print axioms strongA_lt_scaled_strongRho
+#print axioms strong_caseII_fixed_coefficient_strict
+#print axioms strong_caseII_fixed_coefficient_strict_pi_normalized
+#print axioms directionQuotient_isometryOn_half
+#print axioms directionAngleOuter_image_Icc_half
+#print axioms directionOuterMeasure_eq_directionAngleOuter
+#print axioms directionOuterMeasure_le_directionAngleOuter
+#print axioms strongCaseII_radius_branch
+
+#print axioms DirectionNeedleFamily.firstRadius_nonneg
+#print axioms DirectionNeedleFamily.quotient_firstArc_subset_projected_carrier
+#print axioms DirectionNeedleFamily.firstArc_carrier_subset_polarCircleTrace
+#print axioms radial_lintegral_angleOuter_le_of_measurable
+#print axioms lintegral_le_outerMeasure_of_le_angleOuter
+#print axioms outerMeasure_ge_lintegral_of_angleOuter_ge
+#print axioms polarSector_outerMeasure_ge
+#print axioms polarSector_outerMeasure_ge_of_subset_cut
+#print axioms volume_quotient_image_le_outerMeasure_of_subset_Ioc
+#print axioms volume_projectedPolar_le_cutOuter
+#print axioms DirectionNeedleFamily.selectedBaseUnion_subset_projectedPolarUnion
+#print axioms DirectionNeedleFamily.selectedPolarUnion_subset_triangleTraces
+#print axioms DirectionNeedleFamily.polarCarrierCut_selected_subset_angleSection
+#print axioms DirectionNeedleFamily.selectedBaseUnion_volume_le_angleOuter
+#print axioms jGammaCriticalContainment_of_zeroRadius
+#print axioms jGammaCriticalContainment_zero_or_positive
+#print axioms DirectionNeedleFamily.mem_JGamma_firstArcTarget
+#print axioms DirectionNeedleFamily.subset_iUnion_JGamma_firstArcTarget
+#print axioms firstArcPointwiseHybridCriticalContainment_of_branches
+#print axioms DirectionNeedleFamily.quotientHybrid_firstArc_subset_projected_carrier
+#print axioms DirectionNeedleFamily.aggregate_dilated_cover
+#print axioms DirectionNeedleFamily.aggregateBaseUnion_volume_le_angleOuter
+#print axioms angleOuter_ge_of_firstArcPointwiseAggregate
+#print axioms DirectionNeedleFamily.liFamilyContainment_of_critical
+#print axioms angleOuter_ge_of_liFamilyContainment
+
+#print axioms outerMeasure_inner_ge_caseI_lintegral_of_raw
+#print axioms outerMeasure_ge_caseI_lintegral
+#print axioms volume_originSphere
+#print axioms outerMeasure_originSphere
+#print axioms outerMeasure_inter_originOpenDisk_eq_closedDisk
+#print axioms directionOuterMass_univ
+#print axioms strong_li25_output_eq
+#print axioms liLemma25_greedy_geometry
+#print axioms liLemma25OuterStatement_of_greedy
+#print axioms strongLiLemma25
+#print axioms strongCaseI_conditional_area_lower_bound
+#print axioms strongCaseI_conditional_area_lower_bound_strong
+#print axioms strongInteriorRatio_le_paperG
+#print axioms strongFrozenRatio_le_paperG
+#print axioms strongLargeAngleRatio_le_paperG
+#print axioms one_le_strongPaperG
+#print axioms selectedSupportFirstArc?
+#print axioms interior_contact_strict_gap
+#print axioms strongEndpointPhi
+#print axioms strongR₁_lt_1859
+#print axioms base_ray_frozen_analytic
+#print axioms strongR1_endpoint_envelope_analytic
+#print axioms exterior_arcsin_dispatch_counterexample
+#print axioms supportNeedleTriangle_add_pi_neg
+#print axioms supportNeedle_add_pi_neg
+#print axioms projectiveDirection_add_pi
+#print axioms supportNeedleTriangle_reflect
+#print axioms supportNeedleTriangle_reflect_signed
+#print axioms reflected_support_endpoint_norms
+#print axioms NormalizedPolarArc.reflectTarget_carrier
+#print axioms polarArc_zero_target_reflection
+#print axioms selectedSupportFirstArc?_orientation_reversal_eq_none
+#print axioms selectedOrientedSupportFirstArc?_add_pi_neg_carrier
+#print axioms Figure5UpperGapSource
+#print axioms Figure5UpperGapSource.gap_lt
+#print axioms Figure5SelectedChangedLift.upper_selected
+#print axioms Figure5SelectedChangedLift.lower_selected
+#print axioms Figure5SelectedChangedLift.upper_rotated_lift
+#print axioms Figure5SelectedChangedLift.lower_rotated_lift
+#print axioms figure5_local_contact_pointwise
+#print axioms Figure5SelectedGapGeometry.toGapSource
+#print axioms Figure5SelectedChangedLift.reflected_lower_lift
+#print axioms figure5LocalContactCertificate_of_actualSelected
+#print axioms strongCaseI_aggregateMass_of_directionOuterMass
+#print axioms strongCaseI_lintegral_ge_of_integral_ge
+#print axioms strong_integral_certificate_ge
+#print axioms strongILower_le_integral
+
+#print axioms UniversalStrongLowerBound
+#print axioms planeCoordinateEquiv_measurePreserving
+#print axioms universalDirectionNeedle_toUnitNeedle_eq_centered_or_swap
+#print axioms universalDirectionNeedle_image_triangle_eq_centered_triangleHull
+#print axioms universalDirectionTriangleUnion_subset
+#print axioms universalDirectionNeedle_abs_height
+#print axioms outerMeasure_centeredCoordinate_image
+#print axioms CaseIEndpointPointwiseCertificate
+#print axioms CaseIEndpointPointwiseTheorem
+#print axioms strong_target_lt_high_threshold
+#print axioms strong_caseI_of_endpoint_certificate
+#print axioms strong_lower_bound_of_caseI
+#print axioms exists_supportPoint_eq_polarPoint
+#print axioms trianglePolarTrace_nonempty
+#print axioms supportTraceFirstArcData
+#print axioms selectedSupportFirstArc?_eq_some
+#print axioms DirectionNeedle.orientPositive
+#print axioms principalTraceWindow_interval
+#print axioms firstArc_span_pos_of_height_pos
+#print axioms strongEndpointPhi_strictMonoOn_radius
+#print axioms exists_strongEndpointPhi_eq
+#print axioms one_lt_strongPaperG
+#print axioms strongEndpointTarget_lt_top_of_not_saturated
+#print axioms mem_quotientCenteredDilate_add
+#print axioms directionInterval_subset_centeredDilate
+#print axioms universalPositiveNeedle_triangle_subset_disk
+#print axioms universalArcData
+#print axioms universalFamily_selected
+#print axioms universalFamily_zeroHeight
+#print axioms universalFamily_firstRadius_pos
+#print axioms universalFamily_positiveMember_mem_dilate
+#print axioms universalFamily_zeroMember_mem_directionInterval
+#print axioms universal_hybrid_containment
+#print axioms caseIEndpointPointwiseTheorem_proof
+#print axioms strong_lower_bound_of_endpoint_pointwise
+#print axioms universal_strong_lower_bound
+
+/-! ## M6: the parameterised endpoint interface and its generic exits
+
+These are the receipts for the parameter-neutral layer.  `Figure5EndpointDomain`
+and `Figure5EndpointAnalyticPackage` are the only two structures a new parameter
+tuple has to instantiate on the geometric side; `endpointTraceFor` and
+`endpointCriticalFor` are the two inputs the M5 confined wrapper consumes, and
+`confined_lower_bound_of_endpointDomain` is the wrapper with both discharged. -/
+
+#print axioms Figure5EndpointDomain
+#print axioms Figure5EndpointAnalyticPackage
+#print axioms Figure5EndpointAnalyticPackage.of_dominations
+#print axioms Figure5EndpointAnalyticPackage.target_lt_top_of_not_saturated
+#print axioms Figure5UpperGapSourceFor
+#print axioms Figure5UpperGapSourceFor.gap_lt
+#print axioms Figure5SelectedGapGeometryFor
+#print axioms Figure5SelectedGapGeometryFor.toGapSource
+#print axioms Figure5ActualSelectedTargetRelationFor
+#print axioms Figure5LocalContactCertificateFor
+#print axioms figure5ActualSelectedTargetRelationFor_of_principal
+#print axioms figure5LocalContactCertificateFor_of_actualSelected
+#print axioms figure5_local_contact_pointwiseFor
+#print axioms figure5_selected_strict_presentation_endpoints_activeFor
+#print axioms universalPositiveNeedle_triangle_subset_diskFor
+#print axioms universalArcDataFor
+#print axioms universalFamilyFor_positiveMember_mem_dilate
+#print axioms universal_hybrid_containmentFor
+#print axioms endpointTraceFor
+#print axioms endpointCriticalFor
+#print axioms endpointOneLeG
+#print axioms confined_lower_bound_of_endpointDomain
+
+/-! ### The annular `(annA, annR₀, annR₁, annPaperG)` instance of that interface
+
+Milestone M6 endpoint/confined.  `ann_base_ray_gap` is the only deep gate; it is
+proved from scratch against `annPaperG` and does **not** go through
+`base_ray_frozen_analytic`, whose `t = 7/100` polynomial split is false at
+`annA`. -/
+
+#print axioms ann_annBaseL_eq
+#print axioms ann_two_annBaseK_sub_one
+#print axioms ann_frozen_le_annPaperG
+#print axioms ann_sin_taylor_lower
+#print axioms ann_baseRay_small
+#print axioms ann_baseRay_mid_poly
+#print axioms ann_baseRay_mid
+#print axioms ann_half_lt_sin
+#print axioms ann_baseRay_large_poly
+#print axioms ann_alpha_lt_annBaseK_mul
+#print axioms ann_base_ray_gap
+#print axioms annFigure5Domain
+#print axioms ann_strongInteriorRatio_le_annPaperG
+#print axioms ann_strongLargeAngleRatio_le_annPaperG
+#print axioms annFigure5AnalyticPackage
+#print axioms annular_confined_lower_bound
+
+/-! ### The frozen `100π/5599` instance of that interface -/
+
+#print axioms strongFigure5Domain
+#print axioms strongFigure5AnalyticPackage
+
+/-! ### The preserved historical API: original kinds, constructors, projections
+
+These receipts pin that the pre-M6 names are still genuine inductive/structure
+constants with their original constructors and projections, not `def`/`abbrev`
+aliases. -/
+
+#print axioms Figure5UpperGapSource.nearHalf
+#print axioms Figure5UpperGapSource.heightCutoff
+#print axioms Figure5UpperGapSource.baseRayCutoff
+#print axioms Figure5SelectedGapGeometry
+#print axioms Figure5SelectedGapGeometry.nearHalf
+#print axioms Figure5SelectedGapGeometry.height
+#print axioms Figure5SelectedGapGeometry.mixed
+#print axioms Figure5SelectedGapGeometry.baseBase
+#print axioms Figure5LocalContactCertificate
+#print axioms Figure5LocalContactCertificate.mk
+#print axioms Figure5LocalContactCertificate.q
+#print axioms Figure5ActualSelectedTargetRelation
+#print axioms Figure5ActualSelectedTargetRelation.mk
+#print axioms Figure5ActualSelectedTargetRelation.target_eq
+#print axioms figure5_easy_gapGeometry
+#print axioms figure5_hard_mixed_gapGeometry
+#print axioms figure5_hard_baseBase_gapGeometry
+#print axioms figure5ActualSelectedTargetRelation_of_principal
+#print axioms Figure5SelectedChangedLift.upper_selected
+#print axioms Figure5SelectedChangedLift.lower_selected
+#print axioms figure5_selected_strict_presentation_endpoints_active
+#print axioms universalPositiveNeedle_triangle_subset_disk
+
+/-! ## Relocated primitives and audit-only negative controls -/
+
+#print axioms supportNeedle_baseEndpoints_mem_triangle
+#print axioms arctan_lt_self_of_pos
+#print axioms self_lt_arcsin_of_pos_of_lt_one
+#print axioms figure5_single_ray_chord_identity
+#print axioms strongEndpointPhi_le_of_mixedSpan
+#print axioms strongPaperG_strongA_lt_three
+#print axioms one_le_strongR₁_mul_sin_pi_div_four
+
+/-! ## The annular two-active-segment radial integral certificate (M6)
+
+Receipts for the CLEAN annular route.  None of these declarations is used by
+`universal_strong_lower_bound`; their import closure is the reviewed numeric
+kernel `AnnularKernel` plus Mathlib. -/
+
+#print axioms ann_atan_even_partial_lower
+#print axioms ann_arctan_quarter_turn
+#print axioms ann_atanLower6_le
+#print axioms ann_arctan_le_of_reflect
+#print axioms one_le_annPaperG
+#print axioms one_le_annPaperG_on_Icc
+#print axioms ann_continuousOn_paperG
+#print axioms ann_aemeasurable_ofReal_radial
+#print axioms ann_hasDerivAt_H
+#print axioms ann_H_monotoneOn
+#print axioms ann_interior_le_large_of_H
+#print axioms ann_large_le_interior_of_H
+#print axioms ann_frozen_le_large
+#print axioms ann_H_annQL_nonpos
+#print axioms ann_H_annQR_nonneg
+#print axioms ann_paperG_eq_large
+#print axioms ann_paperG_eq_interior
+#print axioms ann_hasDerivAt_largePrimitive
+#print axioms ann_left_interval_integral
+#print axioms ann_hasDerivAt_rightPrimitive
+#print axioms ann_right_interval_integral
+#print axioms ann_log_geom_upper
+#print axioms ann_left_primitive_lower
+#print axioms ann_right_primitive_lower
+#print axioms annILower_le_integral
+#print axioms annILower_le_lintegral
+#print axioms annTarget_lt_annILower
+
+/-! ### Audit-only annular negative controls -/
+
+#print axioms ann_certificate_sum_ge_target
+#print axioms ann_crude_log_tail_negative_control
+#print axioms ann_target_2098_negative_control
+#print axioms ann_frozen_lt_large_at_annA
+#print axioms ann_cuts_straddle_switch
+
+/-! ## M7: the final joint inner/outer assembly
+
+Receipts for `StarKakeyaLower.AnnularAssembly`, which glues the M6
+endpoint/confined ledger to the M4 exterior ledger along the M1 Carathéodory
+split and produces the unconditional bound `π · 131/6250 < μ*(E)`.
+
+`universal_annular_lower_bound` is the new final theorem; it is independent of
+`universal_strong_lower_bound` — neither uses the other, and the M7 import
+closure contains no module carrying the frozen `100π/5599` constants. -/
+
+#print axioms annCExt
+#print axioms annCExt_eq_literal
+#print axioms annJointCoefficient
+#print axioms annJointCoefficient_le_annILower
+#print axioms annJointCoefficient_le_annCExt
+#print axioms annTarget_lt_annCExt
+#print axioms annTarget_lt_annJointCoefficient
+#print axioms annJointCoefficient_pos
+#print axioms directionAngleOuter_le_pi
+#print axioms pi_le_directionAngleOuter_add_compl
+#print axioms ann_target_lt_high_threshold
+#print axioms annular_joint_ledger
+#print axioms annular_lower_bound
+#print axioms UniversalAnnularLowerBound
+#print axioms universal_annular_lower_bound
+#print axioms pi_mul_annTarget_eq
+#print axioms universal_annular_lower_bound_normalForm
+
+end StarKakeyaLower

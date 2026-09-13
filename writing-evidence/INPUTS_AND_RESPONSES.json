@@ -1,0 +1,207 @@
+{
+  "native_responses": [
+    {
+      "round": 1,
+      "model": "grok-4.6",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r1-grok.json",
+      "final": "r1-grok.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r1-manuscript.md",
+          "sha256": "f54dbb2363726936461189920fc634acf1f92a1c6f0c3bd637b36dad89b48085"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r1-exercise.md",
+          "sha256": "2e3391e334ff9b7b53ffc55be30089b8fa97e476c5ec356cc28fb7d854ae2841"
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "model": "gemini-3.5-flash",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r1-gemini.json",
+      "final": "r1-gemini.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r1-manuscript.md",
+          "sha256": "f54dbb2363726936461189920fc634acf1f92a1c6f0c3bd637b36dad89b48085"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r1-exercise.md",
+          "sha256": "2e3391e334ff9b7b53ffc55be30089b8fa97e476c5ec356cc28fb7d854ae2841"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "model": "grok-4.6",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r2-grok.json",
+      "final": "r2-grok.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r2-manuscript.md",
+          "sha256": "699382a67473793a51048d19623b20f80f17cab5ded1115664c18354ccf43a3c"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r2-exercise.md",
+          "sha256": "07a669b9774f9f7c026f234bedbe4187822d9545565daaf33bde5a410c628afe"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "model": "gemini-3.5-flash",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r2-gemini.json",
+      "final": "r2-gemini.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r2-manuscript.md",
+          "sha256": "699382a67473793a51048d19623b20f80f17cab5ded1115664c18354ccf43a3c"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r2-exercise.md",
+          "sha256": "07a669b9774f9f7c026f234bedbe4187822d9545565daaf33bde5a410c628afe"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "model": "grok-4.6",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r3-grok.json",
+      "final": "r3-grok.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r3-manuscript.md",
+          "sha256": "7481c59cb0ee80094c64781da98638700025df182bbb31bd2ed1cafcee9e4638"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r3-exercise.md",
+          "sha256": "2bb0593ff4177ec9081543dc439d3f39ca1f5075d350281cc8c992e1ddb14d9e"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "model": "gemini-3.5-flash",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r3-gemini.json",
+      "final": "r3-gemini.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r3-manuscript.md",
+          "sha256": "7481c59cb0ee80094c64781da98638700025df182bbb31bd2ed1cafcee9e4638"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r3-exercise.md",
+          "sha256": "2bb0593ff4177ec9081543dc439d3f39ca1f5075d350281cc8c992e1ddb14d9e"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "model": "grok-4.6",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r4-grok.json",
+      "final": "r4-grok.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r4-manuscript.md",
+          "sha256": "0156cb9c781c4e99d9df09162315137baca0c9798ff63c8a7aaf3fd9679ecb7a"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r4-exercise.md",
+          "sha256": "6f937472b006663c94f3f1a9134c204f8aec34370f8e7150ee4c594b64a139b7"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "model": "gemini-3.5-flash",
+      "native_status": "complete",
+      "finish_reason": "stop",
+      "receipt": "r4-gemini.json",
+      "final": "r4-gemini.md",
+      "inputs": [
+        {
+          "role": "section",
+          "file": "r4-manuscript.md",
+          "sha256": "0156cb9c781c4e99d9df09162315137baca0c9798ff63c8a7aaf3fd9679ecb7a"
+        },
+        {
+          "role": "prerequisite",
+          "file": "prerequisites.md",
+          "sha256": "4710de7d1219fe0f0df385a931730026bbcf6a84420cd9bbc0af660445167d22"
+        },
+        {
+          "role": "unseen_exercise",
+          "file": "r4-exercise.md",
+          "sha256": "6f937472b006663c94f3f1a9134c204f8aec34370f8e7150ee4c594b64a139b7"
+        }
+      ]
+    }
+  ],
+  "fallback_used": false,
+  "manuscript_authority": "../KAKEYA_HISTORY.md",
+  "convergence": "R3 and R4: no new substantive manuscript defect; learner limitations remain in teacher reports"
+}

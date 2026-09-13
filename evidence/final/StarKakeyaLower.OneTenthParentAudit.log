@@ -1,0 +1,33 @@
+@StarShapedKakeya.one_tenth_le_outerArea : ∀ {E : Set Plane} (K : StarShapedKakeya E),
+  ENNReal.ofReal (1 / 10) ≤ volume.toOuterMeasure E
+@raw_hypotheses : ∀ {E : Set Plane} (o : Plane),
+  (∀ ⦃x : Plane⦄, x ∈ E → segment ℝ o x ⊆ E) →
+    (∀ (θ : Direction), ∃ n, n.HasDirection θ ∧ n.carrier ⊆ E) → ENNReal.ofReal (1 / 10) ≤ volume.toOuterMeasure E
+@[reducible] def StarKakeyaLower.Plane : Type :=
+EuclideanSpace ℝ (Fin 2)
+@[reducible] def StarKakeyaLower.Direction : Type :=
+AddCircle Real.pi
+structure StarKakeyaLower.UnitNeedle : Type
+number of parameters: 0
+fields:
+  StarKakeyaLower.UnitNeedle.left : Plane
+  StarKakeyaLower.UnitNeedle.right : Plane
+  StarKakeyaLower.UnitNeedle.unit_length : dist self.left self.right = 1
+constructor:
+  StarKakeyaLower.UnitNeedle.mk (left right : Plane) (unit_length : dist left right = 1) : UnitNeedle
+def StarKakeyaLower.UnitNeedle.carrier : UnitNeedle → Set Plane :=
+fun n => segment ℝ n.left n.right
+def StarKakeyaLower.UnitNeedle.HasDirection : UnitNeedle → Direction → Prop :=
+fun n θ => ∃ t, ↑t = θ ∧ ∃ c, c ≠ 0 ∧ n.right - n.left = c • angleVector t
+structure StarKakeyaLower.StarShapedKakeya (E : Set Plane) : Type
+number of parameters: 1
+fields:
+  StarKakeyaLower.StarShapedKakeya.center : Plane
+  StarKakeyaLower.StarShapedKakeya.star : ∀ ⦃x : Plane⦄, x ∈ E → segment ℝ self.center x ⊆ E
+  StarKakeyaLower.StarShapedKakeya.needle_exists : ∀ (θ : Direction), ∃ n, n.HasDirection θ ∧ n.carrier ⊆ E
+constructor:
+  StarKakeyaLower.StarShapedKakeya.mk {E : Set Plane} (center : Plane)
+    (star : ∀ ⦃x : Plane⦄, x ∈ E → segment ℝ center x ⊆ E)
+    (needle_exists : ∀ (θ : Direction), ∃ n, n.HasDirection θ ∧ n.carrier ⊆ E) : StarShapedKakeya E
+'StarKakeyaLower.StarShapedKakeya.one_tenth_le_outerArea' depends on axioms: [propext, Classical.choice, Quot.sound]
+'StarKakeyaLower.OneTenth.ParentAudit.raw_hypotheses' depends on axioms: [propext, Classical.choice, Quot.sound]

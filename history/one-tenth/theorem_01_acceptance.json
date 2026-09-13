@@ -1,0 +1,49 @@
+{
+  "status": "ACCEPTED_PAPER_THEOREM",
+  "theorem": "Every planar star-shaped set containing a closed unit segment in every unoriented direction has Lebesgue outer area at least 1/10.",
+  "bound": "1/10",
+  "lean_verified": false,
+  "optimality_or_priority_claimed": false,
+  "reviewed_source_commits": {
+    "low-source-b2/integrated-low/PROOF.md": "ed84c269e743177aaf1d3776df6ec5eefa05a9f6",
+    "low-source-b2/integrated-low/check.py": "ed84c269e743177aaf1d3776df6ec5eefa05a9f6",
+    "baseline/PROOF.md": "d9a3f3c1b9718fd68b9f95cf10bb2cdd32bb16da",
+    "endpoint-geometry-b1/endpoint-domain/PROOF.md": "d9a3f3c1b9718fd68b9f95cf10bb2cdd32bb16da",
+    "endpoint-geometry-b1/CONDITIONAL_TENTH_BRIDGE.md": "d9a3f3c1b9718fd68b9f95cf10bb2cdd32bb16da"
+  },
+  "end_to_end_verdict": "ACCEPT_UNIVERSAL_0P1",
+  "exposition": "THEOREM_01.md is parent-checked exposition; independent reviews apply to pinned authorities above.",
+  "historical_labels": "Pending/open labels in unchanged original proofs and checkers predate acceptance; this record and README give the current status.",
+  "execution": {
+    "normal": "PASS",
+    "optimized": "PASS",
+    "coefficient_tests_per_mode": 5,
+    "methods": [
+      "Fraction positive log series",
+      "192-bit Arb independent reconstruction"
+    ],
+    "external_cwd": "/",
+    "source_unchanged": true,
+    "geometry_certified_by_scripts": false
+  },
+  "sha256": {
+    "low-source-b2/integrated-low/PROOF.md": "5aa5785306678977117009c3abece49fda74b348230b592deaacd8bef2f0da84",
+    "low-source-b2/integrated-low/check.py": "cca8e45b567b51ebd6bd6f3fd68a7cfea997d08d270a2865768f11481eb389db",
+    "baseline/PROOF.md": "e7efd88757d39dd7f436d2f6993a652941ff4aa4c4c6a30baaece1d43fadc33c",
+    "endpoint-geometry-b1/endpoint-domain/PROOF.md": "6aeb43ee26bda0d432f1af5b8778fdc89aed58d6ccdaa00d295674ca5e4913b4",
+    "endpoint-geometry-b1/CONDITIONAL_TENTH_BRIDGE.md": "b0bebfd0cfccbe2b3a18dc800dec07088b970149a79c8bb0e9ba203b33ed1467",
+    "README.md": "ce126c020a6fdbc3e8e5ce847127225cf1ec676af0ad09efe6f7e7c894f48b49",
+    "THEOREM_01.md": "88497784f657ac6639e786ec653ba33255c911c3a317b431497c21fa43d69ffd",
+    "run_one_tenth.sh": "fa1a0e54040ab1b2ce1a43bf4e27e5d4fe500eee8064cde03ed21ad2518e9aab",
+    "verify_one_tenth.py": "3a736039266a8c37b6e053f9ae5b2314e03b1df9c3837bd27844d54d4f0cb2bf",
+    "test_one_tenth.py": "746cced05ee8c2a5030d1603f948dc8e0c6d117c9944bd6a1336872a85a21739",
+    "endpoint-geometry-b1/README.md": "62f17e3162b195baa712fc68b52b06a8a73edcb9b97f311f0877bd3fde02fc16",
+    "low-source-b2/README.md": "dd305e4be0ee8e497414e8f567186279251b503854e589da8ce4c6a2bfaa9024",
+    "tenth-reviews/b1_endpoint_independent_review.md": "a83f2b3fbc7f933dcbf1f23385c46a94cd83f086be5f6064f40fb2b3edb3cad4",
+    "tenth-reviews/b2_conditional_bridge_review.md": "9ab36097e21303dbdd3f9db51416e98641a655433f60f076292b432acd358662",
+    "tenth-reviews/b2_IL_geometry_review.md": "e6c04bee78c3a8f8883d4820967dd4c63bba0a4fed0b740261b0b9a68598d39c",
+    "tenth-reviews/b2_IL_arithmetic_review.md": "75301e76064997a4c7beb3a405d16a03c5e7a1ad9fc9c5727559e1b713e08684",
+    "tenth-reviews/b2_universal_tenth_end_to_end_review.md": "a9736c797eec853c534878ceaa61d27c2d2638ae57a1f10c17d8dd3cade62d57",
+    "tenth-reviews/parent_final_replay.log": "382e92d9aaf638ad5185f2d169879ec1ee09a5fb2ee8a64c0b8bff201f4b47bc"
+  }
+}

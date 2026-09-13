@@ -1,0 +1,72 @@
+{
+  "schema": "two-short-rootmap-provenance-v1",
+  "runtime_old_source_dependencies": [],
+  "fixture_sha256": "cf7fd217829d9d00004f442533260add70ac55564ea0589411ca598487cb1b42",
+  "sources": [
+    {
+      "path": "/home/argustest/c2c5_minimal_bnb_pilot.py",
+      "sha256": "9e1a420f9e7233fbe080a8b902f1adf5ff99faa418a4a1c8b0b150a6ac4ecee6",
+      "role": "Exact support definitions and epsilon=1/6 census, lines 27-55."
+    },
+    {
+      "path": "/home/argustest/c2c5_25root_bernstein_campaign.py",
+      "sha256": "655f30bc9fa9d98b6063fd3c35768f7b7f75f26ed0f95134497c983dfa8381a2",
+      "role": "Historical floating representative ranking assigns Rxxx names, lines 107-118; NOT replayed."
+    },
+    {
+      "path": "/home/argustest/c2c5_441_long_gap_census_lane1.py",
+      "sha256": "bee2958d7d7019f0c72101c7b686be3d6d16b25503eb218069a72bcd98c86f68",
+      "role": "Source census semantics and physical adjacent path indices."
+    },
+    {
+      "path": "/home/argustest/c2c5_441_long_gap_census_lane1.json",
+      "sha256": "8238cb2f738abac3badb537e42b9308b268b012050a4e25896a2dc1256c4c894",
+      "role": "Frozen all-441 ID/signature lookup; exact subset extracted to production_ids.tsv."
+    },
+    {
+      "path": "/home/argustest/c2c5_441root_risk_pilot_receipt.json",
+      "sha256": "ddf470902fb46ba4cbdb3beec4e78f2abe13efe8705f425f8d5ea50d57f1da31",
+      "role": "Second frozen all-441 ID/signature lookup cross-checked during extraction only."
+    },
+    {
+      "path": "/home/argustest/c2c5_two_short_structural_classification.py",
+      "sha256": "5fa9593ce333e5c362757edbaeea932fa726c20e755cbc99a7e468bec9a6298d",
+      "role": "Historical classification-only rule and old seven-root list."
+    },
+    {
+      "path": "/home/argustest/c2c5_two_short_structural_classification.json",
+      "sha256": "be3ae36ebfe2f62952cf7a67da57c94856d159d95006dee1879a6aaa18ef93b5",
+      "role": "27-row classification cross-check only; not whole-carrier authority."
+    },
+    {
+      "path": "/home/argustest/verify_c2c5_closed_root_compiler.py",
+      "sha256": "b6a84ea54dea798b5fccb9062af3ca87efeebeba95effcdbcafe633e0d7fc15e",
+      "role": "General polynomial DAG, weak A/B guards, cube and closure cone: lines 104-109,178-215."
+    },
+    {
+      "path": "/home/argustest/c2c5_one_short_sixroot_compiler.py",
+      "sha256": "77916a75c298fd8354d16c7f25222606a756764e1153ef1a4a9fe5cdf4d36fa5",
+      "role": "Generic all-pair path templates, A/B weak-state rules, lines 218-233,242-259,283-308."
+    },
+    {
+      "path": "/home/argustest/c2c5_one_short_root_closure_coverage.py",
+      "sha256": "67f25270ff918ae37acb4ef24ba3a9de2c42a23259879ed9e4fc8ab22fd45567",
+      "role": "Physical closure continuity, inverse cube map and reflection interface."
+    },
+    {
+      "path": "/home/argustest/verify_c2c5_r000_full7d.py",
+      "sha256": "0615bb112efc8866ba6e3ad9bcb2674237e7a3273cad4a78e07ae1f5ffd1cd3b",
+      "role": "Executable cube and closure/pair guard formulas, lines 38-59 (two cone labels swapped)."
+    },
+    {
+      "path": "/home/argustest/kakeya_astra_audit_20260905/n7.md",
+      "sha256": "a8851c54cad3ddeebfcc2ff89d84a5bf750732086a6f3c80721d030acb656e93",
+      "role": "Accepted restricted two-short theorem; no theorem reproof in this lane."
+    },
+    {
+      "path": "/home/argustest/kakeya_astra_audit_20260905/separator_independent_audit.md",
+      "sha256": "98bf528334a8c9327cc46f6aa311d61c007b341059d769bd389b854d841ae0c6",
+      "role": "Independent acceptance, closed-wall extension and physical ledger."
+    }
+  ]
+}

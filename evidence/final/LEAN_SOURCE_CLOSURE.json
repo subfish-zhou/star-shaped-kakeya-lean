@@ -1,0 +1,379 @@
+{
+  "status": "byte-preserved production + importing audits; cold package rebuild pending",
+  "roots": [
+    "StarKakeyaLower.OneTenthAudit",
+    "StarKakeyaLower.OneTenthParentAudit"
+  ],
+  "modules": {
+    "StarKakeyaLower.OneTenthAudit": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthAudit.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthAudit.lean",
+      "sha256": "1dcd2e81cc5c8979ef023e4967af1a81781792d1d06add652777d8a582c85cfc",
+      "imports": [
+        "StarKakeyaLower.OneTenth"
+      ]
+    },
+    "StarKakeyaLower.OneTenth": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenth.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenth.lean",
+      "sha256": "2e0c8557b68f42eee4699f26538f23ee6648e9b7d434924214feaa19f697f4da",
+      "imports": [
+        "StarKakeyaLower.OneTenthGlobalAssemblyClosed"
+      ]
+    },
+    "StarKakeyaLower.OneTenthGlobalAssemblyClosed": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthGlobalAssemblyClosed.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthGlobalAssemblyClosed.lean",
+      "sha256": "1ec14f848f72b2b09190cd375e975ff63e4698fc2cca6952065ceb9068ec67ff",
+      "imports": [
+        "StarKakeyaLower.OneTenthGlobalAssemblyTail",
+        "StarKakeyaLower.OneTenthFixedHighBank"
+      ]
+    },
+    "StarKakeyaLower.OneTenthGlobalAssemblyTail": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthGlobalAssemblyTail.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthGlobalAssemblyTail.lean",
+      "sha256": "8cb9baba3c0ee276fbe03302d8675eaff737b084bbc4bfa313c9db1f335f47b2",
+      "imports": [
+        "StarKakeyaLower.OneTenthGlobalAssembly"
+      ]
+    },
+    "StarKakeyaLower.OneTenthGlobalAssembly": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthGlobalAssembly.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthGlobalAssembly.lean",
+      "sha256": "376dfa2ed6452ee82fd2d3f71842f298bbdb335b9d42406855ba01408c3f054c",
+      "imports": [
+        "StarKakeyaLower.OneTenthSectionBoundsLowBank",
+        "StarKakeyaLower.OneTenthHighTailSupports"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsLowBank": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSectionBoundsLowBank.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSectionBoundsLowBank.lean",
+      "sha256": "65925177febb6aae9c73cba95a73c9e63b01248e26786dc745d825eb455b5a85",
+      "imports": [
+        "StarKakeyaLower.OneTenthSectionBoundsReal",
+        "StarKakeyaLower.OneTenthKernelIntegralsAssembly"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsReal": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSectionBoundsReal.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSectionBoundsReal.lean",
+      "sha256": "c4d7c5b83f17b9d5ba3d7c36bc156d7b22de0112516e6dfb322fd3ef5c23a8c2",
+      "imports": [
+        "StarKakeyaLower.OneTenthSectionBounds"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBounds": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSectionBounds.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSectionBounds.lean",
+      "sha256": "88d7b9c89985c532f14aad317773012024460f8f0676ee7a169724b4c0f96502",
+      "imports": [
+        "StarKakeyaLower.OneTenthSectionBoundsGeneral",
+        "StarKakeyaLower.OneTenthSourcesPartition",
+        "StarKakeyaLower.OneTenthOpenBankPlane"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsGeneral": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSectionBoundsGeneral.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSectionBoundsGeneral.lean",
+      "sha256": "70b9f13130a5a61768ce9ef1ad9834fe848e783426a7d5e8761e202795b7e1e2",
+      "imports": [
+        "StarKakeyaLower.OneTenthSectionBoundsIntervals"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsIntervals": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSectionBoundsIntervals.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSectionBoundsIntervals.lean",
+      "sha256": "1a1ad5dadfb2384df7f8290abb52fcf7cac6d417117dee25a89f13dfffe11eed",
+      "imports": [
+        "StarKakeyaLower.OneTenthLobesPhysical",
+        "StarKakeyaLower.OneTenthCapsEndpoints"
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesPhysical": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthLobesPhysical.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthLobesPhysical.lean",
+      "sha256": "4405979a46b88e1963c1c58c92d03a464aadd1cd033943a73d2ed8e891941100",
+      "imports": [
+        "StarKakeyaLower.OneTenthLobesCones",
+        "StarKakeyaLower.OneTenthRecovery"
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesCones": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthLobesCones.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthLobesCones.lean",
+      "sha256": "3ecb41f11ba6a0982b00722db70a380d783f7e8fe7a16230eabc50831bcd9400",
+      "imports": [
+        "StarKakeyaLower.OneTenthLobesGap"
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesGap": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthLobesGap.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthLobesGap.lean",
+      "sha256": "7f3667ab882cf55e66875fb04ec4c0ab45d901e3d3fe478b658801b7461a719a",
+      "imports": [
+        "StarKakeyaLower.OneTenthLobes"
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobes": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthLobes.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthLobes.lean",
+      "sha256": "afeffd7bb0a69cf5fc94553147e50a4905dbd44f3a2f5a92d0e1235e98f9545f",
+      "imports": [
+        "StarKakeyaLower.OneTenthLobesGeometry"
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesGeometry": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthLobesGeometry.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthLobesGeometry.lean",
+      "sha256": "0ded762b48338f3d01ba741b5370ea0e31c96dfab9520138af0e3200e3b98a91",
+      "imports": [
+        "StarKakeyaLower.LiGeometry"
+      ]
+    },
+    "StarKakeyaLower.LiGeometry": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/LiGeometry.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/LiGeometry.lean",
+      "sha256": "bc543788923d5820db5a4708fee896fcc8493eacf08473aeb255b4716f6e33e0",
+      "imports": [
+        "StarKakeyaLower.QuotientCircle"
+      ]
+    },
+    "StarKakeyaLower.QuotientCircle": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/QuotientCircle.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/QuotientCircle.lean",
+      "sha256": "71f552e240faadf547a2333731c7eae0a5514d6e986dec6956ced04e5471bf1a",
+      "imports": [
+        "StarKakeyaLower.CircleDilation",
+        "Mathlib.Topology.Instances.AddCircle.Defs",
+        "Mathlib.MeasureTheory.Group.AddCircle"
+      ]
+    },
+    "StarKakeyaLower.CircleDilation": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/CircleDilation.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/CircleDilation.lean",
+      "sha256": "07b3823b348bd0aebee476a01fe762bb9743fc1cd2bf5658b93de59ce0a6a6de",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    "StarKakeyaLower.OneTenthRecovery": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthRecovery.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthRecovery.lean",
+      "sha256": "214a216501fefd4ce665cdc967f8e0b73aa1c65b34d83c4bb0a270a6cd26424d",
+      "imports": [
+        "StarKakeyaLower.TriangleArea"
+      ]
+    },
+    "StarKakeyaLower.TriangleArea": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/TriangleArea.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/TriangleArea.lean",
+      "sha256": "099483df44d34deed0a3b3d009025ea6c99fc8be4f03b2544200c80986deb936",
+      "imports": [
+        "StarKakeyaLower.StarKakeyaSet"
+      ]
+    },
+    "StarKakeyaLower.StarKakeyaSet": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/StarKakeyaSet.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/StarKakeyaSet.lean",
+      "sha256": "364c935a7e4efc48d539f962624c42a2145581e7c588dcdbd3e0d7a6fe4046a6",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    "StarKakeyaLower.OneTenthCapsEndpoints": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthCapsEndpoints.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthCapsEndpoints.lean",
+      "sha256": "73769fe21c519cf8d7b354c961190aa5f1818dc4e8fbf6d9a8f5fcddd085695c",
+      "imports": [
+        "StarKakeyaLower.OneTenthCaps"
+      ]
+    },
+    "StarKakeyaLower.OneTenthCaps": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthCaps.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthCaps.lean",
+      "sha256": "da9252771753dc94dd53674b38172d0685a4a6f56ec4e11df6e2df8a16c85cc9",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSourcesPartition": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSourcesPartition.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSourcesPartition.lean",
+      "sha256": "2bcad310143cdb4fc0e246742d6239a7fd85b8343dbe3c266ab92fb70bb9318b",
+      "imports": [
+        "StarKakeyaLower.OneTenthSourcesGeometry"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSourcesGeometry": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSourcesGeometry.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSourcesGeometry.lean",
+      "sha256": "a45785c6f3b5cec114c1e2bbf3b11e15a1d486eb7ed1e7b2ca23ff762bbeadb6",
+      "imports": [
+        "StarKakeyaLower.OneTenthSources"
+      ]
+    },
+    "StarKakeyaLower.OneTenthSources": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthSources.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthSources.lean",
+      "sha256": "1ce43e97cfc49a716afa162f1c8bbda24a2a7ee3bca1c95c4b2406aead041ae9",
+      "imports": [
+        "StarKakeyaLower.OneTenthRecovery",
+        "StarKakeyaLower.OneTenthCircleReceipt"
+      ]
+    },
+    "StarKakeyaLower.OneTenthCircleReceipt": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthCircleReceipt.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthCircleReceipt.lean",
+      "sha256": "91d877db9b50b5e22d667f8c8f317f68a8f31b6a0caf5038ce1684113aa52d2e",
+      "imports": [
+        "StarKakeyaLower.OneTenthCircleLifts"
+      ]
+    },
+    "StarKakeyaLower.OneTenthCircleLifts": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthCircleLifts.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthCircleLifts.lean",
+      "sha256": "ac9b4930ca8bf0d760be2bb45093254711510b1dfbcaa84ea984d3526c4cde9e",
+      "imports": [
+        "StarKakeyaLower.OneTenthCircle"
+      ]
+    },
+    "StarKakeyaLower.OneTenthCircle": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthCircle.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthCircle.lean",
+      "sha256": "8c2b9da7b0f2a44c97bf32298b8a590c7c6a0852c196e6c05655bdd26f9b5c37",
+      "imports": [
+        "StarKakeyaLower.LiGeometry"
+      ]
+    },
+    "StarKakeyaLower.OneTenthOpenBankPlane": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthOpenBankPlane.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthOpenBankPlane.lean",
+      "sha256": "2e21b7949fe73e8aa2f1920a0fc0a5728aee0b24fa0907f93081e1618be8bf47",
+      "imports": [
+        "StarKakeyaLower.OneTenthOpenBankAssembly"
+      ]
+    },
+    "StarKakeyaLower.OneTenthOpenBankAssembly": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthOpenBankAssembly.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthOpenBankAssembly.lean",
+      "sha256": "98348f2446ca5f738a1c2cca579f95936d11e5cb6691391cd31169ef8e905f51",
+      "imports": [
+        "StarKakeyaLower.OneTenthOpenBank"
+      ]
+    },
+    "StarKakeyaLower.OneTenthOpenBank": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthOpenBank.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthOpenBank.lean",
+      "sha256": "49b395a5edda0d47506aa4e856005f5e875f43edeb2aebb6920a2f2e0ad0ef40",
+      "imports": [
+        "StarKakeyaLower.OneTenthCircleReceipt",
+        "StarKakeyaLower.PolarOuterMeasure"
+      ]
+    },
+    "StarKakeyaLower.PolarOuterMeasure": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/PolarOuterMeasure.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/PolarOuterMeasure.lean",
+      "sha256": "2ae89237c5140a44ad80d61e032ee2b3fe58b0d4896ef4c70539ac6c1daadffc",
+      "imports": [
+        "StarKakeyaLower.LiGeometry",
+        "StarKakeyaLower.StarKakeyaSet",
+        "Mathlib.Analysis.SpecialFunctions.PolarCoord",
+        "Mathlib.MeasureTheory.Integral.Prod"
+      ]
+    },
+    "StarKakeyaLower.OneTenthKernelIntegralsAssembly": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthKernelIntegralsAssembly.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthKernelIntegralsAssembly.lean",
+      "sha256": "068b043e82c8a1374b944801085214b01a2ac30790849c6b0582e09ec318fe5d",
+      "imports": [
+        "StarKakeyaLower.OneTenthKernelIntegrals"
+      ]
+    },
+    "StarKakeyaLower.OneTenthKernelIntegrals": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthKernelIntegrals.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthKernelIntegrals.lean",
+      "sha256": "342458c0d8e49c9bc62e3b73e2a66b0ab42d283523a1ad29d540255798308ba2",
+      "imports": [
+        "StarKakeyaLower.OneTenthArithmetic",
+        "StarKakeyaLower.OneTenthOpenBankAssembly"
+      ]
+    },
+    "StarKakeyaLower.OneTenthArithmetic": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthArithmetic.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthArithmetic.lean",
+      "sha256": "091b83cb907ecee27857b851771c1309d267e922b6e6618c13a51a0d45bd23da",
+      "imports": [
+        "StarKakeyaLower.EndpointCapacityLogBound"
+      ]
+    },
+    "StarKakeyaLower.EndpointCapacityLogBound": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/EndpointCapacityLogBound.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/EndpointCapacityLogBound.lean",
+      "sha256": "5181f6cddccde2f587ccc5b85b9b1a9792737107e93c4e8e78885af4ca65718d",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    "StarKakeyaLower.OneTenthHighTailSupports": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthHighTailSupports.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthHighTailSupports.lean",
+      "sha256": "9c3ef99182748d0ca4837d350bc2f5f5a3e1f78c3411950968fc1642a462199b",
+      "imports": [
+        "StarKakeyaLower.OneTenthHighTailIntegration"
+      ]
+    },
+    "StarKakeyaLower.OneTenthHighTailIntegration": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthHighTailIntegration.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthHighTailIntegration.lean",
+      "sha256": "0af5ce05ca6373b2203748e96e7324d50eb1baa33d67c5b1bb2795bfeafa2d73",
+      "imports": [
+        "StarKakeyaLower.OneTenthHighTail"
+      ]
+    },
+    "StarKakeyaLower.OneTenthHighTail": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthHighTail.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthHighTail.lean",
+      "sha256": "2d14229bc88aea993b03ad55d98198e0ed0276f59ac1cba6c4ed67be4595d09c",
+      "imports": [
+        "StarKakeyaLower.OneTenthLobesCones",
+        "StarKakeyaLower.OneTenthOpenBankAssembly",
+        "StarKakeyaLower.OneTenthSourcesPartition"
+      ]
+    },
+    "StarKakeyaLower.OneTenthFixedHighBank": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthFixedHighBank.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthFixedHighBank.lean",
+      "sha256": "a5f9f4e31e16eaadcb4ee10b3104b51a3b3a504dff65d3e0333cb8bd6108ad40",
+      "imports": [
+        "StarKakeyaLower.OneTenthFixedHigh",
+        "StarKakeyaLower.OneTenthKernelIntegralsHigh"
+      ]
+    },
+    "StarKakeyaLower.OneTenthFixedHigh": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthFixedHigh.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthFixedHigh.lean",
+      "sha256": "ca3d0943dca6ed4b896ed0cb283b1acbc22ceac980877a09d04d8382dcc9d005",
+      "imports": [
+        "StarKakeyaLower.OneTenthSectionBoundsReal"
+      ]
+    },
+    "StarKakeyaLower.OneTenthKernelIntegralsHigh": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthKernelIntegralsHigh.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthKernelIntegralsHigh.lean",
+      "sha256": "8eba4db9544f55f29b5831400a64efa9c9df282891361a7f6a405ff481be9bcf",
+      "imports": [
+        "StarKakeyaLower.OneTenthKernelIntegralsAssembly"
+      ]
+    },
+    "StarKakeyaLower.OneTenthParentAudit": {
+      "original": "/home/argustest/research/kakeya-closeout/materials/STAR-SHAPED-KAKEYA-UPPER-LOWER-COMBINED-2026-07-31/lower-bound/04-lean/StarKakeyaLower/OneTenthParentAudit.lean",
+      "copy": "delivery/staging/lean/StarKakeyaLower/OneTenthParentAudit.lean",
+      "sha256": "0e9e687dd7f87e2f2b929052e0ec779777175c805086c2af70b29ecd376a9bc7",
+      "imports": [
+        "StarKakeyaLower.OneTenth"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1356 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "roots": [
+    "StarKakeyaLower.OneTenthAudit",
+    "StarKakeyaLower.OneTenthParentAudit"
+  ],
+  "order": [
+    "StarKakeyaLower.CircleDilation",
+    "StarKakeyaLower.QuotientCircle",
+    "StarKakeyaLower.LiGeometry",
+    "StarKakeyaLower.OneTenthLobesGeometry",
+    "StarKakeyaLower.OneTenthLobes",
+    "StarKakeyaLower.OneTenthLobesGap",
+    "StarKakeyaLower.OneTenthLobesCones",
+    "StarKakeyaLower.StarKakeyaSet",
+    "StarKakeyaLower.TriangleArea",
+    "StarKakeyaLower.OneTenthRecovery",
+    "StarKakeyaLower.OneTenthLobesPhysical",
+    "StarKakeyaLower.OneTenthCaps",
+    "StarKakeyaLower.OneTenthCapsEndpoints",
+    "StarKakeyaLower.OneTenthSectionBoundsIntervals",
+    "StarKakeyaLower.OneTenthSectionBoundsGeneral",
+    "StarKakeyaLower.OneTenthCircle",
+    "StarKakeyaLower.OneTenthCircleLifts",
+    "StarKakeyaLower.OneTenthCircleReceipt",
+    "StarKakeyaLower.OneTenthSources",
+    "StarKakeyaLower.OneTenthSourcesGeometry",
+    "StarKakeyaLower.OneTenthSourcesPartition",
+    "StarKakeyaLower.PolarOuterMeasure",
+    "StarKakeyaLower.OneTenthOpenBank",
+    "StarKakeyaLower.OneTenthOpenBankAssembly",
+    "StarKakeyaLower.OneTenthOpenBankPlane",
+    "StarKakeyaLower.OneTenthSectionBounds",
+    "StarKakeyaLower.OneTenthSectionBoundsReal",
+    "StarKakeyaLower.EndpointCapacityLogBound",
+    "StarKakeyaLower.OneTenthArithmetic",
+    "StarKakeyaLower.OneTenthKernelIntegrals",
+    "StarKakeyaLower.OneTenthKernelIntegralsAssembly",
+    "StarKakeyaLower.OneTenthSectionBoundsLowBank",
+    "StarKakeyaLower.OneTenthHighTail",
+    "StarKakeyaLower.OneTenthHighTailIntegration",
+    "StarKakeyaLower.OneTenthHighTailSupports",
+    "StarKakeyaLower.OneTenthGlobalAssembly",
+    "StarKakeyaLower.OneTenthGlobalAssemblyTail",
+    "StarKakeyaLower.OneTenthFixedHigh",
+    "StarKakeyaLower.OneTenthKernelIntegralsHigh",
+    "StarKakeyaLower.OneTenthFixedHighBank",
+    "StarKakeyaLower.OneTenthGlobalAssemblyClosed",
+    "StarKakeyaLower.OneTenth",
+    "StarKakeyaLower.OneTenthAudit",
+    "StarKakeyaLower.OneTenthParentAudit"
+  ],
+  "sources": {
+    "StarKakeyaLower.CircleDilation": {
+      "sha256": "07b3823b348bd0aebee476a01fe762bb9743fc1cd2bf5658b93de59ce0a6a6de",
+      "stat": [
+        66305,
+        52920535,
+        11846,
+        1789283917923058945,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.EndpointCapacityLogBound": {
+      "sha256": "2861243688a4f5c682f1adf805cd800dd68ead9f5c0c032bf2b14cb6c4a925b8",
+      "stat": [
+        66305,
+        52920508,
+        7019,
+        1789296845541743917,
+        1789296845543743951
+      ]
+    },
+    "StarKakeyaLower.LiGeometry": {
+      "sha256": "3a07f8aa45aef026d7ded22c85b94379114d895ce88433e28f2e8d9f538400e1",
+      "stat": [
+        66305,
+        52920529,
+        136417,
+        1789296845826748773,
+        1789296845827748790
+      ]
+    },
+    "StarKakeyaLower.OneTenth": {
+      "sha256": "2e0c8557b68f42eee4699f26538f23ee6648e9b7d434924214feaa19f697f4da",
+      "stat": [
+        66305,
+        52920544,
+        846,
+        1789283917918058913,
+        1789296311622368366
+      ]
+    },
+    "StarKakeyaLower.OneTenthArithmetic": {
+      "sha256": "091b83cb907ecee27857b851771c1309d267e922b6e6618c13a51a0d45bd23da",
+      "stat": [
+        66305,
+        52920521,
+        6946,
+        1789283917926058965,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthAudit": {
+      "sha256": "1dcd2e81cc5c8979ef023e4967af1a81781792d1d06add652777d8a582c85cfc",
+      "stat": [
+        66305,
+        52920541,
+        2708,
+        1789283917918058913,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthCaps": {
+      "sha256": "da9252771753dc94dd53674b38172d0685a4a6f56ec4e11df6e2df8a16c85cc9",
+      "stat": [
+        66305,
+        52920540,
+        5533,
+        1789283917924058952,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthCapsEndpoints": {
+      "sha256": "0b456b4e19ccc32b3a6205e6abdad7abcfe81e5698d5dd954da7bc7cfc164c65",
+      "stat": [
+        66305,
+        53037911,
+        5274,
+        1789296844820731633,
+        1789296844822731667
+      ]
+    },
+    "StarKakeyaLower.OneTenthCircle": {
+      "sha256": "8c2b9da7b0f2a44c97bf32298b8a590c7c6a0852c196e6c05655bdd26f9b5c37",
+      "stat": [
+        66305,
+        52920514,
+        9202,
+        1789283917925058959,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthCircleLifts": {
+      "sha256": "ac9b4930ca8bf0d760be2bb45093254711510b1dfbcaa84ea984d3526c4cde9e",
+      "stat": [
+        66305,
+        52920519,
+        8026,
+        1789283917925058959,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthCircleReceipt": {
+      "sha256": "91d877db9b50b5e22d667f8c8f317f68a8f31b6a0caf5038ce1684113aa52d2e",
+      "stat": [
+        66305,
+        52920517,
+        5737,
+        1789283917924058952,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthFixedHigh": {
+      "sha256": "ca3d0943dca6ed4b896ed0cb283b1acbc22ceac980877a09d04d8382dcc9d005",
+      "stat": [
+        66305,
+        52920537,
+        6730,
+        1789283917927058972,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthFixedHighBank": {
+      "sha256": "a5f9f4e31e16eaadcb4ee10b3104b51a3b3a504dff65d3e0333cb8bd6108ad40",
+      "stat": [
+        66305,
+        52920520,
+        4510,
+        1789283917927058972,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthGlobalAssembly": {
+      "sha256": "376dfa2ed6452ee82fd2d3f71842f298bbdb335b9d42406855ba01408c3f054c",
+      "stat": [
+        66305,
+        52920509,
+        6712,
+        1789283917919058919,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthGlobalAssemblyClosed": {
+      "sha256": "1ec14f848f72b2b09190cd375e975ff63e4698fc2cca6952065ceb9068ec67ff",
+      "stat": [
+        66305,
+        52920525,
+        3323,
+        1789283917919058919,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthGlobalAssemblyTail": {
+      "sha256": "8cb9baba3c0ee276fbe03302d8675eaff737b084bbc4bfa313c9db1f335f47b2",
+      "stat": [
+        66305,
+        52920518,
+        3102,
+        1789283917919058919,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthHighTail": {
+      "sha256": "2d14229bc88aea993b03ad55d98198e0ed0276f59ac1cba6c4ed67be4595d09c",
+      "stat": [
+        66305,
+        52920536,
+        4673,
+        1789283917927058972,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthHighTailIntegration": {
+      "sha256": "0af5ce05ca6373b2203748e96e7324d50eb1baa33d67c5b1bb2795bfeafa2d73",
+      "stat": [
+        66305,
+        52920546,
+        4549,
+        1789283917926058965,
+        1789296311622368366
+      ]
+    },
+    "StarKakeyaLower.OneTenthHighTailSupports": {
+      "sha256": "9c3ef99182748d0ca4837d350bc2f5f5a3e1f78c3411950968fc1642a462199b",
+      "stat": [
+        66305,
+        52920533,
+        3664,
+        1789283917926058965,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthKernelIntegrals": {
+      "sha256": "342458c0d8e49c9bc62e3b73e2a66b0ab42d283523a1ad29d540255798308ba2",
+      "stat": [
+        66305,
+        52920510,
+        5553,
+        1789283917926058965,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthKernelIntegralsAssembly": {
+      "sha256": "068b043e82c8a1374b944801085214b01a2ac30790849c6b0582e09ec318fe5d",
+      "stat": [
+        66305,
+        52920513,
+        8413,
+        1789283917926058965,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthKernelIntegralsHigh": {
+      "sha256": "8eba4db9544f55f29b5831400a64efa9c9df282891361a7f6a405ff481be9bcf",
+      "stat": [
+        66305,
+        52920539,
+        5226,
+        1789283917927058972,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobes": {
+      "sha256": "afeffd7bb0a69cf5fc94553147e50a4905dbd44f3a2f5a92d0e1235e98f9545f",
+      "stat": [
+        66305,
+        52920506,
+        6412,
+        1789283917920058926,
+        1789296311618368117
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesCones": {
+      "sha256": "3ecb41f11ba6a0982b00722db70a380d783f7e8fe7a16230eabc50831bcd9400",
+      "stat": [
+        66305,
+        52920542,
+        8738,
+        1789283917920058926,
+        1789296311622368366
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesGap": {
+      "sha256": "dde8f2c590fea818abedef43ffcd79fb5363d5a3b0dc89643334193b8aceb695",
+      "stat": [
+        66305,
+        52920548,
+        5712,
+        1789296844972734223,
+        1789296844973734240
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesGeometry": {
+      "sha256": "0ded762b48338f3d01ba741b5370ea0e31c96dfab9520138af0e3200e3b98a91",
+      "stat": [
+        66305,
+        52920528,
+        8869,
+        1789283917921058932,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthLobesPhysical": {
+      "sha256": "4405979a46b88e1963c1c58c92d03a464aadd1cd033943a73d2ed8e891941100",
+      "stat": [
+        66305,
+        52920523,
+        9941,
+        1789283917920058926,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthOpenBank": {
+      "sha256": "49b395a5edda0d47506aa4e856005f5e875f43edeb2aebb6920a2f2e0ad0ef40",
+      "stat": [
+        66305,
+        52920507,
+        10380,
+        1789283917925058959,
+        1789296311618368117
+      ]
+    },
+    "StarKakeyaLower.OneTenthOpenBankAssembly": {
+      "sha256": "98348f2446ca5f738a1c2cca579f95936d11e5cb6691391cd31169ef8e905f51",
+      "stat": [
+        66305,
+        52920524,
+        8060,
+        1789283917925058959,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthOpenBankPlane": {
+      "sha256": "2e21b7949fe73e8aa2f1920a0fc0a5728aee0b24fa0907f93081e1618be8bf47",
+      "stat": [
+        66305,
+        52920505,
+        4184,
+        1789283917925058959,
+        1789296311618368117
+      ]
+    },
+    "StarKakeyaLower.OneTenthParentAudit": {
+      "sha256": "0e9e687dd7f87e2f2b929052e0ec779777175c805086c2af70b29ecd376a9bc7",
+      "stat": [
+        66305,
+        52920531,
+        1024,
+        1789283917927058972,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthRecovery": {
+      "sha256": "214a216501fefd4ce665cdc967f8e0b73aa1c65b34d83c4bb0a270a6cd26424d",
+      "stat": [
+        66305,
+        52920512,
+        14422,
+        1789283917923058945,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBounds": {
+      "sha256": "88d7b9c89985c532f14aad317773012024460f8f0676ee7a169724b4c0f96502",
+      "stat": [
+        66305,
+        52920522,
+        11242,
+        1789283917919058919,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsGeneral": {
+      "sha256": "70b9f13130a5a61768ce9ef1ad9834fe848e783426a7d5e8761e202795b7e1e2",
+      "stat": [
+        66305,
+        52920515,
+        2834,
+        1789283917920058926,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsIntervals": {
+      "sha256": "1a1ad5dadfb2384df7f8290abb52fcf7cac6d417117dee25a89f13dfffe11eed",
+      "stat": [
+        66305,
+        52920545,
+        11759,
+        1789283917920058926,
+        1789296311622368366
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsLowBank": {
+      "sha256": "65925177febb6aae9c73cba95a73c9e63b01248e26786dc745d825eb455b5a85",
+      "stat": [
+        66305,
+        52920547,
+        1639,
+        1789283917919058919,
+        1789296311622368366
+      ]
+    },
+    "StarKakeyaLower.OneTenthSectionBoundsReal": {
+      "sha256": "c4d7c5b83f17b9d5ba3d7c36bc156d7b22de0112516e6dfb322fd3ef5c23a8c2",
+      "stat": [
+        66305,
+        52920511,
+        7082,
+        1789283917919058919,
+        1789296311619368179
+      ]
+    },
+    "StarKakeyaLower.OneTenthSources": {
+      "sha256": "1ce43e97cfc49a716afa162f1c8bbda24a2a7ee3bca1c95c4b2406aead041ae9",
+      "stat": [
+        66305,
+        52920538,
+        8796,
+        1789283917924058952,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.OneTenthSourcesGeometry": {
+      "sha256": "a45785c6f3b5cec114c1e2bbf3b11e15a1d486eb7ed1e7b2ca23ff762bbeadb6",
+      "stat": [
+        66305,
+        52920526,
+        10888,
+        1789283917924058952,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.OneTenthSourcesPartition": {
+      "sha256": "2bcad310143cdb4fc0e246742d6239a7fd85b8343dbe3c266ab92fb70bb9318b",
+      "stat": [
+        66305,
+        52920534,
+        10229,
+        1789283917924058952,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.PolarOuterMeasure": {
+      "sha256": "2ae89237c5140a44ad80d61e032ee2b3fe58b0d4896ef4c70539ac6c1daadffc",
+      "stat": [
+        66305,
+        52920543,
+        15531,
+        1789283917925058959,
+        1789296311622368366
+      ]
+    },
+    "StarKakeyaLower.QuotientCircle": {
+      "sha256": "71f552e240faadf547a2333731c7eae0a5514d6e986dec6956ced04e5471bf1a",
+      "stat": [
+        66305,
+        52920532,
+        40285,
+        1789283917923058945,
+        1789296311621368303
+      ]
+    },
+    "StarKakeyaLower.StarKakeyaSet": {
+      "sha256": "364c935a7e4efc48d539f962624c42a2145581e7c588dcdbd3e0d7a6fe4046a6",
+      "stat": [
+        66305,
+        52920527,
+        10205,
+        1789283917923058945,
+        1789296311620368241
+      ]
+    },
+    "StarKakeyaLower.TriangleArea": {
+      "sha256": "099483df44d34deed0a3b3d009025ea6c99fc8be4f03b2544200c80986deb936",
+      "stat": [
+        66305,
+        52920530,
+        13124,
+        1789283917923058945,
+        1789296311621368303
+      ]
+    }
+  },
+  "external_objects": {
+    "Mathlib": {
+      "path": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib.olean",
+      "sha256": "b2abfc4030c66339028aba11e3f086a5418603da0a6d9bd20f858a7e84897cac"
+    },
+    "Mathlib.Analysis.SpecialFunctions.PolarCoord": {
+      "path": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Analysis/SpecialFunctions/PolarCoord.olean",
+      "sha256": "7e7b2bfbac52cde59e12ba238efc23f70f67e98f755aff299ff348607556cce5"
+    },
+    "Mathlib.MeasureTheory.Group.AddCircle": {
+      "path": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Group/AddCircle.olean",
+      "sha256": "4908276aa2d65e618801a8c168f886c6df3f89e704ffbc0ff31523ee33ec9a71"
+    },
+    "Mathlib.MeasureTheory.Integral.Prod": {
+      "path": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/MeasureTheory/Integral/Prod.olean",
+      "sha256": "83fde9a2f153852f63623fbffa58a20391b8129e8e103cfe9e1323f4484bfea1"
+    },
+    "Mathlib.Topology.Instances.AddCircle.Defs": {
+      "path": "/home/argustest/research/star-shaped-kakeya-lean/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Topology/Instances/AddCircle/Defs.olean",
+      "sha256": "c84c7a681d15d6c6759121165d8a28d1be34f2060b09643e21278b1a0f20802d"
+    }
+  },
+  "modules": [
+    {
+      "module": "StarKakeyaLower.CircleDilation",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/CircleDilation.lean",
+      "source_sha256": "07b3823b348bd0aebee476a01fe762bb9743fc1cd2bf5658b93de59ce0a6a6de",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/CircleDilation.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/CircleDilation.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/CircleDilation.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.CircleDilation.log",
+      "wall_seconds": 5.703816765919328,
+      "source_sha256_after": "07b3823b348bd0aebee476a01fe762bb9743fc1cd2bf5658b93de59ce0a6a6de",
+      "object_sha256": "25d1cb9175f35244278e04f29178be64553c728fc187aa36a76ae3972e0aec60",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.QuotientCircle",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/QuotientCircle.lean",
+      "source_sha256": "71f552e240faadf547a2333731c7eae0a5514d6e986dec6956ced04e5471bf1a",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/QuotientCircle.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/QuotientCircle.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/QuotientCircle.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.QuotientCircle.log",
+      "wall_seconds": 6.887278673704714,
+      "source_sha256_after": "71f552e240faadf547a2333731c7eae0a5514d6e986dec6956ced04e5471bf1a",
+      "object_sha256": "b37cf254ec0d7e739fe9733b6fd270fbd770d02ce746203bcf4224df366b2848",
+      "log_sha256": "d9a29c2e8787c7acaf470d3adc15bae7c9d944daeab88bfc6995caab6af6b6fd"
+    },
+    {
+      "module": "StarKakeyaLower.LiGeometry",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/LiGeometry.lean",
+      "source_sha256": "3a07f8aa45aef026d7ded22c85b94379114d895ce88433e28f2e8d9f538400e1",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/LiGeometry.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/LiGeometry.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/LiGeometry.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.LiGeometry.log",
+      "wall_seconds": 17.24064258625731,
+      "source_sha256_after": "3a07f8aa45aef026d7ded22c85b94379114d895ce88433e28f2e8d9f538400e1",
+      "object_sha256": "b442008410c2a9b8c3fdb9608b639a97b35e98ae863d7f69b6949834454dcb37",
+      "log_sha256": "a1da33ea676dc922cd8a1a17c8ecc70f3a15bcab27fa5b789bfa2aa7765e8dbc"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesGeometry",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesGeometry.lean",
+      "source_sha256": "0ded762b48338f3d01ba741b5370ea0e31c96dfab9520138af0e3200e3b98a91",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesGeometry.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesGeometry.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesGeometry.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthLobesGeometry.log",
+      "wall_seconds": 5.346163216046989,
+      "source_sha256_after": "0ded762b48338f3d01ba741b5370ea0e31c96dfab9520138af0e3200e3b98a91",
+      "object_sha256": "4e34d09a756e15f41f3a5bde50c7c2287223a93446fbd9f69e89637399604dd5",
+      "log_sha256": "b0b6fc4d594795e5bfa819fb0b579a60fc1922d2f8aa2c3a4545ac83427a75c9"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobes",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobes.lean",
+      "source_sha256": "afeffd7bb0a69cf5fc94553147e50a4905dbd44f3a2f5a92d0e1235e98f9545f",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobes.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobes.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobes.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthLobes.log",
+      "wall_seconds": 4.803614890668541,
+      "source_sha256_after": "afeffd7bb0a69cf5fc94553147e50a4905dbd44f3a2f5a92d0e1235e98f9545f",
+      "object_sha256": "d259533b18bf66478bbd3f1c22ff091fe37593eca5e5895fa6cffb94156cf8f9",
+      "log_sha256": "28a1920c64887fdd9d436cca64ff0b7b9916ae64214c3a29690c90c22b91d30b"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesGap",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesGap.lean",
+      "source_sha256": "dde8f2c590fea818abedef43ffcd79fb5363d5a3b0dc89643334193b8aceb695",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesGap.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesGap.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesGap.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthLobesGap.log",
+      "wall_seconds": 5.097503233235329,
+      "source_sha256_after": "dde8f2c590fea818abedef43ffcd79fb5363d5a3b0dc89643334193b8aceb695",
+      "object_sha256": "7f982b2c68e06c66e24faaa0c502707eba81cd8a566c98181d950923c11a3d03",
+      "log_sha256": "9167ea14d508636474f0844a0902647a4b77e5f493550d6a1d2f2bc2a8b1b3e0"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesCones",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesCones.lean",
+      "source_sha256": "3ecb41f11ba6a0982b00722db70a380d783f7e8fe7a16230eabc50831bcd9400",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesCones.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesCones.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesCones.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthLobesCones.log",
+      "wall_seconds": 8.95655391830951,
+      "source_sha256_after": "3ecb41f11ba6a0982b00722db70a380d783f7e8fe7a16230eabc50831bcd9400",
+      "object_sha256": "bf28a0003af322c3586c3652e9c77f09b0868c00930b579888071205153e6579",
+      "log_sha256": "122c9e4174e210e0bbf8228f3e271dcd2d7354ec0d9b2ef32ba1cc907b53080b"
+    },
+    {
+      "module": "StarKakeyaLower.StarKakeyaSet",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/StarKakeyaSet.lean",
+      "source_sha256": "364c935a7e4efc48d539f962624c42a2145581e7c588dcdbd3e0d7a6fe4046a6",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/StarKakeyaSet.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/StarKakeyaSet.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/StarKakeyaSet.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.StarKakeyaSet.log",
+      "wall_seconds": 4.866864704992622,
+      "source_sha256_after": "364c935a7e4efc48d539f962624c42a2145581e7c588dcdbd3e0d7a6fe4046a6",
+      "object_sha256": "5d7cbc0453aa89941d19e5bf00ecadaddfb78155be628d819adc8ba0fb487445",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.TriangleArea",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/TriangleArea.lean",
+      "source_sha256": "099483df44d34deed0a3b3d009025ea6c99fc8be4f03b2544200c80986deb936",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/TriangleArea.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/TriangleArea.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/TriangleArea.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.TriangleArea.log",
+      "wall_seconds": 7.542685997672379,
+      "source_sha256_after": "099483df44d34deed0a3b3d009025ea6c99fc8be4f03b2544200c80986deb936",
+      "object_sha256": "eb3bd1c683e96842b10fb720352405fa2423a0dd180855d2fa8e71461e50fd10",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthRecovery",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthRecovery.lean",
+      "source_sha256": "214a216501fefd4ce665cdc967f8e0b73aa1c65b34d83c4bb0a270a6cd26424d",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthRecovery.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthRecovery.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthRecovery.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthRecovery.log",
+      "wall_seconds": 5.510602032765746,
+      "source_sha256_after": "214a216501fefd4ce665cdc967f8e0b73aa1c65b34d83c4bb0a270a6cd26424d",
+      "object_sha256": "c3ef23814617cacedffd27247a0c41652e48e1e37f989ae4df70f6511a90bf46",
+      "log_sha256": "cd407cd4e3ecc23cd2b82da9ea6d31a62252d133561892d6dfe3f352c78431e5"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesPhysical",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesPhysical.lean",
+      "source_sha256": "4405979a46b88e1963c1c58c92d03a464aadd1cd033943a73d2ed8e891941100",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesPhysical.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthLobesPhysical.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthLobesPhysical.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthLobesPhysical.log",
+      "wall_seconds": 6.074673620983958,
+      "source_sha256_after": "4405979a46b88e1963c1c58c92d03a464aadd1cd033943a73d2ed8e891941100",
+      "object_sha256": "4bd5ae238df3ca309cc9bf376e7dac49b9684c35f696901ff28801943515c035",
+      "log_sha256": "e80be833be797ed977320c0d0a37c2d9e2bd094b922c240f8cf44f1166481318"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCaps",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCaps.lean",
+      "source_sha256": "da9252771753dc94dd53674b38172d0685a4a6f56ec4e11df6e2df8a16c85cc9",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCaps.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCaps.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCaps.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthCaps.log",
+      "wall_seconds": 5.023992137052119,
+      "source_sha256_after": "da9252771753dc94dd53674b38172d0685a4a6f56ec4e11df6e2df8a16c85cc9",
+      "object_sha256": "9d7676b3d22ee7b554b7c648efd47e7871de8b745498bdd63b5bae424f236fd9",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCapsEndpoints",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCapsEndpoints.lean",
+      "source_sha256": "0b456b4e19ccc32b3a6205e6abdad7abcfe81e5698d5dd954da7bc7cfc164c65",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCapsEndpoints.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCapsEndpoints.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCapsEndpoints.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthCapsEndpoints.log",
+      "wall_seconds": 4.683485182933509,
+      "source_sha256_after": "0b456b4e19ccc32b3a6205e6abdad7abcfe81e5698d5dd954da7bc7cfc164c65",
+      "object_sha256": "6755fb6097166e590b010c7c685b370b769d7c99ab1fef0455bebd8204ab4013",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsIntervals",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsIntervals.lean",
+      "source_sha256": "1a1ad5dadfb2384df7f8290abb52fcf7cac6d417117dee25a89f13dfffe11eed",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsIntervals.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsIntervals.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsIntervals.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSectionBoundsIntervals.log",
+      "wall_seconds": 7.209215176757425,
+      "source_sha256_after": "1a1ad5dadfb2384df7f8290abb52fcf7cac6d417117dee25a89f13dfffe11eed",
+      "object_sha256": "b423f47d3c2072f8f1a5f2507d82b3c0a792d73fac2906a802bc9f1e306bc8d9",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsGeneral",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsGeneral.lean",
+      "source_sha256": "70b9f13130a5a61768ce9ef1ad9834fe848e783426a7d5e8761e202795b7e1e2",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsGeneral.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsGeneral.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsGeneral.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSectionBoundsGeneral.log",
+      "wall_seconds": 5.408308356069028,
+      "source_sha256_after": "70b9f13130a5a61768ce9ef1ad9834fe848e783426a7d5e8761e202795b7e1e2",
+      "object_sha256": "ae43505b9f83769dca80b01e55be990563581ffdad9a436289708042bed975b8",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCircle",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCircle.lean",
+      "source_sha256": "8c2b9da7b0f2a44c97bf32298b8a590c7c6a0852c196e6c05655bdd26f9b5c37",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCircle.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCircle.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCircle.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthCircle.log",
+      "wall_seconds": 4.674011002294719,
+      "source_sha256_after": "8c2b9da7b0f2a44c97bf32298b8a590c7c6a0852c196e6c05655bdd26f9b5c37",
+      "object_sha256": "0660dc0836b0a83c3f8d36be47e574195c36602c19a1e1a56e89034ff5b784d0",
+      "log_sha256": "41ea3a395c999178793acd1c4846636ae95550b106b7396cb035e818f42e9ac9"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCircleLifts",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCircleLifts.lean",
+      "source_sha256": "ac9b4930ca8bf0d760be2bb45093254711510b1dfbcaa84ea984d3526c4cde9e",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCircleLifts.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCircleLifts.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCircleLifts.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthCircleLifts.log",
+      "wall_seconds": 4.446277378126979,
+      "source_sha256_after": "ac9b4930ca8bf0d760be2bb45093254711510b1dfbcaa84ea984d3526c4cde9e",
+      "object_sha256": "88e54246fd4f6e7b20a151c1e04638362fc9b0f99d796a88181835512f658542",
+      "log_sha256": "2933b1814abafb1a11d9344208b21784d96f299bf2ed362d58a622339b97e206"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCircleReceipt",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCircleReceipt.lean",
+      "source_sha256": "91d877db9b50b5e22d667f8c8f317f68a8f31b6a0caf5038ce1684113aa52d2e",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCircleReceipt.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthCircleReceipt.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthCircleReceipt.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthCircleReceipt.log",
+      "wall_seconds": 4.1377754346467555,
+      "source_sha256_after": "91d877db9b50b5e22d667f8c8f317f68a8f31b6a0caf5038ce1684113aa52d2e",
+      "object_sha256": "92f91e01db102827be1dfc6bbac8e04d36d0b63299697de76de4032a6a877388",
+      "log_sha256": "5e1ceebedc19e20cf98e6990e30ca8f899682605f50ad89f3f4a81945ae1c2a0"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSources",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSources.lean",
+      "source_sha256": "1ce43e97cfc49a716afa162f1c8bbda24a2a7ee3bca1c95c4b2406aead041ae9",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSources.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSources.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSources.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSources.log",
+      "wall_seconds": 5.295871895737946,
+      "source_sha256_after": "1ce43e97cfc49a716afa162f1c8bbda24a2a7ee3bca1c95c4b2406aead041ae9",
+      "object_sha256": "703be023e81961543154310b6d898a458eac6b505964e1fb2d384d916bfc376b",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSourcesGeometry",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSourcesGeometry.lean",
+      "source_sha256": "a45785c6f3b5cec114c1e2bbf3b11e15a1d486eb7ed1e7b2ca23ff762bbeadb6",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSourcesGeometry.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSourcesGeometry.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSourcesGeometry.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSourcesGeometry.log",
+      "wall_seconds": 6.933013757225126,
+      "source_sha256_after": "a45785c6f3b5cec114c1e2bbf3b11e15a1d486eb7ed1e7b2ca23ff762bbeadb6",
+      "object_sha256": "77625f211fdc8129524377fe26f2995588cad83657f95d54dd590f14c51122ef",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSourcesPartition",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSourcesPartition.lean",
+      "source_sha256": "2bcad310143cdb4fc0e246742d6239a7fd85b8343dbe3c266ab92fb70bb9318b",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSourcesPartition.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSourcesPartition.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSourcesPartition.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSourcesPartition.log",
+      "wall_seconds": 4.719301304779947,
+      "source_sha256_after": "2bcad310143cdb4fc0e246742d6239a7fd85b8343dbe3c266ab92fb70bb9318b",
+      "object_sha256": "32f1a1ef4203362332a3d0cdc32fb7cccdf8c283aab94e0551fd2f23a7ae0098",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.PolarOuterMeasure",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/PolarOuterMeasure.lean",
+      "source_sha256": "2ae89237c5140a44ad80d61e032ee2b3fe58b0d4896ef4c70539ac6c1daadffc",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/PolarOuterMeasure.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/PolarOuterMeasure.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/PolarOuterMeasure.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.PolarOuterMeasure.log",
+      "wall_seconds": 4.7736316551454365,
+      "source_sha256_after": "2ae89237c5140a44ad80d61e032ee2b3fe58b0d4896ef4c70539ac6c1daadffc",
+      "object_sha256": "06ed2c779be15a4c87a9369096389a2be90d6b8491428d034f146f7417b8c6b9",
+      "log_sha256": "908d99058006b0109e4aca9bdd7ee7e4639c68d56c6e17ba1c08a2c5d6652df4"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthOpenBank",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthOpenBank.lean",
+      "source_sha256": "49b395a5edda0d47506aa4e856005f5e875f43edeb2aebb6920a2f2e0ad0ef40",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthOpenBank.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthOpenBank.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthOpenBank.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthOpenBank.log",
+      "wall_seconds": 4.3811488673090935,
+      "source_sha256_after": "49b395a5edda0d47506aa4e856005f5e875f43edeb2aebb6920a2f2e0ad0ef40",
+      "object_sha256": "24715e0837a5312c5041892716b2bfafa22428a442c1beff57a27e39b225ef10",
+      "log_sha256": "9a6ea8f25cc001c5a0e9d9939ceba269e9152ac75c5ba032c078b21397288d71"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthOpenBankAssembly",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthOpenBankAssembly.lean",
+      "source_sha256": "98348f2446ca5f738a1c2cca579f95936d11e5cb6691391cd31169ef8e905f51",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthOpenBankAssembly.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthOpenBankAssembly.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthOpenBankAssembly.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthOpenBankAssembly.log",
+      "wall_seconds": 4.316815430298448,
+      "source_sha256_after": "98348f2446ca5f738a1c2cca579f95936d11e5cb6691391cd31169ef8e905f51",
+      "object_sha256": "0707cb1a385fc6246a9ebbf1c28a0ded4c7d669aefd7be6208313f241b2277cc",
+      "log_sha256": "98b4ba3dc63c32c6595bffe68e090ce53c047d04c7697972f731ec5e376135f6"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthOpenBankPlane",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthOpenBankPlane.lean",
+      "source_sha256": "2e21b7949fe73e8aa2f1920a0fc0a5728aee0b24fa0907f93081e1618be8bf47",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthOpenBankPlane.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthOpenBankPlane.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthOpenBankPlane.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthOpenBankPlane.log",
+      "wall_seconds": 4.337721881922334,
+      "source_sha256_after": "2e21b7949fe73e8aa2f1920a0fc0a5728aee0b24fa0907f93081e1618be8bf47",
+      "object_sha256": "cc7e376a4fee96f0fbe5754dafeeba84777ffa7ba4f2c146ef71b1503efc0210",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBounds",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBounds.lean",
+      "source_sha256": "88d7b9c89985c532f14aad317773012024460f8f0676ee7a169724b4c0f96502",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBounds.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBounds.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBounds.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSectionBounds.log",
+      "wall_seconds": 5.242584955878556,
+      "source_sha256_after": "88d7b9c89985c532f14aad317773012024460f8f0676ee7a169724b4c0f96502",
+      "object_sha256": "92c3c8a18b576c777fb220e868b38e18d2b53bdada765f4a644cf45d404deea6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsReal",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsReal.lean",
+      "source_sha256": "c4d7c5b83f17b9d5ba3d7c36bc156d7b22de0112516e6dfb322fd3ef5c23a8c2",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsReal.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsReal.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsReal.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSectionBoundsReal.log",
+      "wall_seconds": 4.618982948828489,
+      "source_sha256_after": "c4d7c5b83f17b9d5ba3d7c36bc156d7b22de0112516e6dfb322fd3ef5c23a8c2",
+      "object_sha256": "a14d91171ecbf11596e386a4cf004c4a8db63ee9382db1e7bbfc3240293fda85",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.EndpointCapacityLogBound",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/EndpointCapacityLogBound.lean",
+      "source_sha256": "2861243688a4f5c682f1adf805cd800dd68ead9f5c0c032bf2b14cb6c4a925b8",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/EndpointCapacityLogBound.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/EndpointCapacityLogBound.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/EndpointCapacityLogBound.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.EndpointCapacityLogBound.log",
+      "wall_seconds": 6.117240228224546,
+      "source_sha256_after": "2861243688a4f5c682f1adf805cd800dd68ead9f5c0c032bf2b14cb6c4a925b8",
+      "object_sha256": "c9786c7fa2c9eb318b4b22e1a0a2950afb975ac26302ddc6667ed236882c7476",
+      "log_sha256": "0f7600f1b5a97096325173921e39aec0d386045cd7f2d2eee868b884f8ab5a52"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthArithmetic",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthArithmetic.lean",
+      "source_sha256": "091b83cb907ecee27857b851771c1309d267e922b6e6618c13a51a0d45bd23da",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthArithmetic.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthArithmetic.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthArithmetic.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthArithmetic.log",
+      "wall_seconds": 5.902422882150859,
+      "source_sha256_after": "091b83cb907ecee27857b851771c1309d267e922b6e6618c13a51a0d45bd23da",
+      "object_sha256": "9e28b0a4236bd8d5d018cbdd68298dd1785c87e8d39a4ddb68de9f0080dc7f67",
+      "log_sha256": "7196b24f8247e27e81931ab85784567416dc907a8e7d55d7909e03b5dd579484"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthKernelIntegrals",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthKernelIntegrals.lean",
+      "source_sha256": "342458c0d8e49c9bc62e3b73e2a66b0ab42d283523a1ad29d540255798308ba2",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthKernelIntegrals.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthKernelIntegrals.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthKernelIntegrals.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthKernelIntegrals.log",
+      "wall_seconds": 5.916708260774612,
+      "source_sha256_after": "342458c0d8e49c9bc62e3b73e2a66b0ab42d283523a1ad29d540255798308ba2",
+      "object_sha256": "935598c1ffcfddc3f0d7c8d732ac7ec2930ac043a42f9b3467a4d1623237ca2b",
+      "log_sha256": "f13638756d7e1fce7dc2cd25089cfe0ca1e0eca438083a99776a3a21cb7e068a"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthKernelIntegralsAssembly",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthKernelIntegralsAssembly.lean",
+      "source_sha256": "068b043e82c8a1374b944801085214b01a2ac30790849c6b0582e09ec318fe5d",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthKernelIntegralsAssembly.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthKernelIntegralsAssembly.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthKernelIntegralsAssembly.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthKernelIntegralsAssembly.log",
+      "wall_seconds": 5.045334812719375,
+      "source_sha256_after": "068b043e82c8a1374b944801085214b01a2ac30790849c6b0582e09ec318fe5d",
+      "object_sha256": "fbec10de7b2c6072ccfaf35caaf2b4d454363271340440c2a069b87333362879",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsLowBank",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsLowBank.lean",
+      "source_sha256": "65925177febb6aae9c73cba95a73c9e63b01248e26786dc745d825eb455b5a85",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsLowBank.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthSectionBoundsLowBank.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthSectionBoundsLowBank.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthSectionBoundsLowBank.log",
+      "wall_seconds": 4.232588317710906,
+      "source_sha256_after": "65925177febb6aae9c73cba95a73c9e63b01248e26786dc745d825eb455b5a85",
+      "object_sha256": "ca30c0c1456763605f973f97067ef43241e258bba9e172a4105c7c7dd50e4bbc",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthHighTail",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthHighTail.lean",
+      "source_sha256": "2d14229bc88aea993b03ad55d98198e0ed0276f59ac1cba6c4ed67be4595d09c",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthHighTail.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthHighTail.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthHighTail.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthHighTail.log",
+      "wall_seconds": 5.895144612994045,
+      "source_sha256_after": "2d14229bc88aea993b03ad55d98198e0ed0276f59ac1cba6c4ed67be4595d09c",
+      "object_sha256": "6094cd8d0b7cb6e5a37cfbaf446814b787b09d7db832db4f982715cc4f17d852",
+      "log_sha256": "befc7366100f33efc6e501689706893cb9cbe0ebed12230b41e72baa6eaac37a"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthHighTailIntegration",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthHighTailIntegration.lean",
+      "source_sha256": "0af5ce05ca6373b2203748e96e7324d50eb1baa33d67c5b1bb2795bfeafa2d73",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthHighTailIntegration.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthHighTailIntegration.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthHighTailIntegration.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthHighTailIntegration.log",
+      "wall_seconds": 4.630002129822969,
+      "source_sha256_after": "0af5ce05ca6373b2203748e96e7324d50eb1baa33d67c5b1bb2795bfeafa2d73",
+      "object_sha256": "3cf16532c378783ebd5e0c5e4df70762a57341d468b37938255983e3e7aff285",
+      "log_sha256": "2936bae5215c8958c4a7bcc26a9afc635dcbf18f88a2198c8be1f37bf7a8a3bd"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthHighTailSupports",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthHighTailSupports.lean",
+      "source_sha256": "9c3ef99182748d0ca4837d350bc2f5f5a3e1f78c3411950968fc1642a462199b",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthHighTailSupports.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthHighTailSupports.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthHighTailSupports.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthHighTailSupports.log",
+      "wall_seconds": 4.372913285158575,
+      "source_sha256_after": "9c3ef99182748d0ca4837d350bc2f5f5a3e1f78c3411950968fc1642a462199b",
+      "object_sha256": "cdfc916c1e37e1f638df38eb1195fbca8c010ce2af52d201c4f68cfd77c10961",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthGlobalAssembly",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthGlobalAssembly.lean",
+      "source_sha256": "376dfa2ed6452ee82fd2d3f71842f298bbdb335b9d42406855ba01408c3f054c",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthGlobalAssembly.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthGlobalAssembly.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthGlobalAssembly.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthGlobalAssembly.log",
+      "wall_seconds": 4.7899816846475005,
+      "source_sha256_after": "376dfa2ed6452ee82fd2d3f71842f298bbdb335b9d42406855ba01408c3f054c",
+      "object_sha256": "b54e3a6f87e3ecdc38485c51e74248e61e350e4baae7f011473ab1168ab59c6c",
+      "log_sha256": "55d6a16a796ab1ac736fd469736d2edd1856b3d84c2e4c4442c7e6b7d1c8f957"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthGlobalAssemblyTail",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthGlobalAssemblyTail.lean",
+      "source_sha256": "8cb9baba3c0ee276fbe03302d8675eaff737b084bbc4bfa313c9db1f335f47b2",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthGlobalAssemblyTail.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthGlobalAssemblyTail.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthGlobalAssemblyTail.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthGlobalAssemblyTail.log",
+      "wall_seconds": 4.578254017047584,
+      "source_sha256_after": "8cb9baba3c0ee276fbe03302d8675eaff737b084bbc4bfa313c9db1f335f47b2",
+      "object_sha256": "a5e440a801d4f41995d5ad3b05b9a07bc0fce1ee27bc585997d2614e0e31d403",
+      "log_sha256": "167ae9410280fb662ea144d9ba7dbbaf707d812904643a110e7cfd8a97369101"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthFixedHigh",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthFixedHigh.lean",
+      "source_sha256": "ca3d0943dca6ed4b896ed0cb283b1acbc22ceac980877a09d04d8382dcc9d005",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthFixedHigh.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthFixedHigh.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthFixedHigh.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthFixedHigh.log",
+      "wall_seconds": 5.231643718201667,
+      "source_sha256_after": "ca3d0943dca6ed4b896ed0cb283b1acbc22ceac980877a09d04d8382dcc9d005",
+      "object_sha256": "500428421a4179b53eb9b4376413f32a335229ca2dc8dcf802ced922f941f008",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthKernelIntegralsHigh",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthKernelIntegralsHigh.lean",
+      "source_sha256": "8eba4db9544f55f29b5831400a64efa9c9df282891361a7f6a405ff481be9bcf",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthKernelIntegralsHigh.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthKernelIntegralsHigh.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthKernelIntegralsHigh.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthKernelIntegralsHigh.log",
+      "wall_seconds": 4.333299316000193,
+      "source_sha256_after": "8eba4db9544f55f29b5831400a64efa9c9df282891361a7f6a405ff481be9bcf",
+      "object_sha256": "4a158acb510c24d6555100f194c930d9e8f2e6c9239131e80ba3348a2bd9159e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthFixedHighBank",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthFixedHighBank.lean",
+      "source_sha256": "a5f9f4e31e16eaadcb4ee10b3104b51a3b3a504dff65d3e0333cb8bd6108ad40",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthFixedHighBank.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthFixedHighBank.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthFixedHighBank.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthFixedHighBank.log",
+      "wall_seconds": 4.075191937852651,
+      "source_sha256_after": "a5f9f4e31e16eaadcb4ee10b3104b51a3b3a504dff65d3e0333cb8bd6108ad40",
+      "object_sha256": "9704199dc46ab1acaab970db71b867399e4e523a9d9a14a2d54d66f2e1b64a81",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthGlobalAssemblyClosed",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthGlobalAssemblyClosed.lean",
+      "source_sha256": "1ec14f848f72b2b09190cd375e975ff63e4698fc2cca6952065ceb9068ec67ff",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthGlobalAssemblyClosed.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthGlobalAssemblyClosed.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthGlobalAssemblyClosed.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthGlobalAssemblyClosed.log",
+      "wall_seconds": 4.15630743233487,
+      "source_sha256_after": "1ec14f848f72b2b09190cd375e975ff63e4698fc2cca6952065ceb9068ec67ff",
+      "object_sha256": "ff2373712ba4ac255bf84dd30233130f6e0c7a1317f04ec4b2bd3e0624eec75b",
+      "log_sha256": "92734ef25431711df2ffe1dc6e5ca57da101fdf2b5e2781a90eda91f93674b32"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenth",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenth.lean",
+      "source_sha256": "2e0c8557b68f42eee4699f26538f23ee6648e9b7d434924214feaa19f697f4da",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenth.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenth.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenth.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenth.log",
+      "wall_seconds": 4.0085155023261905,
+      "source_sha256_after": "2e0c8557b68f42eee4699f26538f23ee6648e9b7d434924214feaa19f697f4da",
+      "object_sha256": "4fb059757f793a3a8be0096d22464f014ce532a9ae1ab0c24872cd1eb518f47b",
+      "log_sha256": "2ed0c577c4a5d0bd6ccdf619ed3b457dacdb8268572568afc52054b4a3f27b10"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthAudit",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthAudit.lean",
+      "source_sha256": "1dcd2e81cc5c8979ef023e4967af1a81781792d1d06add652777d8a582c85cfc",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthAudit.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthAudit.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthAudit.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthAudit.log",
+      "wall_seconds": 4.305285406298935,
+      "source_sha256_after": "1dcd2e81cc5c8979ef023e4967af1a81781792d1d06add652777d8a582c85cfc",
+      "object_sha256": "6842eb9e63b528188a49f77926187471f548ee61217650dc5d08834ef0ac2041",
+      "log_sha256": "3af8722e7fe91d996a8b5ccaa163aee45302694d78a437c75cc156ad41c9edf5"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthParentAudit",
+      "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthParentAudit.lean",
+      "source_sha256": "0e9e687dd7f87e2f2b929052e0ec779777175c805086c2af70b29ecd376a9bc7",
+      "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthParentAudit.olean",
+      "command": [
+        "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+        "-j2",
+        "-o",
+        "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthParentAudit.olean",
+        "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthParentAudit.lean"
+      ],
+      "exit_code": 0,
+      "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthParentAudit.log",
+      "wall_seconds": 4.1118253339082,
+      "source_sha256_after": "0e9e687dd7f87e2f2b929052e0ec779777175c805086c2af70b29ecd376a9bc7",
+      "object_sha256": "88c01b98ae2917931d07c82696a5648e27c8a994afd97a583ef4f63a83aed32c",
+      "log_sha256": "97e27934ffe43088f976a3178aafafe514ed9da4abc7fe372b1d62b2396ae191"
+    }
+  ]
+}

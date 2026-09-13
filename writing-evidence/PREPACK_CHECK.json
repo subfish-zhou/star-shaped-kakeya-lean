@@ -1,0 +1,230 @@
+{
+  "scope": "selected delivery payload only; text patterns, not a forensic guarantee",
+  "files_inspected": 426,
+  "excluded_from_text_scan": "PDF bytes; already-preserved published documents",
+  "patterns": [
+    "github_token",
+    "provider_key",
+    "aws_access_key",
+    "private_key",
+    "bearer_value",
+    "jwt_value",
+    "credential_assignment",
+    "url_userinfo"
+  ],
+  "hits": [],
+  "link_targets_verified": [
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/A0-baseline.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "COMMIT_CHRONOLOGY.json"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E2-APPROACH-PORTFOLIO.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E3-PI56-INDEPENDENT-PROOF.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E4-SUPERSEDED-ROUND-1-PI56-AUDIT.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E5-ROUND-2-LI-THEOREM-AUDIT.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E6-STRONGER-100-OVER-5599-PROOF.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E7-ROUND-4-STRONGER-CERTIFICATE.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/E8-ENDPOINT-FATALITY.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/blocked-09755/STATUS_BLOCKED.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "final-public/README.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "historical-lean-2026-08-04/StarKakeyaLower/UniversalAssembly.lean"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "historical-lean-2026-08-04/StarKakeyaLower/AnnularAssembly.lean"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "historical-lean-2026-08-04/StarKakeyaLower/EndpointCapacityFinal141.lean"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "historical-lean-2026-08-04/StarKakeyaLower/EndpointCapacityFinal3527.lean"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "audits/historical-lean-audit.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/D8-li-2026-arxiv-2509.05711v2.pdf"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/001-joint-inner-outer/README.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/final-radial-price-theorem/CERTIFIED.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/final-radial-price-theorem/final_theorem_checklist_20260817_zh.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/radial-H-fixed-point/CERTIFIED.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/radial-H-fixed-point/radial_H_monotonicity_and_certificate_zh.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/shared-terminal-082812/class_independent_terminal_price_report_zh.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/shared-terminal-082812/class_independent_terminal_strict_report_zh.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/shared-terminal-082812/class_independent_terminal_strict_report_v2.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/shared-terminal-082812/CERTIFIED_PROMOTION.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/002-endpoint-capacity/UNIVERSAL-ONE-FIFTEENTH.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/002-endpoint-capacity/UNIVERSAL-OPTIMIZED.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/002-endpoint-capacity/UNIVERSAL-SEVEN-HUNDREDTHS.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/002-endpoint-capacity/UNIVERSAL-141-OVER-2000.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/002-endpoint-capacity/README.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/N8-README.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history-sources/N9-THEOREM.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "final-public/star-shaped-kakeya-paper.pdf"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "writing-evidence/public-repository-readback.json"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "audits/history-source-audit.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/baseline/PROOF.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/baseline/PROVENANCE.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/CLOSEOUT.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/DISPOSITION.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/low-source-b2/integrated-low/PROOF.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/THEOREM_01.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/tenth-reviews/b2_universal_tenth_end_to_end_review.md"
+    },
+    {
+      "from": "KAKEYA_HISTORY.md",
+      "target": "history/one-tenth/low-source-b2/paired-pointwise/COUNTEREXAMPLE.md"
+    },
+    {
+      "from": "README.md",
+      "target": "KAKEYA_HISTORY.md"
+    },
+    {
+      "from": "README.md",
+      "target": "KAKEYA_HISTORY.md"
+    },
+    {
+      "from": "README.md",
+      "target": "final-public/star-shaped-kakeya-paper.pdf"
+    },
+    {
+      "from": "README.md",
+      "target": "final-public/README.md"
+    },
+    {
+      "from": "README.md",
+      "target": "audits/history-source-audit.md"
+    },
+    {
+      "from": "README.md",
+      "target": "audits/historical-lean-audit.md"
+    },
+    {
+      "from": "README.md",
+      "target": "PORTABLE_RESTORE_MAP.json"
+    }
+  ],
+  "latest_source_audits_equal": true,
+  "case_collision_check": "PASS",
+  "symlink_and_cache_path_check": "PASS",
+  "final_text_files_scanned": 426,
+  "PDFs_not_text_scanned": 2,
+  "other_non_UTF8_files": [],
+  "final_pattern_hits": [],
+  "portable_restore_records": 193
+}

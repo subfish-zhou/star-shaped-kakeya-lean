@@ -1,0 +1,83 @@
+[
+  {
+    "id": "gemini-3.5-flash",
+    "supported_endpoints": [
+      "/chat/completions"
+    ],
+    "capabilities": {
+      "family": "gemini-3.5-flash",
+      "limits": {
+        "max_context_window_tokens": 1000000,
+        "max_output_tokens": 64000,
+        "max_prompt_tokens": 936000,
+        "vision": {
+          "max_prompt_image_size": 3145728,
+          "max_prompt_images": 10,
+          "supported_media_types": [
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "image/heic",
+            "image/heif",
+            "application/pdf"
+          ]
+        }
+      },
+      "object": "model_capabilities",
+      "supports": {
+        "max_thinking_budget": 24000,
+        "min_thinking_budget": 256,
+        "parallel_tool_calls": true,
+        "reasoning_effort": [
+          "minimal",
+          "low",
+          "medium",
+          "high"
+        ],
+        "streaming": true,
+        "tool_calls": true,
+        "vision": true
+      },
+      "tokenizer": "o200k_base",
+      "type": "chat"
+    }
+  },
+  {
+    "id": "grok-4.6",
+    "supported_endpoints": [
+      "/responses"
+    ],
+    "capabilities": {
+      "family": "grok-4.6",
+      "limits": {
+        "max_context_window_tokens": 500000,
+        "max_output_tokens": 128000,
+        "max_prompt_tokens": 372000,
+        "vision": {
+          "max_prompt_image_size": 3145728,
+          "max_prompt_images": 1,
+          "supported_media_types": [
+            "image/jpeg",
+            "image/png"
+          ]
+        }
+      },
+      "object": "model_capabilities",
+      "supports": {
+        "parallel_tool_calls": true,
+        "reasoning_effort": [
+          "low",
+          "medium",
+          "high",
+          "xhigh"
+        ],
+        "streaming": true,
+        "structured_outputs": true,
+        "tool_calls": true,
+        "vision": true
+      },
+      "tokenizer": "o200k_base",
+      "type": "chat"
+    }
+  }
+]

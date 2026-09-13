@@ -1,0 +1,765 @@
+{
+  "accepted": true,
+  "all_guard_controls_passed": true,
+  "all_mutation_controls_passed": true,
+  "arb_rounding": "Arb/FLINT outward-rounded intervals",
+  "artifact": "spike-001 joint inner/outer fixed-witness Arb certificate",
+  "elapsed_seconds": 0.6018085479736328,
+  "evidence_level": "interval certificate for Hypotheses B and C of PROOF.md",
+  "fixed_path_guard": {
+    "call_graph": {
+      "_decimal": [
+        ".str"
+      ],
+      "_gate": [
+        ".lower",
+        ".upper",
+        "_decimal",
+        "bool",
+        "str"
+      ],
+      "arb_frac": [
+        "Fraction",
+        "arb"
+      ],
+      "certainly_gt": [
+        "bool"
+      ],
+      "certainly_lt": [
+        "bool"
+      ],
+      "coefficient_intervals": [
+        ".asin",
+        ".pi",
+        "Fraction",
+        "arb",
+        "arb_frac",
+        "require_gt"
+      ],
+      "gate_exact": [
+        "bool"
+      ],
+      "gate_gt": [
+        "_gate",
+        "certainly_gt"
+      ],
+      "gate_lt": [
+        "_gate",
+        "certainly_lt"
+      ],
+      "geometry_intervals": [
+        ".sqrt",
+        "arb",
+        "arb_frac",
+        "require_gt"
+      ],
+      "integral_bounds": [
+        ".lower",
+        ".upper",
+        "Fraction",
+        "arb",
+        "arb_frac",
+        "integrand_cell",
+        "iv_frac",
+        "range",
+        "require_gt"
+      ],
+      "integrand_cell": [
+        ".atan",
+        ".lower",
+        ".pi",
+        ".union",
+        "arb",
+        "bool",
+        "require_gt"
+      ],
+      "iv_frac": [
+        ".union",
+        "arb_frac"
+      ],
+      "require_gt": [
+        "ValueError",
+        "certainly_gt"
+      ],
+      "run_certificate": [
+        ".append",
+        ".items",
+        ".lower",
+        ".pi",
+        ".union",
+        ".upper",
+        "Fraction",
+        "TypeError",
+        "_decimal",
+        "arb",
+        "arb_frac",
+        "bool",
+        "coefficient_intervals",
+        "gate_exact",
+        "gate_gt",
+        "gate_lt",
+        "geometry_intervals",
+        "integral_bounds",
+        "isinstance",
+        "str"
+      ]
+    },
+    "exact_call_whitelist": [
+      "Fraction",
+      "TypeError",
+      "ValueError",
+      "arb",
+      "bool",
+      "isinstance",
+      "range",
+      "str"
+    ],
+    "exact_method_whitelist": [
+      "append",
+      "asin",
+      "atan",
+      "items",
+      "lower",
+      "pi",
+      "sqrt",
+      "str",
+      "union",
+      "upper"
+    ],
+    "findings": [],
+    "forbidden_names": [
+      "Decimal",
+      "breakpoint",
+      "compile",
+      "complex",
+      "decimal",
+      "delattr",
+      "eval",
+      "exec",
+      "float",
+      "getattr",
+      "globals",
+      "input",
+      "locals",
+      "math",
+      "memoryview",
+      "np",
+      "numpy",
+      "open",
+      "round",
+      "setattr",
+      "vars"
+    ],
+    "guard_kind": "AST and call-graph exactness regression guard",
+    "inspected_functions": [
+      "_decimal",
+      "_gate",
+      "arb_frac",
+      "certainly_gt",
+      "certainly_lt",
+      "coefficient_intervals",
+      "gate_exact",
+      "gate_gt",
+      "gate_lt",
+      "geometry_intervals",
+      "integral_bounds",
+      "integrand_cell",
+      "iv_frac",
+      "require_gt",
+      "run_certificate"
+    ],
+    "known_limitations": [
+      "name-resolution of a Div operand is not attempted, so a runtime int/int division through two variables is not detected statically",
+      "correctness of Arb itself is assumed, not verified"
+    ],
+    "not_a_proof": "static regression guard only; does not exclude bytecode rewriting, C-extension inexactness, or a compromised flint build",
+    "passed": true,
+    "rejected_constructs": [
+      "float or complex literal in any notation, including 1e-3",
+      "statically exact integer true division such as 1/2",
+      "load or alias of float, complex, round or a dynamic escape",
+      "dunder name or dunder attribute access",
+      "import, lambda, global/nonlocal, computed call target",
+      "call to a function outside the inspected call graph"
+    ]
+  },
+  "fixed_path_guard_controls": [
+    {
+      "control_passed": true,
+      "description": "1e-3 and 0.5 must both be rejected as float literals",
+      "expected_kinds": [
+        "float-or-complex-literal"
+      ],
+      "expected_kinds_matched": true,
+      "inspected_function": "_control_float_literal",
+      "name": "scientific_notation_float_literal",
+      "observed_findings": [
+        {
+          "detail": "0.001",
+          "function": "_control_float_literal",
+          "kind": "float-or-complex-literal"
+        },
+        {
+          "detail": "0.5",
+          "function": "_control_float_literal",
+          "kind": "float-or-complex-literal"
+        }
+      ],
+      "observed_kinds": [
+        "float-or-complex-literal"
+      ],
+      "rejected_by_guard": true
+    },
+    {
+      "control_passed": true,
+      "description": "1/2 evaluates to a binary float and must be rejected",
+      "expected_kinds": [
+        "exact-int-true-division"
+      ],
+      "expected_kinds_matched": true,
+      "inspected_function": "_control_exact_int_division",
+      "name": "exact_int_true_division",
+      "observed_findings": [
+        {
+          "detail": "1 / 2",
+          "function": "_control_exact_int_division",
+          "kind": "exact-int-true-division"
+        }
+      ],
+      "observed_kinds": [
+        "exact-int-true-division"
+      ],
+      "rejected_by_guard": true
+    },
+    {
+      "control_passed": true,
+      "description": "f = float; f(x) must be rejected through the alias",
+      "expected_kinds": [
+        "forbidden-name",
+        "uninspected-call-target"
+      ],
+      "expected_kinds_matched": true,
+      "inspected_function": "_control_float_alias",
+      "name": "float_constructor_alias",
+      "observed_findings": [
+        {
+          "detail": "float",
+          "function": "_control_float_alias",
+          "kind": "forbidden-name"
+        },
+        {
+          "detail": "f",
+          "function": "_control_float_alias",
+          "kind": "uninspected-call-target"
+        }
+      ],
+      "observed_kinds": [
+        "forbidden-name",
+        "uninspected-call-target"
+      ],
+      "rejected_by_guard": true
+    },
+    {
+      "control_passed": true,
+      "description": "a helper outside FIXED_PATH_FUNCTIONS must not be callable",
+      "expected_kinds": [
+        "uninspected-call-target"
+      ],
+      "expected_kinds_matched": true,
+      "inspected_function": "_control_uninspected_helper",
+      "name": "uninspected_helper",
+      "observed_findings": [
+        {
+          "detail": "_control_uninspected_helper_target",
+          "function": "_control_uninspected_helper",
+          "kind": "uninspected-call-target"
+        }
+      ],
+      "observed_kinds": [
+        "uninspected-call-target"
+      ],
+      "rejected_by_guard": true
+    },
+    {
+      "control_passed": true,
+      "description": "eval must be rejected on the fixed path",
+      "expected_kinds": [
+        "forbidden-name"
+      ],
+      "expected_kinds_matched": true,
+      "inspected_function": "_control_dynamic_escape",
+      "name": "dynamic_escape_eval",
+      "observed_findings": [
+        {
+          "detail": "eval",
+          "function": "_control_dynamic_escape",
+          "kind": "uninspected-call-target"
+        },
+        {
+          "detail": "eval",
+          "function": "_control_dynamic_escape",
+          "kind": "forbidden-name"
+        }
+      ],
+      "observed_kinds": [
+        "forbidden-name",
+        "uninspected-call-target"
+      ],
+      "rejected_by_guard": true
+    }
+  ],
+  "integral_cells_mutation_controls": 4096,
+  "integral_cells_production": 65536,
+  "mutation_controls": [
+    {
+      "abort_reason": null,
+      "control_passed": true,
+      "description": "raise the target from 131/6250 to 21/1000",
+      "expected_failed_gates": [
+        "gate_C1_high_above_target",
+        "gate_C2_integral_above_target"
+      ],
+      "mutation_matched": true,
+      "name": "target_raised",
+      "observed_failed_gates": [
+        "gate_C1_high_above_target",
+        "gate_C2_integral_above_target"
+      ],
+      "observed_missing_gates": [],
+      "overrides": {
+        "target": [
+          21,
+          1000
+        ]
+      },
+      "rejected_by_production_checker": true,
+      "status": "evaluated"
+    },
+    {
+      "abort_reason": null,
+      "control_passed": true,
+      "description": "lower the height threshold h0 from 13177/100000 to 3/25",
+      "expected_failed_gates": [
+        "gate_C1_high_above_target"
+      ],
+      "mutation_matched": true,
+      "name": "h0_lowered",
+      "observed_failed_gates": [
+        "gate_C1_high_above_target"
+      ],
+      "observed_missing_gates": [],
+      "overrides": {
+        "h0": [
+          3,
+          25
+        ]
+      },
+      "rejected_by_production_checker": true,
+      "status": "evaluated"
+    },
+    {
+      "abort_reason": null,
+      "control_passed": true,
+      "description": "weaken the selected exterior rate from C_ext/4 to C_ext/40",
+      "expected_failed_gates": [
+        "gate_C3_exterior_above_target"
+      ],
+      "mutation_matched": true,
+      "name": "exterior_coefficient_weakened",
+      "observed_failed_gates": [
+        "gate_C3_exterior_above_target"
+      ],
+      "observed_missing_gates": [],
+      "overrides": {
+        "exterior_divisor": [
+          40,
+          1
+        ]
+      },
+      "rejected_by_production_checker": true,
+      "status": "evaluated"
+    },
+    {
+      "abort_reason": "undecided or false strict lower sign: interior branch denominator",
+      "control_passed": true,
+      "description": "raise r0 to 7/10, which violates r0 < 1/2 and rho > r0",
+      "expected_failed_gates": [
+        "domain_r0_below_half"
+      ],
+      "mutation_matched": true,
+      "name": "r0_outside_domain",
+      "observed_failed_gates": [
+        "domain_r0_below_half",
+        "domain_rho_above_r0",
+        "evaluation_completed"
+      ],
+      "observed_missing_gates": [
+        "gate_C1_high_above_target",
+        "gate_C2_integral_above_target",
+        "gate_C3_exterior_above_target",
+        "gate_C4_fan_above_target"
+      ],
+      "overrides": {
+        "r0": [
+          7,
+          10
+        ]
+      },
+      "rejected_by_production_checker": true,
+      "status": "domain-abort"
+    }
+  ],
+  "non_claims": [
+    "no optimality or global search claim for the parameter tuple",
+    "no Lean theorem is asserted or implied",
+    "the geometric bridge is the paper proof in PROOF.md",
+    "the fixed-path guard is a static AST and call-graph regression guard, not a proof that binary floats are impossible"
+  ],
+  "parameter_sha256": "57361ed6e8e023c2db769f42502a415d9b47cbf167818dada322d6ff779f12a5",
+  "precision_bits": 256,
+  "primary_parameters": {
+    "eps_del": "1/10000000000",
+    "exterior_divisor": "4/1",
+    "h0": "13177/100000",
+    "r0": "999/2000",
+    "r_lambda": "10227/50000",
+    "target": "131/6250"
+  },
+  "production": {
+    "area_lower_bound": {
+      "expression": "pi * min(h0/(2 pi), I, C_ext/4, C_fan)",
+      "lower": "0.0658813705275836316874410098839",
+      "strictly_above_target": true,
+      "target_pi_T_upper": "0.0658477820192420662781770053135"
+    },
+    "gates": [
+      {
+        "kind": "gt",
+        "left_interval": "[0.1317700000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.17e-78]",
+        "left_lower": "0.131770000000000000000000000000",
+        "left_upper": "0.131770000000000000000000000000",
+        "margin_lower": "0.131770000000000000000000000000",
+        "name": "domain_h0_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.2045400000000000000000000000000000000000000000000000000000000000000000000000 +/- 2.25e-78]",
+        "left_lower": "0.204540000000000000000000000000",
+        "left_upper": "0.204540000000000000000000000000",
+        "margin_lower": "0.0727700000000000000000000000000",
+        "name": "domain_order_h0_rlambda",
+        "passed": true,
+        "right_interval": "[0.1317700000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.17e-78]"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.4995000000000000000000000000000000000000000000000000000000000000000000000000 +/- 4.60e-78]",
+        "left_lower": "0.499500000000000000000000000000",
+        "left_upper": "0.499500000000000000000000000000",
+        "margin_lower": "0.294960000000000000000000000000",
+        "name": "domain_order_rlambda_r0",
+        "passed": true,
+        "right_interval": "[0.2045400000000000000000000000000000000000000000000000000000000000000000000000 +/- 2.25e-78]"
+      },
+      {
+        "kind": "lt",
+        "left_interval": "[0.4995000000000000000000000000000000000000000000000000000000000000000000000000 +/- 4.60e-78]",
+        "left_lower": "0.499500000000000000000000000000",
+        "left_upper": "0.499500000000000000000000000000",
+        "margin_lower": "0.000500000000000000000000000000000",
+        "name": "domain_r0_below_half",
+        "passed": true,
+        "right_interval": "0.5000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.4995000000000000000000000000000000000000000000000000000000000000000000000000 +/- 4.60e-78]",
+        "left_lower": "0.499500000000000000000000000000",
+        "left_upper": "0.499500000000000000000000000000",
+        "margin_lower": "0.349500000000000000000000000000",
+        "name": "domain_r0_at_least_three_twentieths",
+        "passed": true,
+        "right_interval": "[0.1500000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.46e-78]"
+      },
+      {
+        "detail": "lambda = 29496/36773",
+        "kind": "exact-rational",
+        "name": "domain_lambda_in_unit_interval",
+        "passed": true
+      },
+      {
+        "detail": "lambda*h0 + (1-lambda)*r0 = 10227/50000",
+        "kind": "exact-rational",
+        "name": "domain_lambda_interpolation_exact",
+        "passed": true
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.1528888055584752065600000000000000000000000000000000000000000000000000000000 +/- 1.82e-77]",
+        "left_lower": "0.152888805558475206560000000000",
+        "left_upper": "0.152888805558475206560000000000",
+        "margin_lower": "0.152888805558475206560000000000",
+        "name": "domain_Q_nonnegative",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "lt",
+        "left_interval": "[0.1528888055584752065600000000000000000000000000000000000000000000000000000000 +/- 1.82e-77]",
+        "left_lower": "0.152888805558475206560000000000",
+        "left_upper": "0.152888805558475206560000000000",
+        "margin_lower": "0.847111194441524793440000000000",
+        "name": "domain_Q_below_one",
+        "passed": true,
+        "right_interval": "1.000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.03943852316826510323270441574484870047793434664982954981462766396137810843742 +/- 6.44e-78]",
+        "left_lower": "0.0394385231682651032327044157448",
+        "left_upper": "0.0394385231682651032327044157448",
+        "margin_lower": "0.0394385231682651032327044157448",
+        "name": "domain_d_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "lt",
+        "left_interval": "[0.03943852316826510323270441574484870047793434664982954981462766396137810843742 +/- 6.44e-78]",
+        "left_lower": "0.0394385231682651032327044157448",
+        "left_upper": "0.0394385231682651032327044157448",
+        "margin_lower": "0.0264464768317348967672955842552",
+        "name": "domain_d_below_half_h0",
+        "passed": true,
+        "right_interval": "[0.06588500000000000000000000000000000000000000000000000000000000000000000000000 +/- 1.59e-78]"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.04028121449030621668380608012897777076748682883649851680331432231806278286914 +/- 5.39e-78]",
+        "left_lower": "0.0402812144903062166838060801290",
+        "left_upper": "0.0402812144903062166838060801290",
+        "margin_lower": "0.0402812144903062166838060801290",
+        "name": "domain_rlambda_sq_minus_d_sq_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.5985963901990605332428385177938635573792873438541329561300396746054201781502 +/- 6.43e-77]",
+        "left_lower": "0.598596390199060533242838517794",
+        "left_upper": "0.598596390199060533242838517794",
+        "margin_lower": "0.598596390199060533242838517794",
+        "name": "domain_R1_denominator_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[1.675763481231215108697315062627782424577407011091015082963556083403785903508 +/- 4.35e-76]",
+        "left_lower": "1.67576348123121510869731506263",
+        "left_upper": "1.67576348123121510869731506263",
+        "margin_lower": "0.675763481231215108697315062628",
+        "name": "domain_R1_above_one",
+        "passed": true,
+        "right_interval": "1.000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.675763481231215108697315062627782424577407011091015082963556083403785903508 +/- 4.35e-76]",
+        "left_lower": "0.675763481231215108697315062628",
+        "left_upper": "0.675763481231215108697315062628",
+        "margin_lower": "0.176263481231215108697315062628",
+        "name": "domain_rho_above_r0",
+        "passed": true,
+        "right_interval": "[0.4995000000000000000000000000000000000000000000000000000000000000000000000000 +/- 4.60e-78]"
+      },
+      {
+        "kind": "lt",
+        "left_interval": "[0.1317700000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.17e-78]",
+        "left_lower": "0.131770000000000000000000000000",
+        "left_upper": "0.131770000000000000000000000000",
+        "margin_lower": "0.543993481163638760574193551758",
+        "name": "domain_h0_below_m_rho",
+        "passed": true,
+        "right_interval": "[0.675763481163638760574193551758050918314628768633274381854454575107430295168 +/- 1.77e-76]"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.1949942600625889414765163618974836092883292899209594404113714377175599386876 +/- 7.60e-77]",
+        "left_lower": "0.194994260062588941476516361897",
+        "left_upper": "0.194994260062588941476516361897",
+        "margin_lower": "0.194994260062588941476516361897",
+        "name": "domain_asin_arg_rho_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "lt",
+        "left_interval": "[0.1949942600625889414765163618974836092883292899209594404113714377175599386876 +/- 7.60e-77]",
+        "left_lower": "0.194994260062588941476516361897",
+        "left_upper": "0.194994260062588941476516361897",
+        "margin_lower": "0.805005739937411058523483638103",
+        "name": "domain_asin_arg_rho_below_one",
+        "passed": true,
+        "right_interval": "1.000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.1949942600820883674847251986459561291529249028362519306949966307870596017663 +/- 7.22e-77]",
+        "left_lower": "0.194994260082088367484725198646",
+        "left_upper": "0.194994260082088367484725198646",
+        "margin_lower": "0.194994260082088367484725198646",
+        "name": "domain_asin_arg_m_rho_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "lt",
+        "left_interval": "[0.1949942600820883674847251986459561291529249028362519306949966307870596017663 +/- 7.22e-77]",
+        "left_lower": "0.194994260082088367484725198646",
+        "left_upper": "0.194994260082088367484725198646",
+        "margin_lower": "0.805005739917911632515274801354",
+        "name": "domain_asin_arg_m_rho_below_one",
+        "passed": true,
+        "right_interval": "1.000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.210966886763887251296480868156815903060320630748959458983871973860082668596 +/- 3.40e-76]",
+        "left_lower": "0.210966886763887251296480868157",
+        "left_upper": "0.210966886763887251296480868157",
+        "margin_lower": "0.210966886763887251296480868157",
+        "name": "C_ext_positive",
+        "passed": true,
+        "right_interval": "0"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.02097184685121904839426581349959621748528074751921994625148012592664083102426 +/- 2.47e-78]",
+        "left_lower": "0.0209718468512190483942658134996",
+        "left_upper": "0.0209718468512190483942658134996",
+        "margin_lower": "1.18468512190483942658134995962e-5",
+        "name": "gate_C1_high_above_target",
+        "passed": true,
+        "right_interval": "[0.02096000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.06e-79]"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.02097069155426728698898841685149818658828735351562499999999999999999999999326 +/- 7.72e-79]",
+        "left_lower": "0.0209706915542672869889884168515",
+        "left_upper": "0.0209706915542672869889884168515",
+        "margin_lower": "1.06915542672869889884168514982e-5",
+        "name": "gate_C2_integral_above_target",
+        "passed": true,
+        "right_interval": "[0.02096000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.06e-79]"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.0527417216909718128241202170392039757650801576872398647459679934650206671491 +/- 6.47e-77]",
+        "left_lower": "0.0527417216909718128241202170392",
+        "left_upper": "0.0527417216909718128241202170392",
+        "margin_lower": "0.0317817216909718128241202170392",
+        "name": "gate_C3_exterior_above_target",
+        "passed": true,
+        "right_interval": "[0.02096000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.06e-79]"
+      },
+      {
+        "kind": "gt",
+        "left_interval": "[0.103578016282865407239821215320038868301682141151631039230082985339026002065 +/- 5.39e-76]",
+        "left_lower": "0.103578016282865407239821215320",
+        "left_upper": "0.103578016282865407239821215320",
+        "margin_lower": "0.0826180162828654072398212153200",
+        "name": "gate_C4_fan_above_target",
+        "passed": true,
+        "right_interval": "[0.02096000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.06e-79]"
+      },
+      {
+        "detail": "all interval stages evaluated",
+        "kind": "exact-rational",
+        "name": "evaluation_completed",
+        "passed": true
+      }
+    ],
+    "integral_cells": 65536,
+    "integral_enclosure": {
+      "lower": "0.0209706915542672869889884168515",
+      "note": "lower endpoint from the Arb-native branch hull, upper endpoint from the greatest exact branch minorant; only the lower endpoint enters gate C2",
+      "upper": "0.0209724436266729562371749796735",
+      "width": "1.75207240566924818656282203938e-6"
+    },
+    "intervals": {
+      "C_ext": "[0.210966886763887251296480868156815903060320630748959458983871973860082668596 +/- 3.40e-76]",
+      "C_fan": "[0.103578016282865407239821215320038868301682141151631039230082985339026002065 +/- 5.39e-76]",
+      "H_h0": "[0.1962515979046833210696468161915679857902417562058791830601797746407297021364 +/- 6.12e-77]",
+      "Q": "[0.1528888055584752065600000000000000000000000000000000000000000000000000000000 +/- 1.82e-77]",
+      "R1": "[1.675763481231215108697315062627782424577407011091015082963556083403785903508 +/- 4.35e-76]",
+      "R1_denominator": "[0.5985963901990605332428385177938635573792873438541329561300396746054201781502 +/- 6.43e-77]",
+      "d": "[0.03943852316826510323270441574484870047793434664982954981462766396137810843742 +/- 6.44e-78]",
+      "exterior_rate": "[0.0527417216909718128241202170392039757650801576872398647459679934650206671491 +/- 6.47e-77]",
+      "h0_over_m_rho": "[0.1949942600820883674847251986459561291529249028362519306949966307870596017663 +/- 7.22e-77]",
+      "h0_over_rho": "[0.1949942600625889414765163618974836092883292899209594404113714377175599386876 +/- 7.60e-77]",
+      "high": "[0.02097184685121904839426581349959621748528074751921994625148012592664083102426 +/- 2.47e-78]",
+      "integral_I": "[0.02097 +/- 2.45e-6]",
+      "joint_coefficient": "[0.02097069155426728698898841685149818658828735351562499999999999999999999999326 +/- 7.72e-79]",
+      "m": "[0.9999999999000000000000000000000000000000000000000000000000000000000000000000 +/- 1.46e-77]",
+      "r_lambda_sq_minus_d_sq": "[0.04028121449030621668380608012897777076748682883649851680331432231806278286914 +/- 5.39e-78]",
+      "rho": "[0.675763481231215108697315062627782424577407011091015082963556083403785903508 +/- 4.35e-76]",
+      "target": "[0.02096000000000000000000000000000000000000000000000000000000000000000000000000 +/- 5.06e-79]"
+    },
+    "lower_bounds": {
+      "C_ext": "0.210966886763887251296480868157",
+      "C_fan": "0.103578016282865407239821215320",
+      "exterior_rate": "0.0527417216909718128241202170392",
+      "high": "0.0209718468512190483942658134996",
+      "integral_I": "0.0209706915542672869889884168515",
+      "joint_coefficient": "0.0209706915542672869889884168515",
+      "rho": "0.675763481231215108697315062628"
+    },
+    "margins_above_target_lower": {
+      "C_fan": "0.0826180162828654072398212153200",
+      "exterior_rate": "0.0317817216909718128241202170392",
+      "high": "1.18468512190483942658134995962e-5",
+      "integral_I": "1.06915542672869889884168514982e-5",
+      "joint_coefficient": "1.06915542672869889884168514982e-5"
+    },
+    "parameters": {
+      "eps_del": [
+        1,
+        10000000000
+      ],
+      "exterior_divisor": [
+        4,
+        1
+      ],
+      "h0": [
+        13177,
+        100000
+      ],
+      "r0": [
+        999,
+        2000
+      ],
+      "r_lambda": [
+        10227,
+        50000
+      ],
+      "target": [
+        131,
+        6250
+      ]
+    },
+    "precision_bits": 256,
+    "status": "evaluated"
+  },
+  "production_decision": {
+    "abort_reason": null,
+    "accepted": true,
+    "failed_gates": [],
+    "missing_gates": [],
+    "reason": "all mandatory gates present and passing"
+  },
+  "proves_geometric_theorem": false,
+  "script_sha256": "bc5577513472a4956dd960f4479859a6b6cccf501baad0e4c1d419615def6fad"
+}

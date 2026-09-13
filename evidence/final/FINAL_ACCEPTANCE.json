@@ -1,0 +1,165 @@
+{
+  "status": "CONTENT_ACCEPTED_FOR_LOCAL_DELIVERY",
+  "accepted_utc": "2026-09-13T08:15:20.887050+00:00",
+  "scope": "User-requested project closeout; not public publication or new sharp-value research",
+  "paper": {
+    "path": "paper/manuscript/main.pdf",
+    "pages": 57,
+    "sha256": "f0686d3026617df8165e1883793f622ca876e71e65dc1a18a8b5f38f4c1c9e66",
+    "canonical_language": "Chinese",
+    "source_files": {
+      "paper/manuscript/main.tex": "3210e35b7acffe7c594a058719427202305319715ef98d03856411da4efffc9f",
+      "paper/manuscript/chapters/chords.tex": "fab45ab44095a5311f65de635acfc86a6d5ffc4b1bb801973be8221bdf9d6212",
+      "paper/manuscript/chapters/classification.tex": "ad042c2ea4aafb6a9fdf613fe75ed7ae362d292b9f62e4a59bb8eca94cb89b12",
+      "paper/manuscript/chapters/core.tex": "a4c2375fb4f3a2febd225d8a554e60ab8990429939e37d6b8bf1af167de9b801",
+      "paper/manuscript/chapters/density.tex": "eee7d0fd506a205bb850b4115dbc629a1bb442e980ee1bd13eec737ddc637540",
+      "paper/manuscript/chapters/difficulty.tex": "1860f914333812b37cdee6b79a2ad74e3848840ec76d9676325146e235c0be9a",
+      "paper/manuscript/chapters/extremal.tex": "bec002b37837dd111e86ad0689e8d28eefba1e325ac4076a122baa2be0e7837c",
+      "paper/manuscript/chapters/formal-evidence.tex": "10521266c8ae40e27adee37f950e3dc546e025a73e0fc20c092011fb68d7920f",
+      "paper/manuscript/chapters/further.tex": "00b567e8025736c48c23beaa0b8ab680e185c89f9580dd541bc47f3ea7abe04f",
+      "paper/manuscript/chapters/intro.tex": "4316c025c2ec9d1f476e4722593732c392e509a056ed483c1dfc301a121fb084",
+      "paper/manuscript/chapters/replacement.tex": "58868ff0a037b4112d4b2ee025278084aa0c3a71fb380d19dab3ecc416eedde7",
+      "paper/manuscript/chapters/shear.tex": "c71a1ff72a6d3e92ab3055948de0c74773ffe779441ddf479ba8013eee0b38e9",
+      "paper/manuscript/chapters/upper.tex": "306f4a7a6186c41325ae682e6ecae6d060ab8611f6632ad65a8b43f54caec110",
+      "paper/manuscript/figures/needle-sections.tex": "7825444a2aab83193ddba521f2db3ddbe43a46f89be307de6e3298d27fbfcfda",
+      "paper/manuscript/references.bib": "cf5439e7f70ec33d7c63e213a2d63afb7e50b5117eeeeab6e9328d887b8f2610",
+      "paper/manuscript/references-rendered.tex": "641f07701b0affa43b3b2cc56e70361f4566ebac0ba26c9f399d0bece6682669"
+    }
+  },
+  "formal": {
+    "public_import": "StarKakeyaLower.OneTenth",
+    "theorem": "StarKakeyaLower.StarShapedKakeya.one_tenth_le_outerArea",
+    "assumptions": "arbitrary planar set; common star center; complete closed unit in every unoriented direction; no measurable/bounded/regular-selector input assumption",
+    "project_modules_cold_compiled": 44,
+    "actual_cold_exit_code": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "custom_axioms": false,
+    "lean_toolchain": "leanprover/lean4:v4.30.0-rc2",
+    "mathlib_revision": "5450b53e5ddc75d46418fabb605edbf36bd0beb6"
+  },
+  "source_review": {
+    "rounds": [
+      "PAPER_COMBINED_REVIEW_R3.md",
+      "PAPER_COMBINED_REVIEW_R4.md"
+    ],
+    "verdict": "NO_NEW_SUBSTANTIVE_ISSUE",
+    "same_reviewed_body_bytes": true,
+    "only_later_change": "neutral front label; separately diffed and pixel-verified"
+  },
+  "learner_diagnostics": {
+    "rounds": {
+      "core": [
+        "R6",
+        "R7"
+      ],
+      "upper": [
+        "R2",
+        "R3"
+      ],
+      "obstructions": [
+        "R3",
+        "R4"
+      ],
+      "further": [
+        "R3",
+        "R4"
+      ]
+    },
+    "reports": {
+      "core": [
+        {
+          "path": "provenance/TEACHER_CORE_R6.md",
+          "sha256": "985edb6700d16def2d34888853f5bcf28e6a7976763f8d2f4ae879599f78c376"
+        },
+        {
+          "path": "provenance/TEACHER_CORE_R7.md",
+          "sha256": "523be9de226ad4a932ceed529030d28f23f149ebfe8b21da090e76987e08e813"
+        }
+      ],
+      "upper": [
+        {
+          "path": "provenance/TEACHER_CORE_UPPER_R5_R2.md",
+          "sha256": "8a46d6bd2f06c42641bc3692cbfa6121043d346386c85bd2bd0f849c09623107"
+        },
+        {
+          "path": "provenance/TEACHER_UPPER_OBSTRUCTIONS_R3.md",
+          "sha256": "398f760c70d51302a7cfc4d73b1ca7b89156ab700c3de0d4ef7f86a10445dea6"
+        }
+      ],
+      "obstructions": [
+        {
+          "path": "provenance/TEACHER_UPPER_OBSTRUCTIONS_R3.md",
+          "sha256": "398f760c70d51302a7cfc4d73b1ca7b89156ab700c3de0d4ef7f86a10445dea6"
+        },
+        {
+          "path": "provenance/TEACHER_OBSTRUCTIONS_R4.md",
+          "sha256": "2d130a617fc293ec0afde94689cd9c7162eb0887718fa3030dd84044efde481a"
+        }
+      ],
+      "further": [
+        {
+          "path": "provenance/TEACHER_FURTHER_R3.md",
+          "sha256": "be5a7ad3d1f7e8482a506471d2a86fac36e641ed779c5b5f7282fde1f680b523"
+        },
+        {
+          "path": "provenance/TEACHER_FURTHER_R4.md",
+          "sha256": "aa31a7383b6d023d6c1411871957dce9f0e9e12282b5916ff1f67076876af883"
+        }
+      ]
+    },
+    "selected_native_finals_verified": 16,
+    "models": [
+      "grok-4.6",
+      "gemini-3.5-flash"
+    ],
+    "fallback": false,
+    "convergence": "two consecutive valid source/test diagnostics per group with no new substantive manuscript/test debt",
+    "all_learner_claims_correct": false,
+    "limitations": "Substantive learner errors and incomplete replays are preserved; Gemini is not given an error-free proof-replay pass. This diagnostic gate is separate from the independent source reviews and formal theorem verification. Completion retries are not extra rounds; old invalid/blocked attempts are not counted."
+  },
+  "sources": {
+    "original_snapshots": 81,
+    "supplement_snapshots": 14,
+    "all_95_original_and_package_identities_verified": true,
+    "upper_monotonicity_local_source_closure": 51,
+    "new_upper_graph_compilation": false
+  },
+  "evidence": {
+    "LEAN_PARENT_ACCEPTANCE.json": "0c85e9d3d4555d6a0083754a0a007461d46febcc44a6b85bfdb8e16c76a160b2",
+    "LEAN_DELIVERY_COLD_BUILD.json": "f2ac0b3d934432cada0ac9c529a1bb71d2ec3149361560022d376781ff4db262",
+    "PACKAGED_PROOF_AND_REVIEW_IDENTITY.json": "7f66df907fe2dbd68edd3daa7f5865a1acc4d5c097c91ff9f6ad4c5cdf57e12e",
+    "PACKAGED_SOURCE_IDENTITY_CHECK.json": "1a11769502a7674c9860039570370f3cab2875ea162dfe345b6aca28e1080b9c",
+    "FINAL_LEARNER_NATIVE_IDENTITY_CHECK.json": "55f7027028277332f300bd75045dc3984eea239ea0624aa5781a931490a83867",
+    "PDF_RENDER_R3.json": "08a5d0707e5b7b4fd3820910a3503f419413f299561cbe6be3a7f2255c5e090f",
+    "PDF_RENDER_FINAL.json": "c3350ae512a1b95e3a923bba94c60d45b6b8db5fde4edcb2e09143f4a5c26b57",
+    "PACKAGED_PDF_REBUILD.json": "82b28b55e65ed424c15942237f7266f60905fa758782211e4c7e88b422d6a8ec",
+    "FINAL_FRONT_LABEL_DIFF.json": "01287cb7ad7ce55720ab6bd462c0311c91bf0a3fe781c5036faea22fc203b1b3",
+    "MODEL_RECEIPT_EXPORTS.json": "6b7ea23fd8d35c9b69e469d8e1946f384a5331d21c97d4983b7a59a320a14ff2"
+  },
+  "open": [
+    "sharp value and matching bound",
+    "A_coh = A_* or strict infimum separation",
+    "universal nonattainment by finite competitors",
+    "global historical-priority audit"
+  ],
+  "not_claimed": [
+    "human peer review",
+    "a newly certified historical upper scalar graph",
+    "sum or comparison of the independent positive savings",
+    "bitwise-identical PDF builds across environments"
+  ],
+  "publication": {
+    "git_commit": false,
+    "git_push": false,
+    "journal_submission": false,
+    "public_release": false,
+    "authorized_delivery": "current user conversation/local artifact"
+  },
+  "archive_integrity": "Internal SHA256SUMS plus separate post-build delivery/ARCHIVE_VERIFICATION.json; archive cannot include its own hash",
+  "receipt_export": "Only non-final provider reasoning/opaque fields removed from packaged JSON; original raw receipts unchanged locally, hash projection map and identical final answers supplied."
+}

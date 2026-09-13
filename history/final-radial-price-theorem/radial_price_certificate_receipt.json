@@ -1,0 +1,219 @@
+{
+  "certificate_type": "pure_rational_outward_interval_radial_price_v1",
+  "status": "PROVED_STRICTLY_ABOVE_TARGET_AND_PRICE_AT_MOST_ONE",
+  "verifier_sha256": "6acfa1bbf12b05ed0270f48ae9d8a09c34e955b66a43222e910665f632028b19",
+  "arithmetic": "Python Fraction only; exact polynomial integrals; rational Taylor remainder enclosures; no float/quadrature",
+  "target_exact": "28069/1250000",
+  "target_decimal": "0.0224552",
+  "parameters": {
+    "M0": "99/100",
+    "H": "1/5"
+  },
+  "scale_boundaries_exact_decimals": [
+    "0.99",
+    "1.45628085",
+    "2.01689132",
+    "2.70060055",
+    "3.55177018",
+    "4.71011205",
+    "6.83593359"
+  ],
+  "radial_boundaries_exact_decimals": [
+    "0.36434005",
+    "0.90208096",
+    "1.36854204",
+    "1.92904040",
+    "2.61222500",
+    "3.46096510",
+    "4.60835052",
+    "6.83593359"
+  ],
+  "scale_breakpoint_intervals": [
+    {
+      "lo": "0.99",
+      "hi": "0.99"
+    },
+    {
+      "lo": "1.45628085",
+      "hi": "1.45628085"
+    },
+    {
+      "lo": "2.01689132",
+      "hi": "2.01689132"
+    },
+    {
+      "lo": "2.70060055",
+      "hi": "2.70060055"
+    },
+    {
+      "lo": "3.55177018",
+      "hi": "3.55177018"
+    },
+    {
+      "lo": "4.71011205",
+      "hi": "4.71011205"
+    },
+    {
+      "lo": "6.83593359",
+      "hi": "6.83593359"
+    }
+  ],
+  "radial_breakpoint_intervals": [
+    {
+      "lo": "0.36434005",
+      "hi": "0.36434005"
+    },
+    {
+      "lo": "0.90208096",
+      "hi": "0.90208096"
+    },
+    {
+      "lo": "1.36854204",
+      "hi": "1.36854204"
+    },
+    {
+      "lo": "1.92904040",
+      "hi": "1.92904040"
+    },
+    {
+      "lo": "2.61222500",
+      "hi": "2.61222500"
+    },
+    {
+      "lo": "3.46096510",
+      "hi": "3.46096510"
+    },
+    {
+      "lo": "4.60835052",
+      "hi": "4.60835052"
+    },
+    {
+      "lo": "6.83593359",
+      "hi": "6.83593359"
+    }
+  ],
+  "pi_outward": {
+    "lo": "3.141592653589793238",
+    "hi": "3.141592653589793239",
+    "method": "Machin + alternating rational series"
+  },
+  "low_outward": {
+    "lo": "0.023021151022880283",
+    "hi": "0.023021151022880284",
+    "proved_gt_target": true
+  },
+  "high_bins": [
+    {
+      "bin": 0,
+      "kernel_integral_exact": "1645667441738419777767/15625000000000000000000",
+      "coefficient_lower": "0.023021151331401554",
+      "proved_gt_target": true
+    },
+    {
+      "bin": 1,
+      "kernel_integral_exact": "2333884611414251046629/16000000000000000000000",
+      "coefficient_lower": "0.023021150720250842",
+      "proved_gt_target": true
+    },
+    {
+      "bin": 2,
+      "kernel_integral_exact": "244144684909471/1250000000000000",
+      "coefficient_lower": "0.023021151163110338",
+      "proved_gt_target": true
+    },
+    {
+      "bin": 3,
+      "kernel_integral_exact": "205499964864879/800000000000000",
+      "coefficient_lower": "0.023021151113341677",
+      "proved_gt_target": true
+    },
+    {
+      "bin": 4,
+      "kernel_integral_exact": "425812260903871/1250000000000000",
+      "coefficient_lower": "0.023021151236344580",
+      "proved_gt_target": true
+    },
+    {
+      "bin": 5,
+      "kernel_integral_exact": "9887915410120591/20000000000000000",
+      "coefficient_lower": "0.023021151298153813",
+      "proved_gt_target": true
+    },
+    {
+      "bin": 6,
+      "kernel_integral_exact": "197758307/200000000",
+      "coefficient_lower": "0.023021151158180405",
+      "proved_gt_target": true
+    }
+  ],
+  "dyadic_tail": {
+    "first_kernel_integral_exact": "658593359/200000000",
+    "first_coefficient_lower": "0.038333604032402981",
+    "all_later_bins_ge_first_by_exact_scaling": true,
+    "proved_gt_target": true
+  },
+  "minimum_proved_lower": "0.023021150720250842",
+  "strict_margin_lower": "0.000565950720250842",
+  "price_certificate": {
+    "finite_half_open_atoms": [
+      {
+        "lo": "0",
+        "hi": "0.36434005",
+        "owner": "low",
+        "price": "1"
+      },
+      {
+        "lo": "0.36434005",
+        "hi": "0.90208096",
+        "owner": "high_0",
+        "price": "1"
+      },
+      {
+        "lo": "0.90208096",
+        "hi": "1.36854204",
+        "owner": "high_1",
+        "price": "1"
+      },
+      {
+        "lo": "1.36854204",
+        "hi": "1.92904040",
+        "owner": "high_2",
+        "price": "1"
+      },
+      {
+        "lo": "1.92904040",
+        "hi": "2.61222500",
+        "owner": "high_3",
+        "price": "1"
+      },
+      {
+        "lo": "2.61222500",
+        "hi": "3.46096510",
+        "owner": "high_4",
+        "price": "1"
+      },
+      {
+        "lo": "3.46096510",
+        "hi": "4.60835052",
+        "owner": "high_5",
+        "price": "1"
+      },
+      {
+        "lo": "4.60835052",
+        "hi": "6.83593359",
+        "owner": "high_6",
+        "price": "1"
+      }
+    ],
+    "tail": "for n>=1, high tail n owns [2^(n-1) S6, 2^n S6) at price 1",
+    "pointwise_total_price_upper_exact": "1",
+    "proved": true
+  },
+  "proof_notes": [
+    "Decimal breakpoints are interpreted as exact base-10 rationals (degenerate rational intervals).",
+    "Each high integral is split at 1, s-1/2, s and integrated as an exact polynomial.",
+    "High coefficient lower bounds divide by the rigorously enclosed upper endpoint of pi.",
+    "Low transcendental expressions use outward rational intervals throughout.",
+    "For tail kernel scale s>=2*S6, the normalized coefficient is exactly 1/(8*pi)-1/(16*pi*s), hence increases with s; the first tail bin is worst."
+  ]
+}

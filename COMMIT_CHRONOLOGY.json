@@ -1,0 +1,75 @@
+{
+  "meaning": "Git author dates and subjects; not independent discovery timestamps or proof of public publication.",
+  "commits": [
+    {
+      "commit": "f96f4a2fe67026b09e3ec2bcb0cf576849ba6933",
+      "author_date": "2026-08-02T17:25:51+00:00",
+      "subject": "research: validate joint annular lower-bound route"
+    },
+    {
+      "commit": "662cc33674f73be88d8c6a6a8bfce22f044e9b74",
+      "author_date": "2026-08-03T07:50:23+00:00",
+      "subject": "research(lower): prove universal one-fifteenth radial bound"
+    },
+    {
+      "commit": "f58d803acd0aadd32cfb85daf1fada96bcafe898",
+      "author_date": "2026-08-03T08:25:26+00:00",
+      "subject": "research(lower): optimize radial bound to 1717 over 25000"
+    },
+    {
+      "commit": "3af5bec408a079f911566a5ec34dcb75e482fab2",
+      "author_date": "2026-08-03T12:10:18+00:00",
+      "subject": "research(lower): prove universal seven-hundredths bound"
+    },
+    {
+      "commit": "3a1cd160cd61c8208dce7a86a344c7e7ba87da6b",
+      "author_date": "2026-08-03T12:48:04+00:00",
+      "subject": "research(lower): improve universal bound to 141 over 2000"
+    },
+    {
+      "commit": "796e310c8579e3db182876414af3e4720d292c30",
+      "author_date": "2026-08-04T08:56:09+00:00",
+      "subject": "certify C_FS >= 3527/50000 with rational N=64 schedule"
+    },
+    {
+      "commit": "97914ccad79766e8d1e16d727b72a0dae29684c6",
+      "author_date": "2026-08-04T11:48:10+00:00",
+      "subject": "state the full certified N64 coefficient times pi"
+    },
+    {
+      "commit": "8d69d9732692ba40738e897b8ec0bbd36e4a9f79",
+      "author_date": "2026-08-04T17:41:27+00:00",
+      "subject": "[verified] certify paired CFS exact outward lift"
+    },
+    {
+      "commit": "0bbd492de7c608dd68fdec8143485e17e7c5c174",
+      "author_date": "2026-08-16T14:23:26+00:00",
+      "subject": "archive blocked 0.0975576 candidate and start literal primal framework"
+    },
+    {
+      "commit": "9fc64eb4318e64cfe0d0cdc1dc5b15d5b1524b3f",
+      "author_date": "2026-08-17T05:08:36+00:00",
+      "subject": "promote radial-price lower bound 0.072323077979923422"
+    },
+    {
+      "commit": "4acb9bcb654e2529b37173560195fe788841c081",
+      "author_date": "2026-08-17T05:27:43+00:00",
+      "subject": "promote H-optimized radial-price lower 0.073920942372137638"
+    },
+    {
+      "commit": "ccfd7f7dae432c27b7a3b35991c4c133f8027137",
+      "author_date": "2026-08-17T12:33:01+00:00",
+      "subject": "promote certified shared-terminal lower 0.082812417187472190"
+    },
+    {
+      "commit": "80a350d22571e677193f1ce2b2a30384e954b5b5",
+      "author_date": "2026-08-21T03:18:56+00:00",
+      "subject": "certify normalized shared-terminal bound 0.082812499999972190"
+    },
+    {
+      "commit": "2587e7eb9f379a5858fdf9a2e0f3e1dfcd6cc5ef",
+      "author_date": "2026-09-05T02:30:16+00:00",
+      "subject": "Accept universal star-shaped Kakeya outer-area bound 1/10 after independent reviews"
+    }
+  ]
+}

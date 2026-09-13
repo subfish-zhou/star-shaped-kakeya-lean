@@ -1,0 +1,48 @@
+\documentclass[UTF8,fontset=none,11pt]{ctexart}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\setCJKmainfont[ItalicFont={Noto Serif CJK SC},SlantedFont={Noto Serif CJK SC}]{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\hypersetup{pdftitle={星形Kakeya集的面积下界与重构障碍},pdfsubject={完整单位针、十分之一下界、上界构造与全类比较}}
+\newtheoremstyle{zhplain}{7pt}{7pt}{\normalfont}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{zhplain}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{remark}[theorem]{说明}
+\renewcommand{\proofname}{证明}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\title{星形 Kakeya 集的面积下界与重构障碍}
+\author{}
+\date{收尾研究稿}
+\begin{document}
+\maketitle
+\input{chapters/intro.tex}
+\tableofcontents
+\clearpage
+\input{chapters/core.tex}
+\input{chapters/extremal.tex}
+\input{chapters/replacement.tex}
+\input{chapters/upper.tex}
+\input{chapters/density.tex}
+\input{chapters/shear.tex}
+\input{chapters/chords.tex}
+\input{chapters/further.tex}
+\input{chapters/difficulty.tex}
+\clearpage
+\appendix
+\input{chapters/classification.tex}
+\clearpage
+\input{chapters/formal-evidence.tex}
+\clearpage
+\input{references-rendered.tex}
+\end{document}

@@ -1,0 +1,19 @@
+{
+  "module": "StarKakeyaLower.OneTenthParentAudit",
+  "source": "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthParentAudit.lean",
+  "source_sha256": "0e9e687dd7f87e2f2b929052e0ec779777175c805086c2af70b29ecd376a9bc7",
+  "object": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthParentAudit.olean",
+  "command": [
+    "/home/argustest/.elan/toolchains/leanprover--lean4---v4.30.0-rc2/bin/lean",
+    "-j2",
+    "-o",
+    "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/lib/lean/StarKakeyaLower/OneTenthParentAudit.olean",
+    "/home/argustest/research/star-shaped-kakeya-lean/StarKakeyaLower/OneTenthParentAudit.lean"
+  ],
+  "exit_code": 0,
+  "log": "/home/argustest/research/star-shaped-kakeya-lean/.closeout-build/run-ce9yb8h_/logs/StarKakeyaLower.OneTenthParentAudit.log",
+  "wall_seconds": 4.1118253339082,
+  "source_sha256_after": "0e9e687dd7f87e2f2b929052e0ec779777175c805086c2af70b29ecd376a9bc7",
+  "object_sha256": "88c01b98ae2917931d07c82696a5648e27c8a994afd97a583ef4f63a83aed32c",
+  "log_sha256": "97e27934ffe43088f976a3178aafafe514ed9da4abc7fe372b1d62b2396ae191"
+}

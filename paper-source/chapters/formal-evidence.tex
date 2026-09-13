@@ -1,0 +1,26 @@
+\section{形式化定理与证据接口}\label{sec:formal-evidence}
+普适的十分之一定理已在 Lean 与 Mathlib 中形式化。公开入口为 \nolinkurl{StarKakeyaLower.OneTenth}，定理位于 \texttt{StarKakeyaLower} 命名空间，名称为 \nolinkurl{StarShapedKakeya.one_tenth_le_outerArea}。它对欧氏平面中的任意集合，假设存在一个共同星形中心，且每个无向方向上都有一条完整闭单位线段，结论为 Lebesgue 外测度至少 $1/10$。原集合不必可测或有界，方向见证也没有正则性要求。
+
+\subsection{声明所表达的数学对象}
+\texttt{Plane} 定义为 \texttt{EuclideanSpace Real (Fin 2)}，\texttt{Direction} 定义为 \texttt{AddCircle Real.pi}。一条 \texttt{UnitNeedle} 包含两个端点及其欧氏距离等于一的证明，其承载集是两个端点之间的整个闭线段。结构 \texttt{StarShapedKakeya E} 恰有三项数据：中心、从中心到 $E$ 中每一点的线段包含于 $E$，以及每个射影方向上的单位针存在性。这些字段就是原问题的几何量词。
+
+先在任意开包络 $G$ 中恢复实际三角形族及 Borel 中点，再处理大高度分支。实际远端点的选取、两个物理圆周提升及带符号支撑坐标，将恢复族连接到角度估计。低半径估计在同一个实际截面上使用互补权重；全局组合只在不交的径向区间之间相加。对每个开包络得到面积下界后，再由外正则性回到原集合。
+
+实现中直接测量 $G$ 的圆周截面。因此，最后的面积论证只需每个实际三角形包含于 $G$，无须另证所选三角形的不可数并可测。每个来源类都落在射影圆周中，其方向测度有限，所以可在实数中整理相应的标量乘积。$G$ 的面积则始终保留为扩展非负实数，因而不必排除无限面积的开包络。
+
+\subsection{形式化证明使用的较短尾部论证}
+第~\ref{subsec:core-tail} 节的端部短段引理不限制高度，本身也有独立用途。对最终的十分之一定理，恢复后的小高度分支允许一个较短的替代论证。取 $m\ge16/5$ 的二进来源类，端点半径介于 $m$ 与 $2m$ 之间，高度绝对值至多为 $1/5$。在半开区间 $[m/2,3m/4)$ 上，正文已经证明的有界锥估计给出核
+\[
+ \min\left\{\frac1{1+2B_m},\frac{m-r}{m+r}\right\},
+ \qquad B_m=\frac{4m^2}{\sqrt{4m^2-1/25}}.
+\]
+精确的平方比较给出 $\sqrt{4m^2-1/25}\ge3m/2$，因此 $B_m\le8m/3$。又因 $r\le3m/4$，延伸比 $r/(m-r)\le3$，从而 $1+2\max\{B_m,r/(m-r)\}\le6m$。核的两个分支都不小于 $1/(6m)$。这些半径均大于一，截断的极坐标权重等于一，故
+\[
+ \int_{m/2}^{3m/4}\frac1{6m}\,dr=\frac1{24}>\frac1{10\pi}.
+\]
+实际族的截面定理对正高度、负高度及零高度都给出这个下界，也包含外垂足情形。来源类保持不变；新的径向区间缩在正文原尾区间内，彼此不交，也与低半径、$F$ 和 $D_0$ 的区间不交。这就给出同一个最终定理所需的贡献。该实现形式化的是这里的有界高度替代论证，正文中更强的无高度限制端部短段引理仍由其解析证明支持。
+
+\subsection{导入、检查与上界输入}
+证明各层附有独立导入检查。\texttt{Recovery} 与 \texttt{Sources} 定义实际几何数据；\texttt{Circle} 与 \texttt{Lobes} 提供物理区间；\texttt{SectionBounds} 和 \texttt{KernelIntegrals} 将区间并连接到径向积分；\texttt{FixedHigh} 与 \texttt{HighTail} 处理剩余来源类；\texttt{GlobalAssembly} 完成面积不等式。公开定理及另一个直接从原始几何假设构造输入的检查文件，均通过了新的导入编译。两者的公理列表恰为 \texttt{propext}、\texttt{Classical.choice} 和 \texttt{Quot.sound}。复现材料附有依赖版本及完整的项目源码导入闭包。
+
+上述形式化覆盖普适下界。后续构造与障碍定理的证据是正文中的数学证明及保存的来源文档。对固定上界输入，电子附件《上界证据映射》\footnote{\texttt{\detokenize{provenance/UPPER_EVIDENCE_MAP.md}}。}分别列出系数恒等式、严格符号与起始条件、端点映射、单调性、局部支配、尾部界和历史面积基准。特别地，冻结放置的非递增性来自 \texttt{Continuum.PhaseC3} 中的 \texttt{deriv\_a\_nonpos} 与 \texttt{antitoneOn\_a}；仅有导数绝对值界不能给出这个结论。历史不等式 $c_{\mathrm{fr}}<U$ 作为单独标明的证书输入保留，其依据与系数文件、此次下界编译分别列账。

@@ -1,0 +1,323 @@
+{
+  "status": "ALL_44_PROJECT_MODULES_COLD_COMPILED",
+  "exit_code": 0,
+  "driver": "delivery/cold-build.log",
+  "compiler": "Lean 4.30.0-rc2",
+  "parallelism": "one Lean process, -j2; original global compile lock held",
+  "third_party": "read-only cached pinned donor dependencies; no local project object reuse",
+  "modules": [
+    {
+      "module": "StarKakeyaLower.OneTenthAudit",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthAudit.json",
+      "receipt_sha256": "3af795f408d1f885159a32db09d8ddb8162c0d630719572dbc7089b43ce909ca"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenth",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenth.json",
+      "receipt_sha256": "05d75f0824e415836ab5073329d1a8816ffec8b3be5b9159ebcf278057020001"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthGlobalAssemblyClosed",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthGlobalAssemblyClosed.json",
+      "receipt_sha256": "129c1ec1c9339b509f779e04af7ea02b38abe9bf093b4cdce8b6ad333574bd72"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthGlobalAssemblyTail",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthGlobalAssemblyTail.json",
+      "receipt_sha256": "113fb9236e84f41c1fcf0777e3cc4bf806ef39890698c4a4ae54b28ea65724d3"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthGlobalAssembly",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthGlobalAssembly.json",
+      "receipt_sha256": "e02b32cce69e51dffaec9b9d55309ae01540a0cdba5089fa84001f6dfea4a983"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsLowBank",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSectionBoundsLowBank.json",
+      "receipt_sha256": "feeff44d62988763b71f268614a13738a48eab734aecbc52c3b3a65a0233418d"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsReal",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSectionBoundsReal.json",
+      "receipt_sha256": "eb9548eeabd9b9ca68bc2139064ea53694d12d8da97448ed183003490bd33634"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBounds",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSectionBounds.json",
+      "receipt_sha256": "65452b9c0d4c3b1e6bf683874cca8e6adef903b5fc5c4c68cedac52847d9576c"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsGeneral",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSectionBoundsGeneral.json",
+      "receipt_sha256": "53d31167de154aeafcd7b884a7b76980f26c3d784c70c56b8a7857f48e5b62bf"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSectionBoundsIntervals",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSectionBoundsIntervals.json",
+      "receipt_sha256": "54fbca82ad1cb08447724c0b1be2c7dfe6e8d8ae876c34ac449fc07299db0f6e"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesPhysical",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthLobesPhysical.json",
+      "receipt_sha256": "578ecdfe103436bb3c33d930ad2906cf8b76fcf5dcecc71ad0bbe0d112fd7272"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesCones",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthLobesCones.json",
+      "receipt_sha256": "f345fb7635a557d94b046ce86d91915916907473f1267eedbf2b524de9e80ef4"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesGap",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthLobesGap.json",
+      "receipt_sha256": "cd74cf5e4006ca1a54639cae2aa39e29a7051e6dc9e95248869b0f3a7568047e"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobes",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthLobes.json",
+      "receipt_sha256": "b8cfec1a81f7078b6f08b5f8cdec7ec2c5afe79316d7d63c0bdd0bd1de3429e8"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthLobesGeometry",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthLobesGeometry.json",
+      "receipt_sha256": "5c8b13368f4667e0fe8f4ad3135f09a66e0729d5c41035af099fde909c7ac29d"
+    },
+    {
+      "module": "StarKakeyaLower.LiGeometry",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.LiGeometry.json",
+      "receipt_sha256": "d77b5a151f72692caa19416e1047c61e462d3432c9da87c4fafe47f18899f189"
+    },
+    {
+      "module": "StarKakeyaLower.QuotientCircle",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.QuotientCircle.json",
+      "receipt_sha256": "ec00e1456f405369d2943790b8774fe78173f95d7f75c8be325108a7b8c0bb1a"
+    },
+    {
+      "module": "StarKakeyaLower.CircleDilation",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.CircleDilation.json",
+      "receipt_sha256": "cd71581dc027fa3636d03704d89b2817364416a5a5c42c0a86300839525b22a7"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthRecovery",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthRecovery.json",
+      "receipt_sha256": "8973c6c57ec85d806422b13c58037a381fb783779ac56f4294719e10385e324a"
+    },
+    {
+      "module": "StarKakeyaLower.TriangleArea",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.TriangleArea.json",
+      "receipt_sha256": "4f0759113dc568becd8e97489b6626da3f602fb6a2214304a715fc76fe71310c"
+    },
+    {
+      "module": "StarKakeyaLower.StarKakeyaSet",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.StarKakeyaSet.json",
+      "receipt_sha256": "ed8065161248366d193701e43678a97562cd3bd674ec51a1640a6aa27e3f079c"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCapsEndpoints",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthCapsEndpoints.json",
+      "receipt_sha256": "9e1cd6cfb4b0d2ae2dff3ad6d537fdb76a58834b0524a4b704e79b26e0365bc1"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCaps",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthCaps.json",
+      "receipt_sha256": "8bb3df559ce4cd0244b220c24fc03d25ed1c08d3b40735a557c6f2ae391ce057"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSourcesPartition",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSourcesPartition.json",
+      "receipt_sha256": "5e1d7b1ca88e22164800de6bf1bb8bb80ef7743a5251d7fe2dcf8a6a7a40d1df"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSourcesGeometry",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSourcesGeometry.json",
+      "receipt_sha256": "473a80f5610392ff3376f60e230ebada188fb6044b6bff8fcc699b4aec51e04b"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthSources",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthSources.json",
+      "receipt_sha256": "9c98c5ffe51e3d15f2f5e1dd3857f34247cbd41cf7c661fb055910ff2b1d961f"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCircleReceipt",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthCircleReceipt.json",
+      "receipt_sha256": "17c413587acf63b52f8792d8c5c6848bf1bcd1593cae48f1cc4b45e52a391e33"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCircleLifts",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthCircleLifts.json",
+      "receipt_sha256": "4b56586b342e209b4f7f0b8f5bc6849cd85d8fdb9d5a0c46cc498aa40f8fa622"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthCircle",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthCircle.json",
+      "receipt_sha256": "adeeb6af81eba1e2d131d88109210804c763ecd6d0cc06c766ad5b3d1fc47768"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthOpenBankPlane",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthOpenBankPlane.json",
+      "receipt_sha256": "9603686730a91b24d20f8a0718aa0184a003b356657736cf28a75c15abba1830"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthOpenBankAssembly",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthOpenBankAssembly.json",
+      "receipt_sha256": "bc88eb57d99df0eb609c919038eb3f800e49af4373881d771e5ee499295cb6a9"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthOpenBank",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthOpenBank.json",
+      "receipt_sha256": "9c94b31b4c2545e41e047e03a2162ab9f29de017597925805c55f8c40727ce23"
+    },
+    {
+      "module": "StarKakeyaLower.PolarOuterMeasure",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.PolarOuterMeasure.json",
+      "receipt_sha256": "f8d229dcc991e7276492bfac9bc3899eac4eb57c755bc5c598e5ed1e44b85676"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthKernelIntegralsAssembly",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthKernelIntegralsAssembly.json",
+      "receipt_sha256": "2b7ccca1f2cb373b8b39dec8b7e84002a2d30628d175370e8b703834e8282571"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthKernelIntegrals",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthKernelIntegrals.json",
+      "receipt_sha256": "7d2ae18f6f19ca9e60af3ddab49e8b8a53fd1e9fa9c4c98e137eaa3c8a17d27b"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthArithmetic",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthArithmetic.json",
+      "receipt_sha256": "d258e8335fa3a7dcc112e48693ec9a08dd2dae5a990418bf2597f9e4c6275cf0"
+    },
+    {
+      "module": "StarKakeyaLower.EndpointCapacityLogBound",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.EndpointCapacityLogBound.json",
+      "receipt_sha256": "5a3572f598216d782ea83d1d333fb172f49d1c1d22809a580bb0613001e78647"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthHighTailSupports",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthHighTailSupports.json",
+      "receipt_sha256": "23255d0767d61d811007470aca91b06f7e7da7d9999d54cac73bd5db6fbfdfc3"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthHighTailIntegration",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthHighTailIntegration.json",
+      "receipt_sha256": "3b5d0d0be2264556b81194e0695eba45bce02ae4a837e8d87ff48182123d266d"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthHighTail",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthHighTail.json",
+      "receipt_sha256": "4af3ef230c663b96bc39ca7adc2550b5cbe920d7662b4c937ec2ed9deb5740a0"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthFixedHighBank",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthFixedHighBank.json",
+      "receipt_sha256": "795a350672bbf18244045ca5657b7cf5ff3d0005914920bd97f1c736473dc178"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthFixedHigh",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthFixedHigh.json",
+      "receipt_sha256": "e5780e5f85ddbe1cb0234ef2edfa0c7929d1c8718ff7768d3b5aba9d1561ad3d"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthKernelIntegralsHigh",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthKernelIntegralsHigh.json",
+      "receipt_sha256": "d583335f6944a364973aa19d4367157fc173e1a1d229ffa499091a631c17dc8e"
+    },
+    {
+      "module": "StarKakeyaLower.OneTenthParentAudit",
+      "receipt": "delivery/staging/lean/.closeout-build/logs/StarKakeyaLower.OneTenthParentAudit.json",
+      "receipt_sha256": "3b9dac2b755158b57513f955aae8f711c1acd15dec5ecfbe9f388392a8db6010"
+    }
+  ],
+  "axiom_audits": {
+    "StarKakeyaLower.StarShapedKakeya.one_tenth_le_outerArea": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.tail_bounded_kernel_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_tail_radial_price": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_tail_bank_price": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_F_bank_price": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_D0_bank_price": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_bank_price": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.small_height_one_tenth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.open_cover_one_tenth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.sourceCut_mass_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.target_prices_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.pairwise_disjoint_sourceCut": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.pairwise_disjoint_radialSupport": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_banks_sum_le_volume": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.low_banks_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.ofReal_mul_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.GlobalAssembly.actual_low_bank_price": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "StarKakeyaLower.OneTenth.ParentAudit.raw_hypotheses": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "paper_status": "not implied by compiler result"
+}
