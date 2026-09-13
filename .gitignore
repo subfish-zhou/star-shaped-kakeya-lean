@@ -1,0 +1,4 @@
+.lake/
+.closeout-build/
+__pycache__/
+*.pyc
