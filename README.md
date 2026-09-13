@@ -79,8 +79,11 @@ local import graph and compiles it sequentially with one `lean -j2` process at a
 time. Both audit roots and every shipped local module are included. It rebuilds
 the project sources rather than relying on earlier project objects. Build
 objects, logs and receipts are local ignored outputs in `.closeout-build/run-*/`.
-Only a fully successful run is atomically exposed at `.closeout-build/lib/lean`,
-the import path configured for Lake; a failed run does not replace that snapshot.
+Only a fully compiled and validated run is atomically exposed at
+`.closeout-build/lib/lean`, the import path configured for Lake. Compilation or
+validation failures preserve the previous snapshot. A later receipt-writing
+failure can leave the newly validated snapshot in place: require exit code zero
+and the final passed `build.json`, not merely a printed `PASS` line.
 After a successful local-dependency build, the public import can also be checked with:
 
 ```bash
